@@ -107,28 +107,30 @@
     __weak __typeof(self)weakSelf = self;
     
     [MHNetworkManager postReqeustWithURL:API_USER_BESPEAK_SPACE_URL params:params successBlock:^(NSDictionary *returnData) {
-        
-        NSLog(@"获取预约车位数据%@",returnData);
-        NSLog(@"st=%@",[returnData objectForKey:@"states"]);
+
+//        NSLog(@"st=%@",[returnData objectForKey:@"states"]);
         
         [Calculate_frame showWithText:[returnData objectForKey:@"message"]];
 //        states = 0, message = "token不存在或到期！"
 
         NSString * str = [NSString stringWithFormat:@"%@",[returnData objectForKey:@"states"]];
-        if ([str intValue] == 1 ) {
-            //预约成功
-            [self goSucess];
+        switch (str.intValue) {
+            case 1:
+                //预约成功
+                [self goSucess];
+                break;
+            case -2:
+                //已经预约
+                [self goFailure];
+                break;
+            case -1:
+                //先登录
+                [weakSelf goLogin];
+                break;
+                
+            default:
+                break;
         }
-        if ([str intValue] == -2) {
-            //已经预约
-            [self goFailure];
-            
-        }
-        if ([str intValue] == -1) {
-            //先登录
-            [weakSelf goLogin];
-        }
-        
         
         
     } failureBlock:^(NSError *error) {

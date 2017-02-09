@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
     self.title = @"我的车位";
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -47,7 +47,7 @@
     __weak __typeof(self)weakSelf = self;
     
     [MHNetworkManager postReqeustWithURL:API_GET_PARKING_SPACE_LIST_URL params:params successBlock:^(NSDictionary *returnData) {
-//        [self endRefresh];
+
         NSLog(@"获取发布数据%@",returnData);
         
         NSMutableArray * modelArr = [NSMutableArray array];

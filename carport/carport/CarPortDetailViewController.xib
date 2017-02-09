@@ -190,24 +190,6 @@
                                     <color key="textColor" red="0.47450980390000003" green="0.47450980390000003" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9Z-9E-pOu">
-                                    <rect key="frame" x="120" y="559" width="135" height="40"/>
-                                    <color key="backgroundColor" red="0.30196078431372547" green="0.68627450980392157" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="40" id="ZSM-vV-159"/>
-                                    </constraints>
-                                    <state key="normal" title="预约" image="cwxq_09.png">
-                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </state>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                            <integer key="value" value="20"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="appointmentButtonClick:" destination="-1" eventType="touchUpInside" id="Jue-mL-am4"/>
-                                    </connections>
-                                </button>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture.png" translatesAutoresizingMaskIntoConstraints="NO" id="Iaa-la-QiN">
                                     <rect key="frame" x="10" y="10" width="120" height="120"/>
                                     <constraints>
@@ -215,7 +197,7 @@
                                         <constraint firstAttribute="height" constant="120" id="Xiy-SX-4UT"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="6" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ts1-Md-bPJ">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="n" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ts1-Md-bPJ">
                                     <rect key="frame" x="290" y="110" width="23" height="36"/>
                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
@@ -285,7 +267,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="东出口" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkR-nr-NSr">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="出口" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkR-nr-NSr">
                                     <rect key="frame" x="83" y="373" width="272" height="25"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="25" id="pK8-gP-FeO"/>
@@ -320,6 +302,24 @@
                                     <color key="textColor" red="0.38823529410000002" green="0.83137254900000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9Z-9E-pOu">
+                                    <rect key="frame" x="120" y="559" width="135" height="40"/>
+                                    <color key="backgroundColor" red="0.30196078431372547" green="0.68627450980392157" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="ZSM-vV-159"/>
+                                    </constraints>
+                                    <state key="normal" title="预约" image="cwxq_09.png">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="appointmentButtonClick:" destination="-1" eventType="touchUpInside" id="Jue-mL-am4"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -424,7 +424,7 @@
                 <constraint firstItem="QQq-Pu-TtP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="n23-EZ-fQ5"/>
                 <constraint firstItem="QQq-Pu-TtP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="q1b-Cg-Pla"/>
             </constraints>
-            <point key="canvasLocation" x="65" y="45"/>
+            <point key="canvasLocation" x="64.5" y="44.5"/>
         </view>
     </objects>
     <resources>

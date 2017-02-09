@@ -124,7 +124,7 @@
                         <constraint firstAttribute="height" constant="60" id="GYi-mH-7gg"/>
                         <constraint firstAttribute="width" constant="60" id="gTa-JL-nxj"/>
                     </constraints>
-                    <state key="normal" image="dlu_04.png"/>
+                    <state key="normal" image="dlu_04.jpg"/>
                     <connections>
                         <action selector="WeChatLogin:" destination="-1" eventType="touchUpInside" id="jew-on-9Jf"/>
                     </connections>
@@ -262,7 +262,7 @@
         <image name="dlu_01.png" width="38" height="36"/>
         <image name="dlu_02.png" width="30" height="42"/>
         <image name="dlu_03.jpg" width="86" height="86"/>
-        <image name="dlu_04.png" width="86" height="86"/>
+        <image name="dlu_04.jpg" width="86" height="86"/>
         <image name="dlu_05.png" width="87" height="87"/>
     </resources>
 </document>
