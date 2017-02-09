@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CarOwnerViewController">
+            <connections>
+                <outlet property="tableView" destination="c6p-ym-9fo" id="llj-qh-mKf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c6p-ym-9fo">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <view key="tableFooterView" contentMode="scaleToFill" id="Bof-cS-jaV">
+                        <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74h-x3-NMz">
+                                <rect key="frame" x="40" y="20" width="295" height="40"/>
+                                <color key="backgroundColor" red="0.30196078431372547" green="0.68627450980392157" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="发布车位">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="publishButtonClick:" destination="-1" eventType="touchUpInside" id="Fpq-ct-nXU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="74h-x3-NMz" firstAttribute="leading" secondItem="Bof-cS-jaV" secondAttribute="leading" constant="40" id="3HY-zS-Owt"/>
+                            <constraint firstAttribute="trailing" secondItem="74h-x3-NMz" secondAttribute="trailing" constant="40" id="ZbF-lv-tJC"/>
+                            <constraint firstAttribute="bottom" secondItem="74h-x3-NMz" secondAttribute="bottom" constant="20" id="b9H-v7-OeN"/>
+                            <constraint firstItem="74h-x3-NMz" firstAttribute="top" secondItem="Bof-cS-jaV" secondAttribute="top" constant="20" id="d37-u4-ngz"/>
+                        </constraints>
+                    </view>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="c6p-ym-9fo" secondAttribute="trailing" id="TBE-59-Kjt"/>
+                <constraint firstAttribute="bottom" secondItem="c6p-ym-9fo" secondAttribute="bottom" id="aGr-Zf-Tgi"/>
+                <constraint firstItem="c6p-ym-9fo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="c09-IK-93Y"/>
+                <constraint firstItem="c6p-ym-9fo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="utg-NI-XWs"/>
+            </constraints>
+            <point key="canvasLocation" x="32.5" y="82.5"/>
+        </view>
+    </objects>
+</document>

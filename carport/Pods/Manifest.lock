@@ -1,0 +1,20 @@
+PODS:
+  - BaiduMapKit (3.0.0)
+  - SDCycleScrollView (1.65):
+    - SDWebImage (~> 3.7)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+
+DEPENDENCIES:
+  - BaiduMapKit (= 3.0.0)
+  - SDCycleScrollView
+
+SPEC CHECKSUMS:
+  BaiduMapKit: de2a726d5296d6b2dc0e974b683af73153608dcd
+  SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+
+PODFILE CHECKSUM: 0653ab82e02ee0c331feffdf9b0e446c1a48bf9d
+
+COCOAPODS: 1.1.1

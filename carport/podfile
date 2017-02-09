@@ -1,0 +1,5 @@
+platform :ios,'7.0'
+target 'carport' do
+pod 'SDCycleScrollView'
+pod 'BaiduMapKit’,’3.0.0’
+end 
