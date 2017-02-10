@@ -83,7 +83,7 @@
     [self addEntryModeButton];
     self.parkingEntranceTextfield.delegate = self;
     self.describeTextView.delegate = self;
-    NSLog(@"ididid=%@",_id);
+//    NSLog(@"ididid=%@",_id);
 }
 #pragma mark - 确定按钮
 - (IBAction)buttonClick:(id)sender {
@@ -198,23 +198,59 @@
     [params setObject:jsonStr forKey:@"Json"];
     __weak __typeof(self)weakSelf = self;
     [MHNetworkManager postReqeustWithURL:API_SUBMIT_PARKING_SPACE_URL params:params successBlock:^(NSDictionary *returnData) {
-        //
-        NSLog(@"发布车位=%@",returnData);
-        NSLog(@"发布车位message=%@",[returnData objectForKey:@"message"]);
         
         [Calculate_frame showWithText:[returnData objectForKey:@"message"]];
-        NSString * str = [NSString stringWithFormat:@"%@",[returnData objectForKey:@"states"]];
-        if ([str intValue] == -1) {
-            //先登录
-            [weakSelf goLogin];
-        }
         
+        NSString * str = [NSString stringWithFormat:@"%@",[returnData objectForKey:@"states"]];
+      
+        switch ([str intValue]) {
+            case 1:
+            {//发布成功
+                [weakSelf succeedAlert];
+            }
+                break;
+            case -1:
+            {
+                //先登录
+                [weakSelf goLogin];
+            }
+                break;
+                
+            default:
+                break;
+        }
     } failureBlock:^(NSError *error) {
         NSLog(@"error=%@",error);
         [Calculate_frame showWithText:@"网络请求失败"];
     } showHUD:YES];
+
+}
+- (void)succeedAlert
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"发布成功" preferredStyle:  UIAlertControllerStyleAlert];
     
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self viewDidLoad];
+        [self setTextfieldNil];
+    }]];
     
+    [self presentViewController:alert animated:true completion:nil];
+}
+
+-(void)setTextfieldNil{
+    
+    [_startTimeTextfield setText:@""];
+    [_endTimeTextfield setText:@""];
+    [_carPortTitle setText:@""];
+    [_userName setText:@""];
+    [_PlateNumber setText:@""];
+    [_priceTextfield setText:@""];
+    [_hoursTextfield setText:@""];
+    [_discountTextfield setText:@""];
+    [_addressTextfield setText:@""];
+    [_parkingEntranceTextfield setText:@""];
+    [_describeTextView setText:@""];
+
 }
 -(void)goLogin
 {
@@ -234,7 +270,7 @@
         if (i == 2) {
             manageButton.frame = CGRectMake(81, y+188, 75, 25);
         }else{
-        manageButton.frame = CGRectMake(81+i*85, y+155, 75, 25);
+            manageButton.frame = CGRectMake(81+i*85, y+155, 75, 25);
         }
         [manageButton addTarget:self action:@selector(entryModeButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.bottonView addSubview:manageButton];
@@ -495,6 +531,7 @@
                                                         PickerStyle:UUDateStyle_YearMonthDayHourMinute];
     datePickers.minLimitDate = [[NSDate date]dateByAddingTimeInterval:0];
     _endTimeTextfield.inputView = datePickers;
+    //
 }
 #pragma mark - UUDatePicker's delegate
 - (void)uuDatePicker:(UUDatePicker *)datePicker
@@ -507,7 +544,7 @@
 {
     //赋值
     _endTimeTextfield.text = [NSString stringWithFormat:@"%@-%@-%@ %@:%@",year,month,day,hour,minute];
-    
+    //
 }
 
 //下面为了防止UItextfield弹出键盘
@@ -543,6 +580,7 @@
 - (IBAction)checkMapClick:(id)sender {
     
 }
+#pragma mark - textView 代理方法
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString*)text
 {
     if ([text isEqualToString:@"\n"]) {
@@ -553,7 +591,9 @@
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    //
+    //地址字符串转经纬字符串
+    
 }
 
 

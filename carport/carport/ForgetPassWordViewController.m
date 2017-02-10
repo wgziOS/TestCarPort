@@ -26,7 +26,37 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"忘记密码";
+    //手势
+    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(restoredAndHiedBoard)];
+    tap.numberOfTapsRequired = 1;
+    [self.view addGestureRecognizer:tap];
     
+}
+#pragma mark 背景高度恢复
+-(void)restoredAndHiedBoard {
+    
+    if (SCREENHEIGHT == 480) {
+        CGRect frame = self.view.frame;
+        frame.size.height = SCREENHEIGHT;
+        //通过定时器确定延缓执行掩藏
+        [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^{
+            
+            //将textView的高度收起。恢复高度
+            self.view.frame = frame;
+            
+        } completion:nil];
+    }
+    
+    [self hideKeyboard];
+}
+#pragma mark 隐藏软键盘
+- (void)hideKeyboard
+{
+    [self.phoneNumberTextfield resignFirstResponder];
+    [self.codeTextfield resignFirstResponder];
+    [self.passWordTextfield resignFirstResponder];
+    [self.againPassWordTextfield resignFirstResponder];
+   
 }
 #pragma mark - 获取验证码
 - (IBAction)getCodeClick:(id)sender {
@@ -184,13 +214,7 @@
     } showHUD:NO];
 }
 
-- (void)hideKeyboard
-{
-    [self.passWordTextfield resignFirstResponder];
-    [self.phoneNumberTextfield resignFirstResponder];
-    [self.codeTextfield resignFirstResponder];
-    
-}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

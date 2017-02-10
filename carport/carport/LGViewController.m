@@ -14,9 +14,9 @@
     NSUserDefaults * userDefault;
     int clickCount;
 }
-@property (weak, nonatomic) IBOutlet UITextField *phoneNumber;
-@property (weak, nonatomic) IBOutlet UITextField *passWord;
-@property (weak, nonatomic) IBOutlet UIButton *rememberButton;
+@property (weak, nonatomic) IBOutlet UITextField * phoneNumber;
+@property (weak, nonatomic) IBOutlet UITextField * passWord;
+@property (weak, nonatomic) IBOutlet UIButton * rememberButton;
 
 
 @end
@@ -26,6 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"登录";
+    
+    _phoneNumber.delegate = self;
+    _passWord.delegate = self;
     
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(restoredAndHiedBoard)];
     tap.numberOfTapsRequired = 1;
@@ -38,7 +41,6 @@
     userDefault = [NSUserDefaults standardUserDefaults];
     _phoneNumber.text = [userDefault objectForKey:@"phoneNumber"];
 
-    
 }
 #pragma mark 获取Token
 -(void)getToken
@@ -53,7 +55,7 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {  //获得token
         
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-//        NSLog(@"dic -------------------%@",[dic valueForKey:@"Token"]);
+
         userDefault = [NSUserDefaults standardUserDefaults];
         [userDefault setObject:[dic valueForKey:@"Token"] forKey:@"Token"];
         [userDefault synchronize];
@@ -89,29 +91,43 @@
     [self.phoneNumber resignFirstResponder];
     [self.passWord resignFirstResponder];
 }
+//文本框return收回键盘
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
+}
 #pragma mark - 记住信息
 - (IBAction)rememberButtonClick:(id)sender {
     if (clickCount == 1) {
         [self.rememberButton setBackgroundImage:[UIImage imageNamed:@"denglu_91"] forState:UIControlStateNormal];
         //记住信息
-        userDefault = [NSUserDefaults standardUserDefaults];
-//        _phoneNumber.text = [userDefault objectForKey:@"phoneNumber"];
-        [userDefault setObject:_phoneNumber.text forKey:@"phoneNumber"];
-        [userDefault synchronize];
-        NSLog(@"6666%@",[userDefault objectForKey:@"phoneNumber"]);
+        [self saveInfo];
+
         clickCount =2;
         return;
     }
     if (clickCount ==2) {
         [self.rememberButton setBackgroundImage:[UIImage imageNamed:@"denglu_92"] forState:UIControlStateNormal];
-        userDefault = [NSUserDefaults standardUserDefaults];
-        [userDefault removeObjectForKey:@"phoneNumber"];
-        [userDefault synchronize];
+        
+        [self removeInfo];
+        
         clickCount = 1;
         return;
     }
 }
-
+#pragma mark - 保存登录信息
+- (void)saveInfo{
+    userDefault = [NSUserDefaults standardUserDefaults];
+    [userDefault setObject:_phoneNumber.text forKey:@"phoneNumber"];
+    [userDefault synchronize];
+}
+- (void)removeInfo{
+    userDefault = [NSUserDefaults standardUserDefaults];
+    [userDefault removeObjectForKey:@"phoneNumber"];
+    [userDefault synchronize];
+}
 #pragma mark - 获取数据
 - (void)postLoginMobile:(NSString *)mobile andUserPassWord:(NSString *)password
 {
@@ -123,8 +139,6 @@
     NSLog(@"%@",params);
     [MHNetworkManager postReqeustWithURL:API_LOGIN_URL params:params successBlock:^(NSDictionary *returnData) {
         
-        NSLog(@"登录获取数据%@",returnData);
-        NSLog(@"登录%@",returnData[@"message"]);
         if ([[returnData objectForKey:@"states"] integerValue] == 1) {
   
             /*记住登陆的账号。下次进入这个页面时，直接读取账号*/

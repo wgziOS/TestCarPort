@@ -176,7 +176,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="这是一个车位这是一个车位这是一个车位这是一个车位这是一个车位这是一个车位这是一个车位这是一个车位这是一个车位" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNm-Yt-XyV">
-                                    <rect key="frame" x="103" y="415" width="252" height="66"/>
+                                    <rect key="frame" x="103" y="413" width="252" height="68"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="0.47450980390000003" green="0.47450980390000003" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -374,7 +374,7 @@
                                 <constraint firstAttribute="trailing" secondItem="VkR-nr-NSr" secondAttribute="trailing" constant="20" id="crb-5D-Ieo"/>
                                 <constraint firstItem="Iaa-la-QiN" firstAttribute="leading" secondItem="zrm-gm-reb" secondAttribute="leading" constant="10" id="d1f-It-Y1j"/>
                                 <constraint firstItem="HXp-rs-Gzf" firstAttribute="leading" secondItem="zrm-gm-reb" secondAttribute="leading" constant="10" id="dWR-Pc-5CN"/>
-                                <constraint firstItem="uNm-Yt-XyV" firstAttribute="top" secondItem="bI4-Ya-0TE" secondAttribute="bottom" constant="5" id="dYY-Og-ruL"/>
+                                <constraint firstItem="uNm-Yt-XyV" firstAttribute="top" secondItem="bI4-Ya-0TE" secondAttribute="bottom" constant="3" id="dYY-Og-ruL"/>
                                 <constraint firstItem="Hws-SI-tUu" firstAttribute="leading" secondItem="zrm-gm-reb" secondAttribute="leading" constant="10" id="fD3-ft-FNs"/>
                                 <constraint firstItem="5wz-4D-Abg" firstAttribute="top" secondItem="IGT-37-xF9" secondAttribute="bottom" constant="8" id="fYv-pl-ftm"/>
                                 <constraint firstItem="mz9-Wb-Fes" firstAttribute="leading" secondItem="HXp-rs-Gzf" secondAttribute="trailing" constant="8" id="gCS-Q3-kse"/>
@@ -424,7 +424,7 @@
                 <constraint firstItem="QQq-Pu-TtP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="n23-EZ-fQ5"/>
                 <constraint firstItem="QQq-Pu-TtP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="q1b-Cg-Pla"/>
             </constraints>
-            <point key="canvasLocation" x="64.5" y="44.5"/>
+            <point key="canvasLocation" x="30" y="46"/>
         </view>
     </objects>
     <resources>

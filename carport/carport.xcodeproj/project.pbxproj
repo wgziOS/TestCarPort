@@ -1090,10 +1090,10 @@
 		B21895E61E0B6E9C00B798FB /* MasterOrder */ = {
 			isa = PBXGroup;
 			children = (
+				B26B8DFE1E121A720066ED0A /* Child */,
 				B26B8DF91E1219BD0066ED0A /* MasterOrderMainViewController.h */,
 				B26B8DFA1E1219BD0066ED0A /* MasterOrderMainViewController.m */,
 				B26B8DFB1E1219BD0066ED0A /* MasterOrderMainViewController.xib */,
-				B26B8DFE1E121A720066ED0A /* Child */,
 			);
 			name = MasterOrder;
 			sourceTree = "<group>";
@@ -1101,10 +1101,10 @@
 		B21895EC1E0B706D00B798FB /* ClientOrder */ = {
 			isa = PBXGroup;
 			children = (
+				B26B8E291E125EC50066ED0A /* Child */,
 				B26B8E241E125D370066ED0A /* ClientOrderMainViewController.h */,
 				B26B8E251E125D370066ED0A /* ClientOrderMainViewController.m */,
 				B26B8E261E125D370066ED0A /* ClientOrderMainViewController.xib */,
-				B26B8E291E125EC50066ED0A /* Child */,
 			);
 			name = ClientOrder;
 			sourceTree = "<group>";

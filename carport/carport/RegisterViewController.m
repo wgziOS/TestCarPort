@@ -127,7 +127,7 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {  //获得token
         
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        NSLog(@"dic -------------------%@",[dic valueForKey:@"Token"]);
+        
         userDefault = [NSUserDefaults standardUserDefaults];
         [userDefault setObject:[dic valueForKey:@"Token"] forKey:@"Token"];
         [userDefault synchronize];
@@ -222,17 +222,17 @@
 #pragma mark 隐藏软键盘
 -(void)restoredAndHiedBoard {
     
-    if (SCREENHEIGHT == 480) {
-        CGRect frame = self.view.frame;
-        frame.size.height = SCREENHEIGHT;
-        //通过定时器确定延缓执行掩藏
-        [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^{
-            
-            //将textView的高度收起。恢复高度
-            self.view.frame = frame;
-            
-        } completion:nil];
-    }
+//    if (SCREENHEIGHT == 480) {
+//        CGRect frame = self.view.frame;
+//        frame.size.height = SCREENHEIGHT;
+//        //通过定时器确定延缓执行掩藏
+//        [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^{
+//            
+//            //将textView的高度收起。恢复高度
+//            self.view.frame = frame;
+//            
+//        } completion:nil];
+//    }
     
     [self hideKeyboard];
 }

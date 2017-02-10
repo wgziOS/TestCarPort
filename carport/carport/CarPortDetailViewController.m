@@ -82,17 +82,21 @@
 }
 #pragma mark - 预约按钮
 - (IBAction)appointmentButtonClick:(id)sender {
-    UIAlertView * alert1 = [[UIAlertView alloc]initWithTitle:@"提示" message:@"下单超过5分钟无法取消订单\n是否预约此车位" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-    alert1.delegate = self;
-    [alert1 show];
+   
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"下单超过5分钟无法取消订单\n是否预约此车位" preferredStyle:  UIAlertControllerStyleAlert];
     
-}
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (buttonIndex == 1) {
-        NSLog(@"跳转");
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
         [self postNearPakingWithParkid:[_nearbyModel.ParkingSpace.id intValue]];
-    }
+    }]];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }]];
+    
+    //弹出
+    [self presentViewController:alert animated:true completion:nil];
+    
 }
 
 #pragma mark - 获取数据
@@ -107,8 +111,6 @@
     __weak __typeof(self)weakSelf = self;
     
     [MHNetworkManager postReqeustWithURL:API_USER_BESPEAK_SPACE_URL params:params successBlock:^(NSDictionary *returnData) {
-
-//        NSLog(@"st=%@",[returnData objectForKey:@"states"]);
         
         [Calculate_frame showWithText:[returnData objectForKey:@"message"]];
 //        states = 0, message = "token不存在或到期！"

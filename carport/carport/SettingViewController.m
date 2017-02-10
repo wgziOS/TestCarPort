@@ -29,10 +29,52 @@
 - (IBAction)outButtonClick:(id)sender {
     
     userDefault = [NSUserDefaults standardUserDefaults];
-    [userDefault removeObjectForKey:@"phoneNumber"];
-    [userDefault removeObjectForKey:@"logState"];
+    if ([[userDefault objectForKey:@"logState"] isEqualToString:@"1"]) {
+        
+        [self logoutAlert];
+    }else{
+        [self didNoLoginAlert];
+    }
+
+}
+
+- (void)logoutAlert
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"确定退出登录？" preferredStyle:  UIAlertControllerStyleAlert];
     
-    [userDefault synchronize];
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        userDefault = [NSUserDefaults standardUserDefaults];
+        [userDefault removeObjectForKey:@"phoneNumber"];
+        [userDefault removeObjectForKey:@"logState"];
+        [userDefault synchronize];
+    }]];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }]];
+    
+    //弹出
+    [self presentViewController:alert animated:true completion:nil];
+}
+- (void)didNoLoginAlert
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"您还未登录" preferredStyle:  UIAlertControllerStyleAlert];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"去登录" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self goLogin];
+    }]];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }]];
+    
+    [self presentViewController:alert animated:true completion:nil];
+}
+-(void)goLogin
+{
+    LGViewController *LGVC = [[LGViewController alloc]init];
+    [self.navigationController pushViewController:LGVC animated:YES];
 }
 
 - (IBAction)fixPassWordButtonClick:(id)sender {

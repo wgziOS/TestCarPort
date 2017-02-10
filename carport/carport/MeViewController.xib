@@ -44,7 +44,7 @@
                                         <constraint firstAttribute="width" constant="70" id="wqL-8P-tfC"/>
                                     </constraints>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12345678901" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OV-l0-K4i">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="null" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OV-l0-K4i">
                                     <rect key="frame" x="139" y="145" width="97" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="DVa-4f-ZkU"/>
