@@ -62,7 +62,7 @@
     self.userLatitude = [userDefault objectForKey:@"userLatitude"];
     
     
-    self.scrollViewHeight.constant = self.sureButton.frame.origin.y + 80;
+    self.scrollViewHeight.constant = self.sureButton.frame.origin.y + 110;
 
     //时间选择器
     [self addUUDate];
@@ -87,6 +87,7 @@
 }
 #pragma mark - 确定按钮
 - (IBAction)buttonClick:(id)sender {
+   
     
     NSInteger time = [self turnSringToTimeIntervalWithString:_startTimeTextfield.text];
     NSInteger time1 = [self turnSringToTimeIntervalWithString:_endTimeTextfield.text];
@@ -105,7 +106,7 @@
     NSString * describe = [NSString stringWithFormat:@"<p>%@</p>",_describeTextView.text];
    
     NSString * discount = [NSString stringWithFormat:@"%f",[_discountTextfield.text floatValue]];
-    
+   
     if ([IsBlankString isBlankString:_id]) {//判断id
         NSDictionary * json = @{
                                 @"ParkingSpace": @{
@@ -192,6 +193,8 @@
 #pragma mark - 获取数据
 - (void)postWithJson:(NSString *)jsonStr
 {
+    
+    
     NSMutableDictionary * params = [NSMutableDictionary dictionary];
     userDefault = [NSUserDefaults standardUserDefaults];
     [params setObject:[userDefault valueForKey:@"Token"] forKey:@"Token"];
@@ -223,7 +226,8 @@
         NSLog(@"error=%@",error);
         [Calculate_frame showWithText:@"网络请求失败"];
     } showHUD:YES];
-
+    
+    
 }
 - (void)succeedAlert
 {

@@ -63,7 +63,7 @@
 - (void)setupTitle
 {
 
-    CGFloat labelW = 90;
+    CGFloat labelW = SCREEN_WIDTH/5;
     CGFloat labelY = 0;
     CGFloat labelH = self.titleScrollView.frame.size.height;
     

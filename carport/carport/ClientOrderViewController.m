@@ -139,7 +139,8 @@
             switch ([str intValue]) {
                 case 0:
                     //过期
-                    [weakSelf getTokenAgain];
+//                    [weakSelf getTokenAgain];
+                    [weakSelf goLogin];
                     break;
                 case -1:
                     //先登录

@@ -9,14 +9,16 @@
 #import "PersonalInfoViewController.h"
 #import "PresonallTableViewCell.h"
 #import "EditorInfoViewController.h"
-@interface PersonalInfoViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+
+@interface PersonalInfoViewController ()<UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 {
     NSArray * array;
 }
 @property (weak, nonatomic) IBOutlet UIView *headVIew;
-
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property(nonatomic, strong) UIImagePickerController *imagePicker;
+@property(nonatomic, strong) NSArray *contentArray;
 @end
 
 @implementation PersonalInfoViewController
@@ -31,7 +33,71 @@
     
     [self headViewSet];
     
+    _imagePicker = [[UIImagePickerController alloc]init];
+    _imagePicker.delegate = self;
+    
+    _contentArray = @[[self turnNilString:_infoModel.truename],
+                      [self turnNilString:_infoModel.sex],
+                      [self turnNilString:_infoModel.phone],
+                      [self turnNilString:_infoModel.plate_number],
+                      [self turnNilString:_infoModel.qq],
+                      [self turnNilString:_infoModel.weixin],
+                      [self turnNilString:_infoModel.userAddress]];
+   
 }
+-(NSString *)turnNilString:(NSString *)string
+{
+    if ([IsBlankString isBlankString:string]) {
+        return @"";
+    }else return string;
+}
+//是否有摄像头
+- (BOOL) isCameraAvailable{
+    return [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
+}
+
+#pragma mark - 头像点击
+-(void)logoTap
+{
+    UIAlertController *AlertSelect = [UIAlertController alertControllerWithTitle:@"提示" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *camera = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        if (![self isCameraAvailable]) {
+            [Calculate_frame showWithText:@"当前设备无摄像头"];
+        }else{
+            //
+            _imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+            [self presentViewController:_imagePicker animated:YES completion:nil];
+        }
+        
+    }];
+    UIAlertAction *photo = [UIAlertAction actionWithTitle:@"从手机相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        _imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [self presentViewController:_imagePicker animated:YES completion:nil];
+    }];
+    UIAlertAction *cancelAction=[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    
+    [AlertSelect addAction:camera];
+    [AlertSelect addAction:photo];
+    [AlertSelect addAction:cancelAction];
+    
+    [self presentViewController:AlertSelect animated:YES completion:nil];
+}
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+    //获取
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    _logoImage.image= image;
+    
+    //存入
+    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+
 
 -(void)headViewSet
 {
@@ -52,28 +118,8 @@
     
     UITapGestureRecognizer * logotap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(logoTap)];
     [self.headVIew addGestureRecognizer:logotap];
-
-}
-#pragma mark - 头像点击
--(void)logoTap
-{
     
 }
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:NO];//添加点击色
-    
-}
-
-
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH,6)];
-    view.backgroundColor = [UIColor colorWithWhite:0.871 alpha:1.000];
-    
-    return view;
-}
-
 #pragma mark - tableView 代理方法
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -89,11 +135,26 @@
     
     PresonallTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kPresonallTableViewCell];
   
-    cell.titleLabel.text = array[indexPath.row];
     
+    
+    cell.titleLabel.text = array[indexPath.row];
+    cell.detailLabel.text = _contentArray[indexPath.row];
     return cell;
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:NO];//添加点击色
+    
+}
 
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH,6)];
+    view.backgroundColor = [UIColor colorWithWhite:0.871 alpha:1.000];
+    
+    return view;
+}
 
 #pragma mark - 返回
 - (IBAction)goBackClick:(id)sender {

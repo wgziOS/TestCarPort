@@ -44,6 +44,8 @@
 //#define API_GETPARKINGIMGLIST_URL        [NSString stringWithFormat:@"%@/API/GetParkingImgList",URLHTTP]//停车照片
 #define API_GET_PARKING_SPACE_LIST_URL        [NSString stringWithFormat:@"%@/API/GetParkingSpaceList",URLHTTP]//查询发布的车位
 
+#define API_GET_USER_BASE_INFO_URL        [NSString stringWithFormat:@"%@/API/GetUserBaseInfo",URLHTTP]//GetUserBaseInfo 个人中心(string Token)
+
 
 
 

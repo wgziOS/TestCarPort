@@ -87,7 +87,7 @@
 {
 //    WGZTitleLabel * firstLabel= [WGZTitleLabel new];
   
-    CGFloat labelW = 90;
+    CGFloat labelW = SCREEN_WIDTH/5;
     CGFloat labelY = 0;
     CGFloat labelH = self.titleScrollView.frame.size.height;
     
@@ -110,10 +110,6 @@
     
     self.titleScrollView.contentSize = CGSizeMake(5 * labelW, 0);
     self.contentScrollView.contentSize = CGSizeMake(5 * [UIScreen mainScreen].bounds.size.width, 0);
-
-    
-
-
     
 }
 
@@ -221,7 +217,6 @@
 
     CGFloat leftScale = 1 - rightScale;
     
-
     leftLabel.scale = leftScale;
     rightLabel.scale = rightScale;
 }

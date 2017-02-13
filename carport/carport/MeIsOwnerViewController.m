@@ -136,6 +136,7 @@
             case 0:
                 //过期
 //                [weakSelf getTokenAgain];
+                [weakSelf goLogin];
                 break;
             case -1:
                 //先登录

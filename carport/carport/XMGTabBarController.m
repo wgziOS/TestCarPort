@@ -36,7 +36,6 @@
     selectedAttrs[NSFontAttributeName] = attrs[NSFontAttributeName];
     selectedAttrs[NSForegroundColorAttributeName] = [UIColor colorWithRed:0.086 green:0.51 blue:0.91 alpha:1.0f];
 
-   
     UITabBarItem *item = [UITabBarItem appearance];
     [item setTitleTextAttributes:attrs forState:UIControlStateNormal];
     [item setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];
@@ -45,10 +44,12 @@
     [self setupChildVc:[[MainViewController alloc] init] title:@"首页" image:@"cdl-sy-icon" selectedImage:@"cdl-sy-dj-icon"];
     
 //    [self setupChildVc:[[FindCarPortViewController alloc] init] title:@"找车位" image:@"dbdh_02" selectedImage:@"dbdh_06"];
+//    [self setupChildVc:[[NearbyCarportViewController alloc] init] title:@"查找车位" image:@"cdl-czcw-icon" selectedImage:@"cdl-czcw-dj-icon"];
+//    [self setupChildVc:[[PublishCarPortViewController alloc] init] title:@"车位登记" image:@"cdl-cwdj-cion" selectedImage:@"cdl-cwdj-dj-icon"];
     
-    [self setupChildVc:[[NearbyCarportViewController alloc] init] title:@"查找车位" image:@"cdl-czcw-icon" selectedImage:@"cdl-czcw-dj-icon"];
+    [self setupChildVc:[[IWantViewController alloc] init] title:@"我要" image:@"wyzc-wy-wxz" selectedImage:@"wyzc-wy-xz"];
     
-    [self setupChildVc:[[PublishCarPortViewController alloc] init] title:@"车位登记" image:@"cdl-cwdj-cion" selectedImage:@"cdl-cwdj-dj-icon"];
+    [self setupChildVc:[[PublishViewController alloc] init] title:@"发布信息" image:@"wyzc-fbxx-wxz" selectedImage:@"wyzc-fbxx-xz"];
     
     [self setupChildVc:[[MeViewController alloc] init] title:@"我的中心" image:@"cdl-wdzx-cion" selectedImage:@"cdl-wdzx-dj-icon"];
     

@@ -136,6 +136,7 @@
                 case 0:
                     //过期
 //                    [weakSelf getTokenAgain];
+                    [weakSelf goLogin];
                     break;
                 case -1:
                     //先登录
@@ -152,6 +153,17 @@
         
     } showHUD:YES];
     
+    
+}
+-(void)getTokenAgain
+{
+    //串行队列
+    dispatch_sync(dispatch_queue_create("zz", DISPATCH_QUEUE_SERIAL), ^{
+        // 1
+        [GetToken getToken];
+        // 2 重新获取后 请求
+
+    });
     
 }
 -(void)goLogin

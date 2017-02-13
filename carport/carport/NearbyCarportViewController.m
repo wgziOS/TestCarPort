@@ -189,11 +189,11 @@
     //串行队列
     dispatch_sync(dispatch_queue_create("zz", DISPATCH_QUEUE_SERIAL), ^{
         // 1
-        [self getToken];
+//        [self getToken];
+        [GetToken getToken];
         // 2 重新获取后 请求
         [self postNearPakingWithLongitude:self.userLongitude andLatitude:self.userLatitude andPage:0 andSearchkey:@""];
     });
-    
     
 }
 -(void)goLogin
@@ -204,7 +204,6 @@
 
 - (void)updateData
 {
-
     [self postNearPakingWithLongitude:self.userLongitude andLatitude:self.userLatitude andPage:_page andSearchkey:@""];
 }
 /**
@@ -263,7 +262,7 @@
     NSString * imgUrl =[NSString stringWithFormat:@"http://parking.86gg.cn%@",nearbyModel.ParkingSpace.imgurl];
 //     NSString * imgUrl =[NSString stringWithFormat:@"http://192.168.123.73:8090%@",nearbyModel.ParkingSpace.navigation_imgurl];
     NSURL * url = [NSURL URLWithString:imgUrl];
-    
+    NSLog(@"%@",url);
     [cell.portImageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"picture-wait@3x"]];
        
     return cell;

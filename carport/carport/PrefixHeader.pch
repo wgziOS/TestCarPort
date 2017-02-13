@@ -39,6 +39,8 @@
 #import "CarOwnerViewController.h"
 #import "MeViewController.h"
 #import "PublishCarPortViewController.h"
+#import "IWantViewController.h"
+#import "PublishViewController.h"
 
 #import "IsBlankString.h"
 #import "DicToJson.h"
@@ -46,6 +48,7 @@
 #import "TurnDate.h"
 #import "WGZToggleButton.h"
 #import "WGZaddImagesView.h"
+#import "GetToken.h"
 #endif
 
 #endif /* PrefixHeader_pch */

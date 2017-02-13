@@ -4,7 +4,7 @@
 //
 //  Created by 吴桂钊 on 2016/12/2.
 //  Copyright © 2016年 86gg.cn. All rights reserved.
-//
+//API_GET_USER_BASE_INFO_URL
 
 #import "MeViewController.h"
 #import "MeTableViewCell.h"
@@ -17,8 +17,13 @@
 #import "ComplaintViewController.h"
 #import "MasterOrderMainViewController.h"
 #import "ClientOrderMainViewController.h"
+#import "UserInfoModel.h"
+#import "MJExtension.h"
 @interface MeViewController ()
-
+{
+    NSUserDefaults *userDefault;
+    UserInfoModel * Model;
+}
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollViewHeight;
 @property (weak, nonatomic) IBOutlet UIImageView *topView;
 @property (weak, nonatomic) IBOutlet UIView *headView;
@@ -27,6 +32,7 @@
 @property (nonatomic, strong) UIButton * moneyButton;
 @property (nonatomic, strong) UILabel * nikeNameLabel;
 @property (nonatomic, strong) UIButton * setButton;//设置按钮
+@property (weak, nonatomic) IBOutlet UILabel *phoneNumLabel;
 @end
 
 @implementation MeViewController
@@ -37,7 +43,52 @@
 //    [self.navigationController setNavigationBarHidden:YES animated:YES];
     self.scrollViewHeight.constant = SCREENHEIGHT*1;
     [self headViewSet];
+    
+    [self getUserBaseInfo];
 }
+
+#pragma mark - 获取数据
+- (void)getUserBaseInfo
+{
+    NSMutableDictionary * params = [NSMutableDictionary dictionary];
+    userDefault = [NSUserDefaults standardUserDefaults];
+    [params setObject:[userDefault valueForKey:@"Token"] forKey:@"Token"];
+
+    [MHNetworkManager postReqeustWithURL:API_GET_USER_BASE_INFO_URL params:params successBlock:^(NSDictionary *returnData) {
+        
+        NSLog(@"%@",returnData);
+        
+        Model = [UserInfoModel mj_objectWithKeyValues:returnData];
+        _phoneNumLabel.text = Model.phone;
+        _moneyLabel.text = Model.balance;
+
+
+    } failureBlock:^(NSError *error) {
+        [Calculate_frame showWithText:@"网络请求失败"];
+    } showHUD:YES];
+    
+}
+
+-(void)getTokenAgain
+{
+    //串行队列
+    dispatch_sync(dispatch_queue_create("zz", DISPATCH_QUEUE_SERIAL), ^{
+        // 1
+        //        [self getToken];
+        [GetToken getToken];
+        // 2 重新获取后 请求
+       
+    });
+    
+}
+-(void)goLogin
+{
+    LGViewController *LGVC = [[LGViewController alloc]init];
+    [self.navigationController pushViewController:LGVC animated:YES];
+}
+
+
+
 #pragma mark -  车主订单
 - (IBAction)masterOrderBtnClick:(id)sender {
 //    MasterOrderViewController * MOVC = [[MasterOrderViewController alloc]init];
@@ -111,6 +162,7 @@
 -(void)logoTap
 {
     PersonalInfoViewController * PVC = [[PersonalInfoViewController alloc]init];
+    PVC.infoModel = Model;
     [self presentViewController:PVC animated:YES completion:nil];
 }
 

@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="headView" destination="PD5-Oz-xJ7" id="uKD-Yy-Dz2"/>
                 <outlet property="moneyLabel" destination="Fkf-aB-m1g" id="6Bd-Hx-XhU"/>
+                <outlet property="phoneNumLabel" destination="2OV-l0-K4i" id="eqT-QC-Cd4"/>
                 <outlet property="scrollViewHeight" destination="6bK-Yh-L9n" id="LCL-CX-NRg"/>
                 <outlet property="topView" destination="ez5-FY-kq1" id="3wy-hd-whN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
