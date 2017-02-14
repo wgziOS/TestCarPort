@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IWantViewController">
+            <connections>
+                <outlet property="contentScrollView" destination="LMy-wW-K2K" id="dbT-tu-eiN"/>
+                <outlet property="titleScrollView" destination="obs-rL-TTs" id="EUZ-jA-GAP"/>
+                <outlet property="view" destination="jav-su-l4P" id="Hbd-xj-zoC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="jav-su-l4P">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obs-rL-TTs" userLabel="TitleScroll View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="jfm-S1-FTe"/>
+                    </constraints>
+                </scrollView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMy-wW-K2K" userLabel="内容Scroll View">
+                    <rect key="frame" x="0.0" y="35" width="375" height="632"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="obs-rL-TTs" firstAttribute="top" secondItem="jav-su-l4P" secondAttribute="top" id="3c9-Au-6Om"/>
+                <constraint firstAttribute="trailing" secondItem="LMy-wW-K2K" secondAttribute="trailing" id="4UI-xx-Fes"/>
+                <constraint firstAttribute="trailing" secondItem="obs-rL-TTs" secondAttribute="trailing" id="Qne-Ba-cAA"/>
+                <constraint firstItem="LMy-wW-K2K" firstAttribute="top" secondItem="obs-rL-TTs" secondAttribute="bottom" id="a3W-gH-EXw"/>
+                <constraint firstItem="LMy-wW-K2K" firstAttribute="leading" secondItem="jav-su-l4P" secondAttribute="leading" id="bh6-BT-t8d"/>
+                <constraint firstAttribute="bottom" secondItem="LMy-wW-K2K" secondAttribute="bottom" id="fjY-1T-ykd"/>
+                <constraint firstItem="obs-rL-TTs" firstAttribute="leading" secondItem="jav-su-l4P" secondAttribute="leading" id="ypU-Ks-0lt"/>
+            </constraints>
+            <point key="canvasLocation" x="103" y="-8"/>
+        </view>
+    </objects>
+</document>
