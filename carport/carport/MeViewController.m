@@ -36,7 +36,10 @@
 @end
 
 @implementation MeViewController
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self getUserBaseInfo];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -44,7 +47,7 @@
     self.scrollViewHeight.constant = SCREENHEIGHT*1;
     [self headViewSet];
     
-    [self getUserBaseInfo];
+    
 }
 
 #pragma mark - 获取数据

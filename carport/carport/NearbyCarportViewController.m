@@ -22,8 +22,9 @@
     UITextField * searchField;
     UIView * bgView;
 }
-@property (strong, nonatomic) NSArray * nearbyArray;
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSArray * nearbyArray;
 @property (assign, nonatomic) NSInteger page; //!< 数据页数.表示下次请求第几页的数据.
 @property (strong ,nonatomic) NSString * userLongitude;
 @property (strong ,nonatomic) NSString * userLatitude;

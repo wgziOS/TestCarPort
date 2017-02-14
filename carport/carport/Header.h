@@ -47,6 +47,8 @@
 #define API_GET_USER_BASE_INFO_URL        [NSString stringWithFormat:@"%@/API/GetUserBaseInfo",URLHTTP]//GetUserBaseInfo 个人中心(string Token)
 
 
+#define API_GET_VEHICLE_INFOMATION_URL       [NSString stringWithFormat:@"%@/API/GetVehicleInformation",URLHTTP]//GetVehicleInformation(string Token, int? CurrentPage)
+
 
 
 //主题蓝色

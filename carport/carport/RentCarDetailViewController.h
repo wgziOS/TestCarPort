@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "RentCarModel.h"
 @interface RentCarDetailViewController : UIViewController
-
+@property(nonatomic, strong)RentCarModel * model;
 @end
