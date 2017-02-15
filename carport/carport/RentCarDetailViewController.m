@@ -38,7 +38,7 @@
     
     _titleLabel.text = _model.VehicleInformation.car_size;
     _priceLabel.text = _model.VehicleInformation.non_holiday_prie;
-    _pledgeMoneyLabel.text = _model.VehicleInformation.deposited_price;
+    _pledgeMoneyLabel.text = [NSString stringWithFormat:@"¥%@",_model.VehicleInformation.deposited_price];
     
 }
 #pragma mark - 设置轮播
@@ -75,10 +75,10 @@
         case 0:
         {
             cell.carSizeLabel.text = _model.VehicleInformation.car_size;
-            cell.buyCarYearLabel.text = _model.VehicleInformation.buy_car_year;
+            cell.buyCarYearLabel.text = [NSString stringWithFormat:@"%@年",_model.VehicleInformation.buy_car_year];
             cell.plateNumberLabel.text = _model.VehicleInformation.plate_number;
-            cell.kilometersTraveledLabel.text = _model.VehicleInformation.kilometers_traveled;
-            cell.seatCountLabel.text = _model.VehicleInformation.seat_count;
+            cell.kilometersTraveledLabel.text = [NSString stringWithFormat:@"%@公里",_model.VehicleInformation.kilometers_traveled];
+            cell.seatCountLabel.text = [NSString stringWithFormat:@"%@座",_model.VehicleInformation.seat_count];
             cell.engineDisplacementLabel.text = _model.VehicleInformation.engine_displacement;
             cell.variableBoxLabel.text = _model.VehicleInformation.variable_box;
 //            cell.configurationLabel.text =
@@ -88,7 +88,7 @@
             break;
         case 1:
         {
-            NSString * str = [NSString stringWithFormat:@"%@ 至 %@",[TurnDate turnDataWithString:_model.VehicleInformation.starttime],[TurnDate turnDataWithString:_model.VehicleInformation.endtime]];
+            NSString * str = [NSString stringWithFormat:@"%@ 至 %@",[TurnDate turToDataWithoutHour:_model.VehicleInformation.starttime],[TurnDate turToDataWithoutHour:_model.VehicleInformation.endtime]];
             cell1.timeLabel.text = str;
             cell1.nonHolidayPrie.text = [NSString stringWithFormat:@"%@元/天",_model.VehicleInformation.non_holiday_prie];
             cell1.holidayPrie.text = [NSString stringWithFormat:@"%@元/天",_model.VehicleInformation.holiday_prie];

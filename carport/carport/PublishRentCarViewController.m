@@ -8,7 +8,13 @@
 
 #import "PublishRentCarViewController.h"
 #import "PublishRentCarInfoCell.h"
-@interface PublishRentCarViewController ()<UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface PublishRentCarViewController ()<UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource,UUDatePickerDelegate>
+{
+    
+    NSString * boxValue;
+    NSString * configurationValue;
+    NSString * displacementValue;
+}
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UITextField *ownerNameTextfield;
 @property (weak, nonatomic) IBOutlet UITextField *ownerPhoneTextfield;
@@ -27,19 +33,55 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self fun];
-    
+    [self addUUDate];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     
      [self.tableView registerNib:[UINib nibWithNibName:kPublishRentCarInfoCell bundle:nil] forCellReuseIdentifier:kPublishRentCarInfoCell];
     
 }
+
 #pragma mark - tableView
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     PublishRentCarInfoCell * cell = [tableView dequeueReusableCellWithIdentifier:kPublishRentCarInfoCell];
     cell.selectionStyle=UITableViewCellSelectionStyleNone;//设置cell点击效果
+    
+    cell.carSizeBlock = ^(NSString *text){
+        NSLog(@"size=%@",text);
+    };
+    
+    cell.plateNumBlock = ^(NSString *text){
+        NSLog(@"num=%@",text);
+    };
+    
+    cell.seatCountBlock = ^(NSString *text){
+        NSLog(@"seat=%@",text);
+    };
+    
+    cell.buyCarYearBlock = ^(NSString *text){
+        NSLog(@"year=%@",text);
+    };
+    
+    cell.kmBlock = ^(NSString *text){
+        NSLog(@"km=%@",text);
+    };
+    
+    cell.boxBtnBlock = ^(){
+        boxValue = cell.boxValue;
+        NSLog(@"box-tag=%@",boxValue);
+    };
+    
+    cell.configurationBtnBlock = ^(){
+        configurationValue = cell.configurationValue;
+        NSLog(@"配置tag=%@",configurationValue);
+    };
+    
+    cell.displacementBtnBlock = ^(){
+        displacementValue = cell.displacementValue;
+        NSLog(@"排量tag=%@",displacementValue);
+    };
     return cell;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -50,16 +92,68 @@
 {
     return 500;
 }
+#pragma mark - 时间选择器
+-(void)addUUDate
+{
+    //时间选择控件
+    UUDatePicker *datePicker = [[UUDatePicker alloc]initWithframe:CGRectMake(0, 0, SCREEN_WIDTH, 200)
+                                                      PickerStyle:UUDateStyle_YearMonthDay
+                                                      didSelected:^(NSString *year,
+                                                  NSString *month,
+                                                  NSString *day,
+                                                  NSString *hour,
+                                                  NSString *minute,
+                                                  NSString *weekDay) {
+                                                          _startTimeTextfield.text = [NSString stringWithFormat:@"%@-%@-%@",year,month,day];
+                                                          
+                                                      }];
+    datePicker.minLimitDate = [[NSDate date]dateByAddingTimeInterval:0];
+    _startTimeTextfield.inputView = datePicker;
+    
+    UUDatePicker * datePickers = [[UUDatePicker alloc]initWithframe:CGRectMake(0, 0, SCREEN_WIDTH, 200)
+                                                           Delegate:self
+                                                        PickerStyle:UUDateStyle_YearMonthDay];
+    datePickers.minLimitDate = [[NSDate date]dateByAddingTimeInterval:0];
+    _endTimeTextfield.inputView = datePickers;
+    //
+}
+#pragma mark - UUDatePicker's delegate
+- (void)uuDatePicker:(UUDatePicker *)datePicker
+                year:(NSString *)year
+               month:(NSString *)month
+                 day:(NSString *)day
+                hour:(NSString *)hour
+              minute:(NSString *)minute
+             weekDay:(NSString *)weekDay
+{
+    //赋值
+    _endTimeTextfield.text = [NSString stringWithFormat:@"%@-%@-%@",year,month,day];
+    //
+}
+
+//下面为了防止UItextfield弹出键盘
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    
+    if (textField==self.startTimeTextfield) {
+        return NO;
+    }
+    if (textField==self.endTimeTextfield) {
+        return NO;
+    }
+    return YES;
+}
+
 #pragma mark - publish
 - (IBAction)publishBtnClick:(id)sender {
+
 }
 //textField 协议
 -(void)fun
 {
     _ownerNameTextfield.delegate = self;
     _ownerPhoneTextfield.delegate = self;
-    _startTimeTextfield.delegate = self;
-    _endTimeTextfield.delegate = self;
+//    _startTimeTextfield.delegate = self;
+//    _endTimeTextfield.delegate = self;
     _holidayPriceTextfield.delegate = self;
     _normalPriceTextfield.delegate = self;
     _pledgePriceTextfield.delegate = self;

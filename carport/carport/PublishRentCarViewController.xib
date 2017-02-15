@@ -53,7 +53,7 @@
                                     <constraint firstAttribute="height" constant="1" id="5Z3-TY-r0d"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clxq-sxy.png" translatesAutoresizingMaskIntoConstraints="NO" id="meV-Qb-4Qd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clxq-sxy-bt.png" translatesAutoresizingMaskIntoConstraints="NO" id="meV-Qb-4Qd">
                                 <rect key="frame" x="8" y="12" width="9" height="9"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="9" id="Ugn-RP-m9I"/>
@@ -213,7 +213,7 @@
                                     <constraint firstAttribute="height" constant="10" id="iyZ-D9-dcI"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clxq-sxy.png" translatesAutoresizingMaskIntoConstraints="NO" id="18a-sj-mig">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clxq-sxy-bt.png" translatesAutoresizingMaskIntoConstraints="NO" id="18a-sj-mig">
                                 <rect key="frame" x="8" y="22" width="9" height="9"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="9" id="8dv-lP-Gab"/>
@@ -274,7 +274,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入开始时间" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cEX-fe-Clq">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="点击输入开始时间" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cEX-fe-Clq">
                                 <rect key="frame" x="147" y="64" width="220" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="sMT-l5-Le8"/>
@@ -283,7 +283,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入结束时间" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="13b-91-KY1">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="点击输入结束时间" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="13b-91-KY1">
                                 <rect key="frame" x="147" y="97" width="220" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Gwv-mL-oeS"/>
@@ -292,7 +292,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="价格" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EtC-Zk-LgN">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="价格" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EtC-Zk-LgN">
                                 <rect key="frame" x="123" y="142" width="40" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="FRY-SA-I6B"/>
@@ -302,7 +302,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="价格" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wux-lT-Yb1">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="价格" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wux-lT-Yb1">
                                 <rect key="frame" x="108" y="181" width="40" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="2bk-HK-I3d"/>
@@ -322,7 +322,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="价格" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bh1-Qx-DY1">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="价格" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bh1-Qx-DY1">
                                 <rect key="frame" x="78" y="267" width="68" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="tot-e4-AZh"/>
@@ -377,7 +377,7 @@
                                     <constraint firstAttribute="height" constant="1" id="xhb-tP-mjc"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clxq-sxy.png" translatesAutoresizingMaskIntoConstraints="NO" id="nEV-dd-4hw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clxq-sxy-bt.png" translatesAutoresizingMaskIntoConstraints="NO" id="nEV-dd-4hw">
                                 <rect key="frame" x="8" y="235" width="9" height="9"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="9" id="Lht-T4-Gtc"/>
@@ -517,7 +517,7 @@
         </view>
     </objects>
     <resources>
-        <image name="clxq-sxy.png" width="8" height="8"/>
+        <image name="clxq-sxy-bt.png" width="8" height="8"/>
         <image name="czfb-dtls.png" width="20" height="19"/>
         <image name="czfb-icon.png" width="160" height="45"/>
         <image name="fbcw-b-icon.jpg" width="42" height="25"/>

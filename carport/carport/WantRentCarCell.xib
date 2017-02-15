@@ -53,7 +53,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nc7-rA-4eP">
-                        <rect key="frame" x="192" y="50" width="142" height="20"/>
+                        <rect key="frame" x="185" y="49" width="157" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="g4J-6d-jpq"/>
                         </constraints>
@@ -62,10 +62,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wyzc-dth.png" translatesAutoresizingMaskIntoConstraints="NO" id="x5R-DD-Z1U">
-                        <rect key="frame" x="163" y="50" width="21" height="20"/>
+                        <rect key="frame" x="163" y="50" width="19" height="18"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="FBW-4Q-EPW"/>
-                            <constraint firstAttribute="width" constant="21" id="MzV-13-Eev"/>
+                            <constraint firstAttribute="height" constant="18" id="FBW-4Q-EPW"/>
+                            <constraint firstAttribute="width" constant="19" id="MzV-13-Eev"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrF-Kc-heg">
@@ -82,14 +82,14 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="hVv-Bp-ict" secondAttribute="bottom" id="4ad-qc-c5l"/>
                     <constraint firstItem="x5R-DD-Z1U" firstAttribute="top" secondItem="riH-n5-hJX" secondAttribute="bottom" constant="10" id="8Up-vf-6s6"/>
-                    <constraint firstItem="nc7-rA-4eP" firstAttribute="leading" secondItem="x5R-DD-Z1U" secondAttribute="trailing" constant="8" id="Acg-jb-wbR"/>
+                    <constraint firstItem="nc7-rA-4eP" firstAttribute="leading" secondItem="x5R-DD-Z1U" secondAttribute="trailing" constant="3" id="Acg-jb-wbR"/>
                     <constraint firstAttribute="trailing" secondItem="riH-n5-hJX" secondAttribute="trailing" constant="15" id="DcA-Nf-uAX"/>
                     <constraint firstItem="bNx-VF-vNL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="F5A-py-r0G"/>
                     <constraint firstItem="hVv-Bp-ict" firstAttribute="top" secondItem="gRH-wX-2ju" secondAttribute="bottom" constant="15" id="Hay-uT-zL5"/>
                     <constraint firstItem="riH-n5-hJX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="Hfd-fv-EQB"/>
                     <constraint firstItem="hVv-Bp-ict" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Q8R-LV-Aaq"/>
                     <constraint firstAttribute="trailing" secondItem="gRH-wX-2ju" secondAttribute="trailing" constant="10" id="RRg-Fq-pea"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="nc7-rA-4eP" secondAttribute="trailing" constant="8" id="Sbb-a5-j4N"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="nc7-rA-4eP" secondAttribute="trailing" id="Sbb-a5-j4N"/>
                     <constraint firstItem="x5R-DD-Z1U" firstAttribute="leading" secondItem="bNx-VF-vNL" secondAttribute="trailing" constant="8" id="erV-Vv-coV"/>
                     <constraint firstItem="nc7-rA-4eP" firstAttribute="centerY" secondItem="x5R-DD-Z1U" secondAttribute="centerY" id="gs4-Sh-XYs"/>
                     <constraint firstItem="nrF-Kc-heg" firstAttribute="centerY" secondItem="gRH-wX-2ju" secondAttribute="centerY" id="j32-aj-f96"/>

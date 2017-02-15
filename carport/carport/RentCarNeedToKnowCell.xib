@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="324" height="148"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hdw-T9-v7C" id="M2P-Xs-qdu">
-                <rect key="frame" x="0.0" y="0.0" width="324" height="147.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="324" height="147"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="交车需知" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQd-yh-gwd">
@@ -52,7 +52,7 @@
                             <constraint firstAttribute="height" constant="1" id="YTT-W3-TRt"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clxq-sxy.png" translatesAutoresizingMaskIntoConstraints="NO" id="uWw-6l-Kml">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clxq-sxy-bt.png" translatesAutoresizingMaskIntoConstraints="NO" id="uWw-6l-Kml">
                         <rect key="frame" x="8" y="26" width="9" height="9"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="9" id="3l0-OI-KYm"/>
@@ -154,7 +154,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="clxq-sxy.png" width="8" height="8"/>
+        <image name="clxq-sxy-bt.png" width="8" height="8"/>
         <image name="czfb-dtls.png" width="20" height="19"/>
     </resources>
 </document>

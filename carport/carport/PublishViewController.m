@@ -20,7 +20,8 @@
 
 @property (weak, nonatomic) IBOutlet UIScrollView *titleScrollView;
 @property (weak, nonatomic) IBOutlet UIScrollView *contentScrollView;
-
+/*标题按钮地下的指示器*/
+@property (weak ,nonatomic) UIView *indicatorView ;
 @end
 
 @implementation PublishViewController
@@ -40,6 +41,16 @@
     
     [self scrollViewDidEndScrollingAnimation:self.contentScrollView];
     
+    //    底部指示器
+    UIView *indicatorView = [[UIView alloc]init];
+    self.indicatorView = indicatorView;
+    indicatorView.backgroundColor = [UIColor colorWithRed:42.0/255.0 green:173.0/255.0 blue:234.0/255.0 alpha:1.0f];
+    
+    indicatorView.gf_height = 2;
+    indicatorView.gf_y = 33;
+    indicatorView.gf_width = SCREEN_WIDTH/5;
+    indicatorView.gf_x = 0;
+    [self.view addSubview:indicatorView];
 }
 
 - (void)setupChildVc
@@ -109,36 +120,11 @@
     offset.x = index * self.contentScrollView.frame.size.width;
     [self.contentScrollView setContentOffset:offset animated:YES];
     
-    //    //控制状态
-    //    self.selectTitleButton.selected = NO;
-    //    titleButton.selected = YES;
-    //    self.selectTitleButton = titleButton;
-    
-    ////    指示器
-    //    [UIView animateWithDuration:0.25 animations:^{
-    //
-    //        self.indicatorView.gf_width = 60;
-    //        self.indicatorView.gf_centerX = tap.view.gf_centerX;
-    //        switch (index) {
-    //            case 2:
-    //            {NSLog(@"%f",self.indicatorView.gf_x);
-    //                self.indicatorView.gf_centerX = tap.view.gf_centerX-40;
-    //            }
-    //                break;
-    //            case 3:
-    //            {NSLog(@"%f",self.indicatorView.gf_x);
-    //                self.indicatorView.gf_centerX = tap.view.gf_centerX-70;
-    //            }
-    //                break;
-    //            case 4:
-    //            {NSLog(@"%f",self.indicatorView.gf_x);
-    //                self.indicatorView.gf_centerX = tap.view.gf_centerX-70;
-    //            }
-    //                break;
-    //            default:
-    //                break;
-    //        }
-    //    }];
+    WGZTitleLabel *label = self.titleScrollView.subviews[index];
+    [UIView animateWithDuration:0.25 animations:^{
+        
+        self.indicatorView.gf_centerX = label.center.x;
+    }];
 }
 
 #pragma mark - <UIScrollViewDelegate>
@@ -156,6 +142,11 @@
     WGZTitleLabel *label = self.titleScrollView.subviews[index];
     CGPoint titleOffset = self.titleScrollView.contentOffset;
     titleOffset.x = label.center.x - width * 0.5;
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        
+        self.indicatorView.gf_centerX = label.center.x;
+    }];
     
     if (titleOffset.x < 0) titleOffset.x = 0;
     

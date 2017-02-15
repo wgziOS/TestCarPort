@@ -14,7 +14,5 @@
 @property(strong, nonatomic)VehicleInformationModel *  VehicleInformation;
 @property(strong, nonatomic)NSArray *  listImg;
 
-
-
 -(id)initWithInfoDic:(NSDictionary *)infoDic;
 @end

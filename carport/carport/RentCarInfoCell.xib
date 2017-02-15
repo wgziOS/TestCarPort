@@ -71,7 +71,7 @@
                             <constraint firstAttribute="height" constant="1" id="psE-je-dEJ"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clxq-sxy.png" translatesAutoresizingMaskIntoConstraints="NO" id="I49-hp-H04">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clxq-sxy-bt.png" translatesAutoresizingMaskIntoConstraints="NO" id="I49-hp-H04">
                         <rect key="frame" x="8" y="26" width="9" height="9"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="9" id="cA7-n9-uWz"/>
@@ -184,7 +184,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sz-BA-lzK">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sz-BA-lzK">
                         <rect key="frame" x="85" y="169" width="135" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="ndt-sd-a4j"/>
@@ -270,6 +270,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="clxq-sxy.png" width="8" height="8"/>
+        <image name="clxq-sxy-bt.png" width="8" height="8"/>
     </resources>
 </document>

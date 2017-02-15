@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="359" height="508"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HxV-II-Rua" id="SU1-oO-nlb">
-                <rect key="frame" x="0.0" y="0.0" width="359" height="507.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="359" height="507"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车辆信息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BX-A0-UPT">
@@ -46,7 +46,7 @@
                             <constraint firstAttribute="height" constant="1" id="ZNz-s6-sem"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clxq-sxy.png" translatesAutoresizingMaskIntoConstraints="NO" id="EKE-xj-awv">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clxq-sxy-bt.png" translatesAutoresizingMaskIntoConstraints="NO" id="EKE-xj-awv">
                         <rect key="frame" x="8" y="16" width="9" height="9"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="9" id="70I-fG-iSZ"/>
@@ -124,7 +124,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="多媒体配置：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBR-ww-Gl2">
-                        <rect key="frame" x="8" y="387" width="75" height="20"/>
+                        <rect key="frame" x="8" y="375" width="75" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="75" id="A4D-DO-rgz"/>
                             <constraint firstAttribute="height" constant="20" id="PCn-mX-0Nb"/>
@@ -176,20 +176,20 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gxz-vR-sDh" userLabel="PZView">
-                        <rect key="frame" x="0.0" y="376" width="359" height="1"/>
+                        <rect key="frame" x="0.0" y="364" width="359" height="1"/>
                         <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="OT0-yW-uu4"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ids-GK-9Q5">
-                        <rect key="frame" x="0.0" y="417" width="359" height="1"/>
+                        <rect key="frame" x="0.0" y="405" width="359" height="1"/>
                         <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="eZC-SP-JOT"/>
                         </constraints>
                     </view>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="车辆品牌型号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iz6-Rf-ale">
+                    <textField opaque="NO" clipsSubviews="YES" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="车辆品牌型号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iz6-Rf-ale">
                         <rect key="frame" x="78" y="48" width="261" height="25"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="IJu-jC-8Ee"/>
@@ -198,7 +198,7 @@
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="车牌号码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Cx-EM-dG5">
+                    <textField opaque="NO" clipsSubviews="YES" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="车牌号码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Cx-EM-dG5">
                         <rect key="frame" x="78" y="88" width="261" height="25"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="AfZ-gu-h7y"/>
@@ -207,7 +207,7 @@
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="N" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cki-6I-JgA">
+                    <textField opaque="NO" clipsSubviews="YES" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="N" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cki-6I-JgA">
                         <rect key="frame" x="63" y="130" width="35" height="25"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="hcI-3D-qnZ"/>
@@ -227,7 +227,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="N" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6go-fr-pRB">
+                    <textField opaque="NO" clipsSubviews="YES" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="N" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6go-fr-pRB">
                         <rect key="frame" x="78" y="171" width="35" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="35" id="AGS-do-IfA"/>
@@ -247,7 +247,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="N" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B2A-Te-cus">
+                    <textField opaque="NO" clipsSubviews="YES" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="N" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B2A-Te-cus">
                         <rect key="frame" x="90" y="212" width="35" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="35" id="ezw-So-1mv"/>
@@ -280,7 +280,7 @@
                     <constraint firstItem="1sY-HB-QfL" firstAttribute="leading" secondItem="SU1-oO-nlb" secondAttribute="leading" id="KO8-Bw-e6I"/>
                     <constraint firstItem="Iz6-Rf-ale" firstAttribute="leading" secondItem="1AA-79-K9H" secondAttribute="trailing" constant="8" id="KPU-JB-ux7"/>
                     <constraint firstItem="cpE-53-pdI" firstAttribute="top" secondItem="Kz6-VG-eud" secondAttribute="bottom" constant="10" id="KvX-tO-vTv"/>
-                    <constraint firstItem="Gxz-vR-sDh" firstAttribute="top" secondItem="Rkz-kh-1wq" secondAttribute="bottom" constant="60" id="LPY-hN-Bcg"/>
+                    <constraint firstItem="Gxz-vR-sDh" firstAttribute="top" secondItem="Rkz-kh-1wq" secondAttribute="bottom" constant="48" id="LPY-hN-Bcg"/>
                     <constraint firstItem="Gxz-vR-sDh" firstAttribute="leading" secondItem="SU1-oO-nlb" secondAttribute="leading" id="LaW-hZ-FqM"/>
                     <constraint firstAttribute="trailing" secondItem="SIr-X4-LXE" secondAttribute="trailing" id="NkJ-k4-pWC"/>
                     <constraint firstItem="oBR-ww-Gl2" firstAttribute="leading" secondItem="SU1-oO-nlb" secondAttribute="leading" constant="8" id="QPF-iE-uYA"/>
@@ -326,10 +326,20 @@
                     <constraint firstItem="cki-6I-JgA" firstAttribute="centerY" secondItem="cpE-53-pdI" secondAttribute="centerY" id="zYn-mV-aUT"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="boxLabel" destination="aVR-Q0-ilT" id="ZgC-EL-QZ8"/>
+                <outlet property="buyCarYearTextfield" destination="6go-fr-pRB" id="Hhb-rA-1uO"/>
+                <outlet property="carSizeTextfield" destination="Iz6-Rf-ale" id="5SY-Tx-KtV"/>
+                <outlet property="configurationLabel" destination="oBR-ww-Gl2" id="9zl-Z3-BJP"/>
+                <outlet property="displacementLabel" destination="Rkz-kh-1wq" id="tdz-RA-ayZ"/>
+                <outlet property="kilometersTraveledTextfield" destination="B2A-Te-cus" id="x1M-8M-oMa"/>
+                <outlet property="plateNumTextfield" destination="4Cx-EM-dG5" id="4Lw-yc-o1a"/>
+                <outlet property="seatCountTextfield" destination="cki-6I-JgA" id="mi2-Z1-5AA"/>
+            </connections>
             <point key="canvasLocation" x="-94.5" y="139"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="clxq-sxy.png" width="8" height="8"/>
+        <image name="clxq-sxy-bt.png" width="8" height="8"/>
     </resources>
 </document>

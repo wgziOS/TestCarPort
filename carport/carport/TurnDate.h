@@ -10,4 +10,5 @@
 
 @interface TurnDate : NSObject
 +(NSString *)turnDataWithString:(NSString *)string;
++(NSString *)turToDataWithoutHour:(NSString *)string;
 @end
