@@ -513,7 +513,7 @@
                 <constraint firstAttribute="trailing" secondItem="vEU-h3-D0y" secondAttribute="trailing" id="vnI-kl-HTT"/>
                 <constraint firstAttribute="bottom" secondItem="vEU-h3-D0y" secondAttribute="bottom" id="z8B-A2-p96"/>
             </constraints>
-            <point key="canvasLocation" x="42.5" y="87.5"/>
+            <point key="canvasLocation" x="-9" y="-148"/>
         </view>
     </objects>
     <resources>

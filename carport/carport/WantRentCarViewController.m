@@ -70,7 +70,7 @@
   
     userDefault = [NSUserDefaults standardUserDefaults];
     [params setObject:[userDefault valueForKey:@"Token"] forKey:@"Token"];
-    
+    NSLog(@"====%@",[userDefault valueForKey:@"Token"] );
     __weak __typeof(self)weakSelf = self;
     
     [MHNetworkManager postReqeustWithURL:API_GET_VEHICLE_INFOMATION_URL params:params successBlock:^(NSDictionary *returnData) {

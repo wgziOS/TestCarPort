@@ -90,16 +90,35 @@
     [self.window.rootViewController presentViewController:pc animated:YES completion:nil];
 }
 #pragma mark - UIImagePickerController 代理方法
--(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+//-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+//{
+//    UIImage *image = info[UIImagePickerControllerEditedImage];
+//    self.image = image;
+//    [self setImage:self.image forState:UIControlStateNormal];
+//    
+//    self.base64String = [NSString stringWithFormat:@"data: image/png;base64,%@",[self UIImageToBase64Str:image]];
+//    self.base64String1 = self.base64String;
+//    // 退出图片选择控制器
+//    [picker dismissViewControllerAnimated:YES completion:nil];
+//}
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
 {
     UIImage *image = info[UIImagePickerControllerEditedImage];
     self.image = image;
     [self setImage:self.image forState:UIControlStateNormal];
     
+    self.base64String = [NSString stringWithFormat:@"data: image/png;base64,%@",[self UIImageToBase64Str:image]];
+    self.base64String1 = self.base64String;
     // 退出图片选择控制器
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
-
+#pragma mark - 图片转base64字符串
+-(NSString *)UIImageToBase64Str:(UIImage *) image
+{//
+    NSData *data = UIImageJPEGRepresentation(image, 1.0f);
+    NSString *encodedImageStr = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    return encodedImageStr;
+}
 
 
 @end

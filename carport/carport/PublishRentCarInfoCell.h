@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WGZaddCatPortImgView.h"
+
 static NSString * const kPublishRentCarInfoCell = @"PublishRentCarInfoCell";
+
 @interface PublishRentCarInfoCell : UITableViewCell
 {
     WGZToggleButton * boxButton;
@@ -37,5 +40,11 @@ static NSString * const kPublishRentCarInfoCell = @"PublishRentCarInfoCell";
 @property(nonatomic,strong) void (^displacementBtnBlock)();
 @property (nonatomic, strong)NSString * configurationValue;
 @property(nonatomic,strong) void (^configurationBtnBlock)();
+
+
+@property (strong, nonatomic) WGZaddCatPortImgView * carImgView;
+@property (strong, nonatomic) WGZaddCatPortImgView * papersImgView;
+@property(nonatomic,strong) void (^carImgBlock)(NSString *);
+@property(nonatomic,strong) void (^papersImgBlock)(NSString *);
 
 @end

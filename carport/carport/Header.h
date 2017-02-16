@@ -47,9 +47,12 @@
 #define API_GET_USER_BASE_INFO_URL        [NSString stringWithFormat:@"%@/API/GetUserBaseInfo",URLHTTP]//GetUserBaseInfo 个人中心(string Token)
 
 
-#define API_GET_VEHICLE_INFOMATION_URL       [NSString stringWithFormat:@"%@/API/GetVehicleInformation",URLHTTP]//GetVehicleInformation(string Token, int? CurrentPage)
+#define API_GET_VEHICLE_INFOMATION_URL       [NSString stringWithFormat:@"%@/API/GetVehicleInformation",URLHTTP]//获取租车订单列表(string Token, int? CurrentPage)
 
 
+
+//车主发布车辆信息 SubmitVehicleInformation(string Token, string Json)
+//用户租车  UserCarRental(string Token, int VehicleId)
 
 //主题蓝色
 #define BLUECOLOR [UIColor colorWithRed:77.0/255.0 green:175.0/255.0 blue:252.0/255.0 alpha:1]

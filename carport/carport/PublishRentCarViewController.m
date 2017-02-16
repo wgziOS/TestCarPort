@@ -7,7 +7,9 @@
 //
 
 #import "PublishRentCarViewController.h"
+#import "WGZaddCatPortImgView.h"
 #import "PublishRentCarInfoCell.h"
+
 @interface PublishRentCarViewController ()<UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource,UUDatePickerDelegate>
 {
     
@@ -25,6 +27,12 @@
 @property (weak, nonatomic) IBOutlet UITextField *pledgePriceTextfield;
 @property (weak, nonatomic) IBOutlet UITextField *addressTextfield;
 @property (weak, nonatomic) IBOutlet UITextField *needToKnowTextfield;
+
+@property (strong, nonatomic) WGZaddCatPortImgView * carImgView;
+@property (strong, nonatomic) WGZaddCatPortImgView * papersImgView;
+@property (strong, nonatomic) NSString * carImgString;//车照片str
+@property (strong, nonatomic) NSString * papersImgString;//
+
 
 @end
 
@@ -47,6 +55,15 @@
 {
     PublishRentCarInfoCell * cell = [tableView dequeueReusableCellWithIdentifier:kPublishRentCarInfoCell];
     cell.selectionStyle=UITableViewCellSelectionStyleNone;//设置cell点击效果
+    
+    
+    cell.carImgBlock = ^(NSString *cartext){
+        NSLog(@"car-base64=%@",cartext);
+    };
+    
+    cell.papersImgBlock = ^(NSString *text){
+        NSLog(@"par-base64=%@",text);
+    };
     
     cell.carSizeBlock = ^(NSString *text){
         NSLog(@"size=%@",text);
@@ -84,13 +101,21 @@
     };
     return cell;
 }
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 1;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 500;
+    return 495;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    PublishRentCarInfoCell * cell = [tableView dequeueReusableCellWithIdentifier:kPublishRentCarInfoCell];
+//    [self textFieldDidEndEditing:cell.seatCountTextfield];
+//    cell.seatCountTextfield.delegate = self;
+    [cell.seatCountTextfield resignFirstResponder];
 }
 #pragma mark - 时间选择器
 -(void)addUUDate
@@ -145,7 +170,7 @@
 
 #pragma mark - publish
 - (IBAction)publishBtnClick:(id)sender {
-
+ 
 }
 //textField 协议
 -(void)fun

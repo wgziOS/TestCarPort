@@ -12,6 +12,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    
     //变数箱
     CGFloat y = self.boxLabel.frame.origin.y;
     NSArray * array = @[@"czfb-zdd-wxz",@"czfb-sdd-wxz"];
@@ -23,8 +24,21 @@
         [boxButton addTarget:self action:@selector(boxButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:boxButton];
     }
-    //配置
+    
     CGFloat z = self.configurationLabel.frame.origin.y;
+    _carImgView = [[WGZaddCatPortImgView alloc]initWithFrame:CGRectMake(20, z+45, 60, 60) andImageStr:@"czfb-actp"];
+    [self addSubview:_carImgView];
+    
+    _papersImgView = [[WGZaddCatPortImgView alloc]initWithFrame:CGRectMake(100, z+45, 60, 60) andImageStr:@"czfb-xsz"];
+    [self addSubview:_papersImgView];
+    
+    // kvo 为par添加观察者
+    [_papersImgView addObserver:self forKeyPath:@"base64String" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    
+    [_carImgView addObserver:self forKeyPath:@"base64String1" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    
+
+    //配置
     NSArray * array1 = @[@"czfb-usbck-wxz",@"czfb-gpsdhxwxz"];
     NSArray * DJArray1 = @[@"czfb-usbck",@"czfb-gpsdhx"];
     for (int i = 0; i<2; i++) {
@@ -52,12 +66,52 @@
     }
     
     [self.seatCountTextfield addTarget:self action:@selector(textfieldTextDidChange:) forControlEvents:UIControlEventEditingChanged];
+    
     [self.carSizeTextfield addTarget:self action:@selector(textfieldTextDidChange:) forControlEvents:UIControlEventEditingChanged];
+    
     [self.plateNumTextfield addTarget:self action:@selector(textfieldTextDidChange:) forControlEvents:UIControlEventEditingChanged];
+    
     [self.buyCarYearTextfield addTarget:self action:@selector(textfieldTextDidChange:) forControlEvents:UIControlEventEditingChanged];
+    
     [self.kilometersTraveledTextfield addTarget:self action:@selector(textfieldTextDidChange:) forControlEvents:UIControlEventEditingChanged];
 }
+/** 添加观察者必须要实现的方法 */
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
+    /** 打印新老值 */
+    NSLog(@"old : %@  new : %@",[change objectForKey:@"old"],[change objectForKey:@"new"]);
+    
+    NSLog(@"key=%@",keyPath);
+    
+    if ([keyPath isEqualToString:@"base64String1"]) {
+        
+        if (self.carImgBlock) {
+            self.carImgBlock([change objectForKey:@"new"]);
+        }
+    }else{
+        
+        if (self.papersImgBlock) {
+            self.papersImgBlock([change objectForKey:@"new"]);
+        }
+    }
 
+}
+
+
+/** 移除 */
+-(void)dealloc{
+    
+    [self.papersImgView removeObserver:self forKeyPath:@"base64String" context:nil];
+    [self.carImgView removeObserver:self forKeyPath:@"base64String1" context:nil];
+    
+}
+
+#pragma mark - 图片转base64字符串
+-(NSString *)UIImageToBase64Str:(UIImage *) image
+{//
+    NSData *data = UIImageJPEGRepresentation(image, 1.0f);
+    NSString *encodedImageStr = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    return encodedImageStr;
+}
 //- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 //{
 //    [self.seatCountTextfield becomeFirstResponder];

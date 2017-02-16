@@ -15,5 +15,8 @@
 @property (nonatomic, strong) NSString *imageStr;
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, strong) UIImage *bottonImage;
+
+@property (nonatomic, strong) NSString *base64String;
+@property (nonatomic, strong) NSString *base64String1;
 - (id)initWithFrame:(CGRect)frame andImageStr:(NSString *)imageStr;
 @end
