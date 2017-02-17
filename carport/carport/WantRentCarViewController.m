@@ -148,6 +148,9 @@
     
     NSString * imgUrl =[NSString stringWithFormat:@"http://parking.86gg.cn%@",imgModel.imgurl];
 //         NSString * imgUrl =[NSString stringWithFormat:@"http://192.168.123.73:8090%@",model.imgurl];
+    /* 
+     tableView
+    */
     NSURL * url = [NSURL URLWithString:imgUrl];
     NSLog(@"url===%@",url);
     [cell.ImgView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"picture-wait@3x"]];
@@ -165,9 +168,11 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+  
     RentCarModel * model = [RentCarModel mj_objectWithKeyValues:self.dataArray[indexPath.row]];
     RentCarDetailViewController * RVC = [[RentCarDetailViewController alloc]init];
     RVC.model = model;
+    NSLog(@"00000%@",model.VehicleInformation.starttime);
     [self.navigationController pushViewController:RVC animated:YES];
 }
 - (void)didReceiveMemoryWarning {

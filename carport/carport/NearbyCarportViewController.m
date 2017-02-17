@@ -61,12 +61,9 @@
         [self updateData];
     }];
     
-    if (_userLatitude != nil) {
-        
-        [self postNearPakingWithLongitude:self.userLongitude andLatitude:self.userLatitude andPage:0 andSearchkey:@""];
-    }else{//未定位
-        [self postNearPakingWithLongitude:@"" andLatitude:@"" andPage:0 andSearchkey:@""];
-    }
+    [self getToken];
+    
+    
     
     
     count = 1;//初始化count
@@ -74,7 +71,7 @@
     //添加搜索栏
     [self addSearchView];
     bgView.hidden = YES;
-//    [self getToken];
+    
   
 }
 #pragma mark 获取Token
@@ -94,6 +91,13 @@
         userDefault = [NSUserDefaults standardUserDefaults];
         [userDefault setObject:[dic valueForKey:@"Token"] forKey:@"Token"];
         [userDefault synchronize];
+        
+        if (_userLatitude != nil) {
+            
+            [self postNearPakingWithLongitude:self.userLongitude andLatitude:self.userLatitude andPage:0 andSearchkey:@""];
+        }else{//未定位
+            [self postNearPakingWithLongitude:@"" andLatitude:@"" andPage:0 andSearchkey:@""];
+        }
         
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

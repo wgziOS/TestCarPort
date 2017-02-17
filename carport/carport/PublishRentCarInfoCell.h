@@ -2,7 +2,7 @@
 //  PublishRentCarInfoCell.h
 //  carport
 //
-//  Created by 吴桂钊 on 2017/2/14.
+//  Created by 吴桂钊 on 2017/2/17.
 //  Copyright © 2017年 86gg.cn. All rights reserved.
 //
 

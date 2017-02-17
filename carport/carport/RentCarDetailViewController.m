@@ -11,9 +11,14 @@
 #import "RentCarInfoCell.h"
 #import "RentCarTimeCell.h"
 #import "RentCarNeedToKnowCell.h"
+#import "RentResultView.h"
 @interface RentCarDetailViewController ()<UITableViewDataSource,UITableViewDelegate,SDCycleScrollViewDelegate>
+{
+    NSUserDefaults * userDefault;
+}
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *headView;
+@property (weak, nonatomic) IBOutlet UIView *headBgView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *pledgeMoneyLabel;//押金
@@ -52,14 +57,14 @@
         [modelArr addObject:[NSString stringWithFormat:@"http://parking.86gg.cn%@",Model.imgurl]];
     }
     
-    //轮播
-    _scrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 233) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    //轮%@播
+    _scrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, _headBgView.frame.size.width, _headBgView.frame.size.height) delegate:self placeholderImage:[UIImage imageNamed:@"picture-wait"]];
     _scrollView.imageURLStringsGroup = modelArr;
     _scrollView.pageControlDotSize = CGSizeMake(8.0, 8.0);
     _scrollView.autoScrollTimeInterval = 2.0;
     _scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     
-    [_headView addSubview:_scrollView];
+    [_headBgView addSubview:_scrollView];
 }
 
 #pragma mark - tableView 代理
@@ -127,6 +132,89 @@
 }
 #pragma mark - 立即租用按钮
 - (IBAction)rentBtnClick:(id)sender {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"下单超过5分钟无法取消订单\n是否立即租用" preferredStyle:  UIAlertControllerStyleAlert];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        [self postRental];
+    }]];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }]];
+    
+    //弹出
+    [self presentViewController:alert animated:true completion:nil];
+    
+}
+
+#pragma mark - 获取数据
+- (void)postRental
+{
+    NSMutableDictionary * params = [NSMutableDictionary dictionary];
+    
+    [params setObject:[NSString stringWithFormat:@"%@",_model.VehicleInformation.Id] forKey:@"VehicleId"];
+    userDefault = [NSUserDefaults standardUserDefaults];
+    [params setObject:[userDefault valueForKey:@"Token"] forKey:@"Token"];
+    __weak __typeof(self)weakSelf = self;
+    
+    [MHNetworkManager postReqeustWithURL:API_GET_USER_CAR_RENTAL_URL params:params successBlock:^(NSDictionary *returnData) {
+        
+        [Calculate_frame showWithText:[returnData objectForKey:@"message"]];
+        
+        NSString * str = [NSString stringWithFormat:@"%@",[returnData objectForKey:@"states"]];
+        switch (str.intValue) {
+            case 1:
+                //预约成功
+                [self goSucess];
+                break;
+            case -2:
+                //已经预约
+                [self goFailure];
+                break;
+            case -1:
+                //先登录
+                [weakSelf goLogin];
+                break;
+            case 0:
+                //过期先登录
+                [weakSelf goLogin];
+                break;
+            default:
+                break;
+        }
+        
+    } failureBlock:^(NSError *error) {
+        [Calculate_frame showWithText:@"网络请求失败"];
+    } showHUD:YES];
+    
+}
+-(void)goFailure
+{
+
+    RentResultView * resultView = [[RentResultView alloc]initViewTitleImgString:@"clxq-icon" TitleString:@"订单失败" SubTitleString:@"该车辆已被出租" BtnImgString:@"clxq-cxzc"];
+    [resultView show];
+
+    resultView.goonBlock = ^() {
+//        [self.navigationController popViewControllerAnimated:YES];
+    };
+    
+}
+-(void)goSucess
+{
+
+    RentResultView * resultView = [[RentResultView alloc]initViewTitleImgString:@"cwxq-yycg-icon" TitleString:@"出租成功" SubTitleString:@"" BtnImgString:@""];
+    [resultView show];
+    
+    resultView.goonBlock = ^() {
+//        [self.navigationController popViewControllerAnimated:YES];
+    };
+}
+-(void)goLogin
+{
+    LGViewController *LGVC = [[LGViewController alloc]init];
+    [self.navigationController pushViewController:LGVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -49,7 +49,7 @@
     
     [self setupChildVc:[[IWantViewController alloc] init] title:@"我要" image:@"wyzc-wy-wxz" selectedImage:@"wyzc-wy-xz"];
     
-    [self setupChildVc:[[PublishViewController alloc] init] title:@"发布信息" image:@"wyzc-fbxx-wxz" selectedImage:@"wyzc-fbxx-xz"];
+    [self setupChildVc:[[PublishViewController alloc] init] title:@"信息发布" image:@"wyzc-fbxx-wxz" selectedImage:@"wyzc-fbxx-xz"];
     
     [self setupChildVc:[[MeViewController alloc] init] title:@"我的中心" image:@"cdl-wdzx-cion" selectedImage:@"cdl-wdzx-dj-icon"];
     

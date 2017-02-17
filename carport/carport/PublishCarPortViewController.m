@@ -241,6 +241,12 @@
     [self presentViewController:alert animated:true completion:nil];
 }
 
+
+-(void)goLogin
+{
+    LGViewController *LGVC = [[LGViewController alloc]init];
+    [self.navigationController pushViewController:LGVC animated:YES];
+}
 -(void)setTextfieldNil{
     
     [_startTimeTextfield setText:@""];
@@ -254,14 +260,8 @@
     [_addressTextfield setText:@""];
     [_parkingEntranceTextfield setText:@""];
     [_describeTextView setText:@""];
-
+    
 }
--(void)goLogin
-{
-    LGViewController *LGVC = [[LGViewController alloc]init];
-    [self.navigationController pushViewController:LGVC animated:YES];
-}
-
 #pragma mark - 加载entryMode button
 -(void)addEntryModeButton
 {

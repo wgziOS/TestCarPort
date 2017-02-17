@@ -64,6 +64,7 @@
 		B23D4B3F1E0A61BC005AF3E5 /* wscz-xg@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B23D4B3B1E0A61BC005AF3E5 /* wscz-xg@3x.jpg */; };
 		B23D4B421E0A6C15005AF3E5 /* picture-wait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B23D4B401E0A6C15005AF3E5 /* picture-wait@2x.png */; };
 		B23D4B431E0A6C15005AF3E5 /* picture-wait@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B23D4B411E0A6C15005AF3E5 /* picture-wait@3x.png */; };
+		B2407E7F1E56851700E3D9AE /* RentResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2407E7E1E56851700E3D9AE /* RentResultView.m */; };
 		B24188E11E10B6BF00C6BFD7 /* OrderListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B24188E01E10B6BF00C6BFD7 /* OrderListModel.m */; };
 		B24188E81E10F03000C6BFD7 /* wddd-wscz-qd@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B24188E21E10F03000C6BFD7 /* wddd-wscz-qd@2x.jpg */; };
 		B24188E91E10F03000C6BFD7 /* wddd-wscz-qd@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B24188E31E10F03000C6BFD7 /* wddd-wscz-qd@3x.jpg */; };
@@ -650,6 +651,8 @@
 		B23D4B3B1E0A61BC005AF3E5 /* wscz-xg@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wscz-xg@3x.jpg"; sourceTree = "<group>"; };
 		B23D4B401E0A6C15005AF3E5 /* picture-wait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "picture-wait@2x.png"; sourceTree = "<group>"; };
 		B23D4B411E0A6C15005AF3E5 /* picture-wait@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "picture-wait@3x.png"; sourceTree = "<group>"; };
+		B2407E7D1E56851700E3D9AE /* RentResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RentResultView.h; sourceTree = "<group>"; };
+		B2407E7E1E56851700E3D9AE /* RentResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RentResultView.m; sourceTree = "<group>"; };
 		B24188DF1E10B6BF00C6BFD7 /* OrderListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderListModel.h; sourceTree = "<group>"; };
 		B24188E01E10B6BF00C6BFD7 /* OrderListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderListModel.m; sourceTree = "<group>"; };
 		B24188E21E10F03000C6BFD7 /* wddd-wscz-qd@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wddd-wscz-qd@2x.jpg"; sourceTree = "<group>"; };
@@ -2436,6 +2439,8 @@
 		B2CEFC861E5194D1001CDD91 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B2407E7D1E56851700E3D9AE /* RentResultView.h */,
+				B2407E7E1E56851700E3D9AE /* RentResultView.m */,
 				B242727F1E528714006BDBCD /* RentCarInfoCell.h */,
 				B24272801E528714006BDBCD /* RentCarInfoCell.m */,
 				B24272811E528714006BDBCD /* RentCarInfoCell.xib */,
@@ -3306,6 +3311,7 @@
 				B2D13EFF1E13602600D407CB /* UIView+GFFrame.m in Sources */,
 				B2CEFC0C1E515BFF001CDD91 /* UserInfoModel.m in Sources */,
 				B24272921E52AB37006BDBCD /* PublishRentCarInfoCell.m in Sources */,
+				B2407E7F1E56851700E3D9AE /* RentResultView.m in Sources */,
 				B26B8DFC1E1219BD0066ED0A /* MasterOrderMainViewController.m in Sources */,
 				B221C9B91DF905F5005BAD69 /* MJRefreshGifHeader.m in Sources */,
 				B221C9AE1DF905F5005BAD69 /* MJRefreshAutoFooter.m in Sources */,

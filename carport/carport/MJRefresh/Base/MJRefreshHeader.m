@@ -36,7 +36,7 @@
     // 设置key
     self.lastUpdatedTimeKey = MJRefreshHeaderLastUpdatedTimeKey;
     
-    // 设置高度
+    // 设置高度   
     self.mj_h = MJRefreshHeaderHeight;
 }
 

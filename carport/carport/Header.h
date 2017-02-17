@@ -52,11 +52,18 @@
 
 
 //车主发布车辆信息 SubmitVehicleInformation(string Token, string Json)
-//用户租车  UserCarRental(string Token, int VehicleId)
+
+#define API_GET_USER_CAR_RENTAL_URL       [NSString stringWithFormat:@"%@/API/UserCarRental",URLHTTP]//用户租车(string Token, int VehicleId)
+/*
+ states = 1, message = "租车成功，请到租车地址交接！"
+ states = -2, message = "该车辆被出租！"
+ states = -1, message = "请先登录！"
+ */
 
 //主题蓝色
 #define BLUECOLOR [UIColor colorWithRed:77.0/255.0 green:175.0/255.0 blue:252.0/255.0 alpha:1]
-
+//背景灰
+#define BACKGROUNDCOLOR [UIColor colorWithRed:235.0/255.0 green:239.0/255.0 blue:240.0/255.0 alpha:1]
 //屏幕物理高度
 #define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
 
