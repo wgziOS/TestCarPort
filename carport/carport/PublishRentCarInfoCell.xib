@@ -238,7 +238,7 @@
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公里" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjt-uX-bkg">
-                        <rect key="frame" x="125" y="214" width="25" height="20"/>
+                        <rect key="frame" x="145" y="214" width="25" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="CGJ-oN-s76"/>
                             <constraint firstAttribute="width" constant="25" id="qV0-Uh-H4s"/>
@@ -248,9 +248,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" clipsSubviews="YES" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="N" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B2A-Te-cus">
-                        <rect key="frame" x="90" y="212" width="35" height="25"/>
+                        <rect key="frame" x="90" y="212" width="55" height="25"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="35" id="ezw-So-1mv"/>
+                            <constraint firstAttribute="width" constant="55" id="ezw-So-1mv"/>
                             <constraint firstAttribute="height" constant="25" id="mKG-G8-hWp"/>
                         </constraints>
                         <color key="textColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>

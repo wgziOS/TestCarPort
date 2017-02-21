@@ -93,7 +93,7 @@
     NSInteger time1 = [self turnSringToTimeIntervalWithString:_endTimeTextfield.text];
     NSString * start = [NSString stringWithFormat:@"/Date(%ld000)/",(long)time];
     NSString * end = [NSString stringWithFormat:@"/Date(%ld000)/",(long)time1];
-    
+    NSLog(@"endtime=%@",end);
 //    NSString *baseb4_1 = [self image2DataURL:_addMapImgView.image];
 //    NSString *baseb4_2 = [self image2DataURL:_addcarPortImgView.image];
     
@@ -134,7 +134,7 @@
                                         ]
                                 };
         NSString * jsonStr = [DicToJson dictionaryToJson:json];
-        NSLog(@"发布jsonStr=%@",jsonStr);
+//        NSLog(@"发布jsonStr=%@",jsonStr);
         
         [self postWithJson:jsonStr];
     }else{
@@ -165,7 +165,7 @@
                                         ]
                                 };
         NSString * jsonStr = [DicToJson dictionaryToJson:json];
-        NSLog(@"发布jsonStr=%@",jsonStr);
+//        NSLog(@"发布jsonStr=%@",jsonStr);
         
         [self postWithJson:jsonStr];
 
@@ -548,6 +548,7 @@
 {
     //赋值
     _endTimeTextfield.text = [NSString stringWithFormat:@"%@-%@-%@ %@:%@",year,month,day,hour,minute];
+    
     //
 }
 

@@ -144,16 +144,20 @@
     cell.addressLabel.text = model.VehicleInformation.car_address;
     cell.priceLabel.text = model.VehicleInformation.non_holiday_prie;
     
-    ListImgModel * imgModel = [ListImgModel mj_objectWithKeyValues:model.listImg[0]];
+    if (model.listImg.count!=0) {
+        ListImgModel * imgModel = [ListImgModel mj_objectWithKeyValues:model.listImg[0]];
+        
+        NSString * imgUrl =[NSString stringWithFormat:@"http://parking.86gg.cn%@",imgModel.imgurl];
+        //         NSString * imgUrl =[NSString stringWithFormat:@"http://192.168.123.73:8090%@",model.imgurl];
+        /*
+         tableView
+         */
+        NSURL * url = [NSURL URLWithString:imgUrl];
+        NSLog(@"url===%@",url);
+        [cell.ImgView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"picture-wait@3x"]];
+    }
     
-    NSString * imgUrl =[NSString stringWithFormat:@"http://parking.86gg.cn%@",imgModel.imgurl];
-//         NSString * imgUrl =[NSString stringWithFormat:@"http://192.168.123.73:8090%@",model.imgurl];
-    /* 
-     tableView
-    */
-    NSURL * url = [NSURL URLWithString:imgUrl];
-    NSLog(@"url===%@",url);
-    [cell.ImgView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"picture-wait@3x"]];
+   
     
 
     return cell;

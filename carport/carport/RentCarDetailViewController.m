@@ -93,7 +93,14 @@
             break;
         case 1:
         {
-            NSString * str = [NSString stringWithFormat:@"%@ 至 %@",[TurnDate turToDataWithoutHour:_model.VehicleInformation.starttime],[TurnDate turToDataWithoutHour:_model.VehicleInformation.endtime]];
+//            NSString * str = [NSString stringWithFormat:@"%@ 至 %@",[TurnDate turToDataWithoutHour:_model.VehicleInformation.starttime],[TurnDate turToDataWithoutHour:_model.VehicleInformation.endtime]];
+            
+            NSLog(@"我要租车详情页endtime=%@",_model.VehicleInformation.endtime);
+            NSString *str1 = [[TurnDate turnDataWithString:_model.VehicleInformation.starttime] substringToIndex:10];
+            NSString *str2 = [[TurnDate turnDataWithString:_model.VehicleInformation.endtime] substringToIndex:10];
+            NSString * str = [NSString stringWithFormat:@"%@ 至 %@",str1,str2];
+           
+            
             cell1.timeLabel.text = str;
             cell1.nonHolidayPrie.text = [NSString stringWithFormat:@"%@元/天",_model.VehicleInformation.non_holiday_prie];
             cell1.holidayPrie.text = [NSString stringWithFormat:@"%@元/天",_model.VehicleInformation.holiday_prie];

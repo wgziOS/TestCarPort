@@ -19,13 +19,9 @@
 @property (nonatomic, strong) UILabel * subTitle;            //子标题
 @property (nonatomic, strong) UIView  * backImageView;       //顶层模态视图，半透明视图
 
-/*
- *代码块调用事件
- */
-//@property (nonatomic, copy) dispatch_block_t lateronBlock;
-//@property (nonatomic, copy) dispatch_block_t goonBlock;
+
 @property(nonatomic,strong) void (^goonBlock)();
-//@property (nonatomic, copy) dispatch_block_t dismissBlock;
+
 
 -(id)initViewTitleImgString:(NSString *)titleImgString TitleString:(NSString *)titleString SubTitleString:(NSString *)subTitleString BtnImgString:(NSString *)btnImgString;
 

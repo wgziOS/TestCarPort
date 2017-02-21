@@ -57,17 +57,6 @@ static CGFloat kTransitionDuration = 0.3;
     return self;
 }
 
-//#pragma mark - 稍后继续
-//-(void)lateronAction:(UIButton *)sender
-//{
-//    //代码筷回掉
-////    _leaveAlertView = NO;
-//    [self dismissAlert];
-//    if (self.lateronBlock) {
-//        self.lateronBlock();
-//    }
-//    
-//}
 
 #pragma mark - 继续按钮
 -(void)goonAction:(UIButton *)sender
@@ -76,8 +65,6 @@ static CGFloat kTransitionDuration = 0.3;
 //    _leaveAlertView = NO;
     [self dismissAlert];
     if (self.goonBlock) {
-        
-        
         
         self.goonBlock();
     }

@@ -7,7 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "WGZaddCatPortImgView.h"
+#import "PublishRentCarInfoCell.h"
 
 @interface PublishRentCarViewController : ViewController
-
+@property (strong, nonatomic) WGZaddCatPortImgView * carImgView;
+@property (strong, nonatomic) WGZaddCatPortImgView * papersImgView;
+@property (strong, nonatomic) NSString * carImgString;//车照片str
+@property (strong, nonatomic) NSString * papersImgString;//
 @end

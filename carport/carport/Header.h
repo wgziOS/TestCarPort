@@ -10,7 +10,9 @@
 #define Header_h
 
 
-#define URLHTTP @"http://192.168.123.73:8090"
+//#define URLHTTP @"http://192.168.123.73:8090"
+#define URLHTTP @"http://parkapi.86gg.cn/"
+
 //通用接口地址
 #define API_LOGIN_URL                   [NSString stringWithFormat:@"%@/API/Login",URLHTTP]//登录
 
@@ -49,9 +51,8 @@
 
 #define API_GET_VEHICLE_INFOMATION_URL       [NSString stringWithFormat:@"%@/API/GetVehicleInformation",URLHTTP]//获取租车订单列表(string Token, int? CurrentPage)
 
+#define API_SUBMIT_VEHICLE_INFORMATION_URL       [NSString stringWithFormat:@"%@/API/SubmitVehicleInformation",URLHTTP]//车主发布车辆信息(string Token, string Json)
 
-
-//车主发布车辆信息 SubmitVehicleInformation(string Token, string Json)
 
 #define API_GET_USER_CAR_RENTAL_URL       [NSString stringWithFormat:@"%@/API/UserCarRental",URLHTTP]//用户租车(string Token, int VehicleId)
 /*
