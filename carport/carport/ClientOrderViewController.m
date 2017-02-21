@@ -47,7 +47,7 @@
     NSURL * urlStr = [NSURL URLWithString:imgUrl];
     [cell.imgView sd_setImageWithURL:urlStr placeholderImage:[UIImage imageNamed:@"picture-wait@3x"]];
     
-    cell.userNameLabel.text = orderListModel.truename;
+    cell.userNameLabel.text = orderListModel.owner;
     cell.phoneNumber.text = orderListModel.phone;
     cell.priceLabel.text = [NSString stringWithFormat:@"%@元",orderListModel.pay_price];
     

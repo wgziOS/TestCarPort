@@ -96,6 +96,16 @@
 		B24AD0BB1DFE916A0049FE24 /* MyCarPortTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B24AD0B91DFE916A0049FE24 /* MyCarPortTableViewCell.xib */; };
 		B24AD0C01DFE97850049FE24 /* PublishCarPortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B24AD0BE1DFE97850049FE24 /* PublishCarPortViewController.m */; };
 		B24AD0C11DFE97850049FE24 /* PublishCarPortViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B24AD0BF1DFE97850049FE24 /* PublishCarPortViewController.xib */; };
+		B26AB68A1E5BDEDE00031C8E /* ClientRentCarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B26AB6881E5BDEDE00031C8E /* ClientRentCarCell.m */; };
+		B26AB68B1E5BDEDE00031C8E /* ClientRentCarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B26AB6891E5BDEDE00031C8E /* ClientRentCarCell.xib */; };
+		B26AB6901E5BDFD900031C8E /* hc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B26AB68C1E5BDFD900031C8E /* hc@2x.png */; };
+		B26AB6911E5BDFD900031C8E /* hc@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B26AB68D1E5BDFD900031C8E /* hc@3x.png */; };
+		B26AB6921E5BDFD900031C8E /* jycg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B26AB68E1E5BDFD900031C8E /* jycg@2x.png */; };
+		B26AB6931E5BDFD900031C8E /* jycg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B26AB68F1E5BDFD900031C8E /* jycg@3x.png */; };
+		B26AB6961E5BEAB000031C8E /* jztp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B26AB6941E5BEAB000031C8E /* jztp@2x.png */; };
+		B26AB6971E5BEAB000031C8E /* jztp@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B26AB6951E5BEAB000031C8E /* jztp@3x.png */; };
+		B26AB69A1E5C16D200031C8E /* RentCarOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B26AB6991E5C16D200031C8E /* RentCarOrderModel.m */; };
+		B26AB69D1E5C17D400031C8E /* CarRentalOrdersModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B26AB69C1E5C17D400031C8E /* CarRentalOrdersModel.m */; };
 		B26B8DD01E11FE280066ED0A /* cdl-wy-dj@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B26B8DC81E11FE280066ED0A /* cdl-wy-dj@2x.png */; };
 		B26B8DD11E11FE280066ED0A /* cdl-wy-dj@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B26B8DC91E11FE280066ED0A /* cdl-wy-dj@3x.png */; };
 		B26B8DD21E11FE280066ED0A /* cdl-wy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B26B8DCA1E11FE280066ED0A /* cdl-wy@2x.png */; };
@@ -697,6 +707,19 @@
 		B24AD0BD1DFE97850049FE24 /* PublishCarPortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishCarPortViewController.h; sourceTree = "<group>"; };
 		B24AD0BE1DFE97850049FE24 /* PublishCarPortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishCarPortViewController.m; sourceTree = "<group>"; };
 		B24AD0BF1DFE97850049FE24 /* PublishCarPortViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublishCarPortViewController.xib; sourceTree = "<group>"; };
+		B26AB6871E5BDEDE00031C8E /* ClientRentCarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientRentCarCell.h; sourceTree = "<group>"; };
+		B26AB6881E5BDEDE00031C8E /* ClientRentCarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientRentCarCell.m; sourceTree = "<group>"; };
+		B26AB6891E5BDEDE00031C8E /* ClientRentCarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClientRentCarCell.xib; sourceTree = "<group>"; };
+		B26AB68C1E5BDFD900031C8E /* hc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hc@2x.png"; sourceTree = "<group>"; };
+		B26AB68D1E5BDFD900031C8E /* hc@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hc@3x.png"; sourceTree = "<group>"; };
+		B26AB68E1E5BDFD900031C8E /* jycg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jycg@2x.png"; sourceTree = "<group>"; };
+		B26AB68F1E5BDFD900031C8E /* jycg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jycg@3x.png"; sourceTree = "<group>"; };
+		B26AB6941E5BEAB000031C8E /* jztp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jztp@2x.png"; sourceTree = "<group>"; };
+		B26AB6951E5BEAB000031C8E /* jztp@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jztp@3x.png"; sourceTree = "<group>"; };
+		B26AB6981E5C16D200031C8E /* RentCarOrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RentCarOrderModel.h; sourceTree = "<group>"; };
+		B26AB6991E5C16D200031C8E /* RentCarOrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RentCarOrderModel.m; sourceTree = "<group>"; };
+		B26AB69B1E5C17D400031C8E /* CarRentalOrdersModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarRentalOrdersModel.h; sourceTree = "<group>"; };
+		B26AB69C1E5C17D400031C8E /* CarRentalOrdersModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarRentalOrdersModel.m; sourceTree = "<group>"; };
 		B26B8DC81E11FE280066ED0A /* cdl-wy-dj@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cdl-wy-dj@2x.png"; sourceTree = "<group>"; };
 		B26B8DC91E11FE280066ED0A /* cdl-wy-dj@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cdl-wy-dj@3x.png"; sourceTree = "<group>"; };
 		B26B8DCA1E11FE280066ED0A /* cdl-wy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cdl-wy@2x.png"; sourceTree = "<group>"; };
@@ -1530,6 +1553,16 @@
 			name = Other;
 			sourceTree = "<group>";
 		};
+		B26AB6861E5BDCCC00031C8E /* RentCarCell */ = {
+			isa = PBXGroup;
+			children = (
+				B26AB6871E5BDEDE00031C8E /* ClientRentCarCell.h */,
+				B26AB6881E5BDEDE00031C8E /* ClientRentCarCell.m */,
+				B26AB6891E5BDEDE00031C8E /* ClientRentCarCell.xib */,
+			);
+			name = RentCarCell;
+			sourceTree = "<group>";
+		};
 		B26B8DC71E11FDD30066ED0A /* Center */ = {
 			isa = PBXGroup;
 			children = (
@@ -1615,6 +1648,7 @@
 				B26B8E2A1E125EF00066ED0A /* ClientOrderSecondViewController.h */,
 				B26B8E2B1E125EF00066ED0A /* ClientOrderSecondViewController.m */,
 				B26B8E2C1E125EF00066ED0A /* ClientOrderSecondViewController.xib */,
+				B26AB6861E5BDCCC00031C8E /* RentCarCell */,
 				B26B8E2F1E125F120066ED0A /* ClientOrderThirdViewController.h */,
 				B26B8E301E125F120066ED0A /* ClientOrderThirdViewController.m */,
 				B26B8E311E125F120066ED0A /* ClientOrderThirdViewController.xib */,
@@ -1725,6 +1759,10 @@
 			children = (
 				B2CEFC0A1E515BFF001CDD91 /* UserInfoModel.h */,
 				B2CEFC0B1E515BFF001CDD91 /* UserInfoModel.m */,
+				B26AB6981E5C16D200031C8E /* RentCarOrderModel.h */,
+				B26AB6991E5C16D200031C8E /* RentCarOrderModel.m */,
+				B26AB69B1E5C17D400031C8E /* CarRentalOrdersModel.h */,
+				B26AB69C1E5C17D400031C8E /* CarRentalOrdersModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1948,6 +1986,12 @@
 		B29E01EF1E53E81800615FE2 /* rentimg */ = {
 			isa = PBXGroup;
 			children = (
+				B26AB6941E5BEAB000031C8E /* jztp@2x.png */,
+				B26AB6951E5BEAB000031C8E /* jztp@3x.png */,
+				B26AB68C1E5BDFD900031C8E /* hc@2x.png */,
+				B26AB68D1E5BDFD900031C8E /* hc@3x.png */,
+				B26AB68E1E5BDFD900031C8E /* jycg@2x.png */,
+				B26AB68F1E5BDFD900031C8E /* jycg@3x.png */,
 				B29E01F01E53E81800615FE2 /* clxq-cpt@2x.png */,
 				B29E01F11E53E81800615FE2 /* clxq-cpt@3x.png */,
 				B29E01F21E53E81800615FE2 /* clxq-cxzc@2x.png */,
@@ -2788,6 +2832,7 @@
 				B2C60CDF1DF11E88006BED2C /* shezhi.png in Resources */,
 				B29E027B1E53E81900615FE2 /* czfb-zdd@3x.png in Resources */,
 				B2C60C391DF10EAF006BED2C /* gerzx_01.png in Resources */,
+				B26AB6921E5BDFD900031C8E /* jycg@2x.png in Resources */,
 				B2C60C2F1DF10EAF006BED2C /* dlu_01.png in Resources */,
 				B2ACE8F61E0219D700B7B415 /* sybz.png in Resources */,
 				B29327C11E012F560053C557 /* SettingViewController.xib in Resources */,
@@ -2816,6 +2861,7 @@
 				B2CEFC911E519BA5001CDD91 /* RentCarDetailViewController.xib in Resources */,
 				B26B8DD11E11FE280066ED0A /* cdl-wy-dj@3x.png in Resources */,
 				B29E02401E53E81900615FE2 /* clxq-cpt@2x.png in Resources */,
+				B26AB6911E5BDFD900031C8E /* hc@3x.png in Resources */,
 				B2ACE8F51E0219D700B7B415 /* gywm.png in Resources */,
 				B2C60CBF1DF11E88006BED2C /* denglu_10.png in Resources */,
 				B2C60CE21DF11E88006BED2C /* sybz.png in Resources */,
@@ -2953,6 +2999,7 @@
 				B29327B91E00F6010053C557 /* ForgetPassWordViewController.xib in Resources */,
 				B293277D1E00CDE60053C557 /* fbcw-bmz@2x.png in Resources */,
 				B293275D1E00CDE60053C557 /* cwxq-ckcwxq-icon@2x.png in Resources */,
+				B26AB6971E5BEAB000031C8E /* jztp@3x.png in Resources */,
 				B2C60CD91DF11E88006BED2C /* grzl_01.png in Resources */,
 				B29E025E1E53E81900615FE2 /* czfb-6z3@2x.png in Resources */,
 				B29327941E00CDE60053C557 /* fbcw-sc-icon@3x.png in Resources */,
@@ -3025,6 +3072,7 @@
 				B29E026B1E53E81900615FE2 /* czfb-gpsdhxwxz@3x.png in Resources */,
 				B29E024A1E53E81900615FE2 /* clxq-sxy-lb@2x.png in Resources */,
 				B2C60CCD1DF11E88006BED2C /* fbcw_08.png in Resources */,
+				B26AB6931E5BDFD900031C8E /* jycg@3x.png in Resources */,
 				B24188E81E10F03000C6BFD7 /* wddd-wscz-qd@2x.jpg in Resources */,
 				B293275A1E00CDE60053C557 /* cwxq-bj@3x.png in Resources */,
 				B29E02421E53E81900615FE2 /* clxq-cxzc@2x.png in Resources */,
@@ -3056,6 +3104,7 @@
 				B29327AF1E00ECC20053C557 /* czcw-youhui-icon@2x.jpg in Resources */,
 				B26B8DF21E120B2B0066ED0A /* 4@3x.jpg in Resources */,
 				B24AD0AD1DFE2AF10049FE24 /* CarPortDetailViewController.xib in Resources */,
+				B26AB68B1E5BDEDE00031C8E /* ClientRentCarCell.xib in Resources */,
 				B29E02441E53E81900615FE2 /* clxq-icon@2x.png in Resources */,
 				B29E02711E53E81900615FE2 /* czfb-sdd@3x.png in Resources */,
 				B29327631E00CDE60053C557 /* cwxq-yy-qry@2x.png in Resources */,
@@ -3125,6 +3174,7 @@
 				B29E026F1E53E81900615FE2 /* czfb-sdd-wxz@3x.png in Resources */,
 				B29E02481E53E81900615FE2 /* clxq-sxy-bt@2x.png in Resources */,
 				B2ACE9211E0249E900B7B415 /* fbcw-wy-dj@3x.jpg in Resources */,
+				B26AB6961E5BEAB000031C8E /* jztp@2x.png in Resources */,
 				B208ACEF1E0930CD00224F12 /* denglu_91.png in Resources */,
 				B2C60C411DF10EAF006BED2C /* sousuo_01.png in Resources */,
 				B29327611E00CDE60053C557 /* cwxq-yy-icon@2x.png in Resources */,
@@ -3185,6 +3235,7 @@
 				B29E02431E53E81900615FE2 /* clxq-cxzc@3x.png in Resources */,
 				B29E026E1E53E81900615FE2 /* czfb-sdd-wxz@2x.png in Resources */,
 				B2EB3FB31DF7B3A600ABC83F /* PersonalInfoViewController.xib in Resources */,
+				B26AB6901E5BDFD900031C8E /* hc@2x.png in Resources */,
 				B29E02681E53E81900615FE2 /* czfb-gpsdhx-wxz@2x.png in Resources */,
 				B2C60CEC1DF11E88006BED2C /* yanzhengma.png in Resources */,
 				B29E02581E53E81900615FE2 /* czfb-3ys-wxz@2x.png in Resources */,
@@ -3251,6 +3302,7 @@
 			files = (
 				B21A35051DFA5EE8000E4637 /* ListImgModel.m in Sources */,
 				B2C60C681DF11738006BED2C /* XMGTabBar.m in Sources */,
+				B26AB68A1E5BDEDE00031C8E /* ClientRentCarCell.m in Sources */,
 				B2EB3FB71DF7BBC700ABC83F /* PresonallTableViewCell.m in Sources */,
 				B2E66C491DF548E400889EA1 /* UIViewController+YQSlideMenu.m in Sources */,
 				B2140ABE1DFAB04F00A814F5 /* TurnDate.m in Sources */,
@@ -3282,6 +3334,7 @@
 				B2E66D4B1DF5565200889EA1 /* SVProgressHUD.m in Sources */,
 				B2EB3FB21DF7B3A600ABC83F /* PersonalInfoViewController.m in Sources */,
 				B26B8E051E121E8D0066ED0A /* MasterSecondViewController.m in Sources */,
+				B26AB69A1E5C16D200031C8E /* RentCarOrderModel.m in Sources */,
 				B2E66D491DF5565200889EA1 /* ProgressHUD.m in Sources */,
 				B2E66C9B1DF5553F00889EA1 /* MHNetworkManager.m in Sources */,
 				B2C60BED1DF10C07006BED2C /* ViewController.m in Sources */,
@@ -3329,6 +3382,7 @@
 				B2E66C8A1DF5553F00889EA1 /* AFImageDownloader.m in Sources */,
 				B221C9BB1DF905F5005BAD69 /* MJRefreshStateHeader.m in Sources */,
 				B26B8E321E125F120066ED0A /* ClientOrderThirdViewController.m in Sources */,
+				B26AB69D1E5C17D400031C8E /* CarRentalOrdersModel.m in Sources */,
 				B2EB3FCD1DF7ECCF00ABC83F /* EditorSexTableViewCell.m in Sources */,
 				B221C9C41DF93963005BAD69 /* NearbyModel.m in Sources */,
 				B221C9B11DF905F5005BAD69 /* MJRefreshFooter.m in Sources */,

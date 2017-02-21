@@ -54,25 +54,40 @@
 #pragma mark - publish
 - (IBAction)publishBtnClick:(id)sender {
    
-    if (![IsBlankString isBlankString:_startTimeTextfield.text] &&
-        ![IsBlankString isBlankString:_endTimeTextfield.text] &&
-        ![IsBlankString isBlankString:_ownerNameTextfield.text] &&
-        ![IsBlankString isBlankString:carBase64] &&
-        ![IsBlankString isBlankString:papersBase64]
-        ) {
-        NSInteger time = [self turnSringToTimeIntervalWithString:_startTimeTextfield.text];
-        NSInteger time1 = [self turnSringToTimeIntervalWithString:_endTimeTextfield.text];
-//        NSLog(@"time1=%ld",(long)time1);
-        start = [NSString stringWithFormat:@"/Date(%ld000)/",(long)time];
-        end = [NSString stringWithFormat:@"/Date(%ld000)/",(long)time1];
-        NSLog(@"发布时endtime=%@",end);//
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否发布" preferredStyle:  UIAlertControllerStyleAlert];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
-        [self turnJson];
-    }else
-    {
-        [Calculate_frame showWithText:@"信息填写不全"];
-        return;
-    }
+        if (![IsBlankString isBlankString:_startTimeTextfield.text] &&
+            ![IsBlankString isBlankString:_endTimeTextfield.text] &&
+            ![IsBlankString isBlankString:_ownerNameTextfield.text] &&
+            ![IsBlankString isBlankString:_ownerPhoneTextfield.text] &&
+            ![IsBlankString isBlankString:carBase64] &&
+            ![IsBlankString isBlankString:papersBase64]
+            ) {
+            NSInteger time = [self turnSringToTimeIntervalWithString:_startTimeTextfield.text];
+            NSInteger time1 = [self turnSringToTimeIntervalWithString:_endTimeTextfield.text];
+            //        NSLog(@"time1=%ld",(long)time1);
+            start = [NSString stringWithFormat:@"/Date(%ld000)/",(long)time];
+            end = [NSString stringWithFormat:@"/Date(%ld000)/",(long)time1];
+            NSLog(@"发布时endtime=%@",end);//
+            
+            [self turnJson];
+        }else
+        {
+            [Calculate_frame showWithText:@"信息填写不全"];
+            return;
+        }
+
+  
+    }]];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }]];
+    
+    [self presentViewController:alert animated:true completion:nil];
+    
     
 }
 #pragma mark - turnJson
@@ -218,7 +233,8 @@
 //    cell.seatCountTextfield.delegate = self;
     [cell.seatCountTextfield resignFirstResponder];
 }
-#pragma mark - 字符串转时间戳
+
+#pragma mark - 字符串转时间戳 - nian
 -(NSTimeInterval)turnSringToTimeIntervalWithString:(NSString *)str
 {
     NSDateFormatter * dateFormat = [[NSDateFormatter alloc]init];

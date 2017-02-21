@@ -115,7 +115,7 @@ static CGFloat kTransitionDuration = 0.3;
     }
     [topVC.view addSubview:self.backImageView];
     
-    // 一系列动画效果, 先放大0.1, 在缩小0.1,随后还原原始大小,达到反弹效果
+    // 一系列动画效果,达到反弹效果
     self.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.05, 0.05);
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:kTransitionDuration/2];

@@ -71,7 +71,7 @@
     
     
 }
-
+//布局
 - (void)setupTitle
 {
 
@@ -98,7 +98,7 @@
     self.contentScrollView.contentSize = CGSizeMake(5 * [UIScreen mainScreen].bounds.size.width, 0);
 }
 
-
+//点击
 - (void)labelClick:(UITapGestureRecognizer *)tap
 {
  
@@ -132,7 +132,7 @@
         
         self.indicatorView.gf_centerX = label.center.x;
     }];
-    
+    //结束滚动时调用
     if (titleOffset.x < 0) titleOffset.x = 0;
 
     CGFloat maxTitleOffsetX = self.titleScrollView.contentSize.width - width;

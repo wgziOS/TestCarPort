@@ -154,7 +154,7 @@
          */
         NSURL * url = [NSURL URLWithString:imgUrl];
         NSLog(@"url===%@",url);
-        [cell.ImgView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"picture-wait@3x"]];
+        [cell.ImgView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"jztp"]];
     }
     
    
