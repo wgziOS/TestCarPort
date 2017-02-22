@@ -55,11 +55,10 @@
 
 #define API_GET_USER_CAR_RENTAL_URL       [NSString stringWithFormat:@"%@/API/UserCarRental",URLHTTP]//用户租车(string Token, int VehicleId)
 
-#define API_POST_RENTAL_ORDERS_LIST_URL       [NSString stringWithFormat:@"%@/API/UserCarRentalOrdersList",URLHTTP]// 用户查看租车订单列表(string Token)
+#define API_POST_RENTAL_ORDERS_LIST_URL       [NSString stringWithFormat:@"%@/API/UserCarRentalOrdersList",URLHTTP]// 用户查看租车订单列表 (string Token)
 
-
+#define API_POST_OWNER_RENTAL_ORDERS_LIST_URL    [NSString stringWithFormat:@"%@/API/OwnerCarRentalOrdersList",URLHTTP]//  车主查看租车订单列表 (string Token)
 /*
- 车主查看租车订单列表 OwnerCarRentalOrdersList(string Token)
 
  */
 

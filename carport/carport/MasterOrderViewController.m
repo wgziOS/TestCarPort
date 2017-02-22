@@ -57,7 +57,9 @@
     cell.unitPriceLabel.text = orderListModel.park_price;
     
     cell.hoursLabel.text = [NSString stringWithFormat:@"%d",[orderListModel.pay_price intValue]/[orderListModel.park_price intValue]];
-    cell.sureButton.userInteractionEnabled = NO;
+    
+    cell.sureButton.userInteractionEnabled = NO;//用户交互
+    
     switch ([orderListModel.status intValue]) {
         case 0:
         {// 取消订单
@@ -78,12 +80,12 @@
     }
   
     cell.complainBtnBlock = ^(){//投诉
-        NSLog(@"dsfg%ld",(long)indexPath.row);
+        NSLog(@"indexPath=%ld",(long)indexPath.row);
         ComplaintViewController * CVC = [[ComplaintViewController alloc]init];
         [self.navigationController pushViewController:CVC animated:YES];
     };
     cell.sureBtnBlock = ^(){//未付款已付款
-        NSLog(@"dsfg%ld",(long)indexPath.row);
+        NSLog(@"indexPath=%ld",(long)indexPath.row);
     };
   
    return cell;

@@ -5,7 +5,7 @@
 //  Created by 吴桂钊 on 2016/12/27.
 //  Copyright © 2016年 86gg.cn. All rights reserved.
 //
-
+#define Screenwidth self.view.bounds.size.width
 #import "MasterThirdViewController.h"
 
 @interface MasterThirdViewController ()
@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+
 }
 
 - (void)didReceiveMemoryWarning {

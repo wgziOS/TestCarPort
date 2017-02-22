@@ -211,7 +211,7 @@
 -(void)goSucess
 {
   //成功
-    RentResultView * resultView = [[RentResultView alloc]initViewTitleImgString:@"cwxq-yycg-icon" TitleString:@"出租成功" SubTitleString:@"" BtnImgString:@""];
+    RentResultView * resultView = [[RentResultView alloc]initViewTitleImgString:@"cwxq-yycg-icon" TitleString:@"出租成功" SubTitleString:@"" BtnImgString:@"clxq-cxzc"];
     [resultView show];
     
     resultView.goonBlock = ^() {

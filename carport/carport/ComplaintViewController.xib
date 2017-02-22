@@ -49,7 +49,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qal-Lw-nnc">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="原因" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qal-Lw-nnc">
                     <rect key="frame" x="84" y="30" width="261" height="40"/>
                     <color key="backgroundColor" red="0.93415983937991443" green="0.94340894670050757" blue="0.94340894670050757" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -69,7 +69,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="备注原因……" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cwd-RU-frT">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cwd-RU-frT">
                     <rect key="frame" x="84" y="165" width="261" height="135"/>
                     <color key="backgroundColor" red="0.92031767100875883" green="0.92942972715736039" blue="0.92942972715736039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>

@@ -42,8 +42,14 @@
     cell.nameTitle.text = @"车主:";
     cell.nameAndPhoneLabel.text = [NSString stringWithFormat:@"%@ %@",Model.CarRentalOrders.owner_name,Model.CarRentalOrders.owner_phone];
     
-    cell.startLabel.text = [NSString stringWithFormat:@"开始-%@",[TurnDate turnDataWithString:Model.CarRentalOrders.Starttime]];
-    cell.endLabel.text = [NSString stringWithFormat:@"结束-%@",[TurnDate turnDataWithString:Model.CarRentalOrders.Endtime]];
+    NSString * str = [NSString stringWithFormat:@"%@",Model.CarRentalOrders.Starttime];
+    if (str.length == 21) {
+        cell.startLabel.text = [NSString stringWithFormat:@"开始-%@",[TurnDate turnDataWithString:Model.CarRentalOrders.Starttime]];
+        cell.endLabel.text = [NSString stringWithFormat:@"结束-%@",[TurnDate turnDataWithString:Model.CarRentalOrders.Endtime]];
+    }else{
+        cell.startLabel.text = [NSString stringWithFormat:@"时间数据异常"];
+        cell.endLabel.text = [NSString stringWithFormat:@"时间数据异常"];
+    }
     
     NSURL * urlStr;
     if (Model.listImg.count != 0) {
