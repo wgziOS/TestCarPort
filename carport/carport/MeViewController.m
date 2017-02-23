@@ -12,6 +12,7 @@
 #import "BalanceViewController.h"
 #import "SettingViewController.h"
 #import "MeIsOwnerViewController.h"
+#import "MyRentCarViewController.h"
 #import "MasterOrderViewController.h"
 #import "ClientOrderViewController.h"
 #import "ComplaintViewController.h"
@@ -108,6 +109,12 @@
 - (IBAction)myCarPortBtnClick:(id)sender {
     MeIsOwnerViewController * OWVC = [[MeIsOwnerViewController alloc]init];
     [self.navigationController pushViewController:OWVC animated:YES];
+}
+#pragma mark -  我出租的爱车
+- (IBAction)MyRentCarBtnClick:(id)sender {
+    MyRentCarViewController * RVC = [[MyRentCarViewController alloc]init];
+    [self.navigationController pushViewController:RVC animated:YES];
+    
 }
 #pragma mark -  投诉
 - (IBAction)complaintBtnClcik:(id)sender {

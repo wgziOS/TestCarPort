@@ -17,7 +17,7 @@
 }
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray * listArray;
-@property (assign, nonatomic) NSInteger page; //!< 数据页数.表示下次请求第几页的数据.
+@property (assign, nonatomic) NSInteger page;
 @end
 
 @implementation MeIsOwnerViewController
@@ -34,7 +34,7 @@
     [self postPakingSpaceListWithPage:1];
     _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         self.page--;
-        if (_page == 0 || _page ==-1) {
+        if (_page <= 0) {
             _page = 0;
             [Calculate_frame showWithText:@"已经是第一页"];
             [self endRefresh];
@@ -82,8 +82,8 @@
     MeIsOwnerTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kMeIsOwnerTableViewCell];
     NearbyModel *nearbyModel = [NearbyModel mj_objectWithKeyValues:self.listArray[indexPath.row]];
     
-//    NSString * imgUrl =[NSString stringWithFormat:@"http://parking.86gg.cn%@",nearbyModel.ParkingSpace.navigation_imgurl];
-    NSString * imgUrl =[NSString stringWithFormat:@"http://192.168.123.73:8090%@",nearbyModel.ParkingSpace.navigation_imgurl];
+    NSString * imgUrl =[NSString stringWithFormat:@"http://parking.86gg.cn%@",nearbyModel.ParkingSpace.navigation_imgurl];
+//    NSString * imgUrl =[NSString stringWithFormat:@"http://192.168.123.73:8090%@",nearbyModel.ParkingSpace.navigation_imgurl];
     
     NSURL * urlStr = [NSURL URLWithString:imgUrl];
     [cell.imgView sd_setImageWithURL:urlStr placeholderImage:[UIImage imageNamed:@"picture-wait@3x"]];
@@ -172,14 +172,11 @@
     
     userDefault = [NSUserDefaults standardUserDefaults];
     [params setObject:[userDefault valueForKey:@"Token"] forKey:@"Token"];
-    NSLog(@"参数%@",params);
     __weak __typeof(self)weakSelf = self;
     
     [MHNetworkManager postReqeustWithURL:API_GET_PARKING_SPACE_LIST_URL params:params successBlock:^(NSDictionary *returnData) {
         //        [self endRefresh];
         NSLog(@"我的车位返回数据%@",returnData);
-        
-        
 
         if([returnData isKindOfClass:[NSArray class]])
         {
@@ -208,7 +205,6 @@
     } failureBlock:^(NSError *error) {
         
     } showHUD:YES];
-    
     
 }
 #pragma mark 获取Token

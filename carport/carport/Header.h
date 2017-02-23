@@ -48,7 +48,6 @@
 
 #define API_GET_USER_BASE_INFO_URL        [NSString stringWithFormat:@"%@/API/GetUserBaseInfo",URLHTTP]//GetUserBaseInfo 个人中心(string Token)
 
-
 #define API_GET_VEHICLE_INFOMATION_URL       [NSString stringWithFormat:@"%@/API/GetVehicleInformation",URLHTTP]//获取租车订单列表(string Token, int? CurrentPage)
 
 #define API_SUBMIT_VEHICLE_INFORMATION_URL       [NSString stringWithFormat:@"%@/API/SubmitVehicleInformation",URLHTTP]//车主发布车辆信息(string Token, string Json)
@@ -58,6 +57,11 @@
 #define API_POST_RENTAL_ORDERS_LIST_URL       [NSString stringWithFormat:@"%@/API/UserCarRentalOrdersList",URLHTTP]// 用户查看租车订单列表 (string Token)
 
 #define API_POST_OWNER_RENTAL_ORDERS_LIST_URL    [NSString stringWithFormat:@"%@/API/OwnerCarRentalOrdersList",URLHTTP]//  车主查看租车订单列表 (string Token)
+
+#define API_POST_USER_VEHICLE_INFOMATION_URL    [NSString stringWithFormat:@"%@/API/GetUserVehicleInformation",URLHTTP]// 我出租的爱车 (string Token, int? CurrentPage)
+
+#define API_POST_USER_CAR_ORDER_CANCEL_URL    [NSString stringWithFormat:@"%@/API/UserCarOrderCancel",URLHTTP]// 用户租车退单 (string Token, int Orderid)
+
 /*
 
  */

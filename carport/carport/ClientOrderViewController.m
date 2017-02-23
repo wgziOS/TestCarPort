@@ -43,7 +43,7 @@
     cell.startTimeLabel.text = str1;
     cell.endTimeLabel.text = str2;
     
-    NSString * imgUrl =[NSString stringWithFormat:@"http://192.168.123.73:8090%@",orderListModel.navigation_imgurl];
+    NSString * imgUrl =[NSString stringWithFormat:@"%@%@",URLHTTP,orderListModel.navigation_imgurl];
     NSURL * urlStr = [NSURL URLWithString:imgUrl];
     [cell.imgView sd_setImageWithURL:urlStr placeholderImage:[UIImage imageNamed:@"picture-wait@3x"]];
     
@@ -107,8 +107,6 @@
 - (void)postUserOrdersList
 {
     NSMutableDictionary * params = [NSMutableDictionary dictionary];
-    
-//    [params setObject:prkid forKey:@"Prkid"];
     
     userDefault = [NSUserDefaults standardUserDefaults];
     [params setObject:[userDefault valueForKey:@"Token"] forKey:@"Token"];

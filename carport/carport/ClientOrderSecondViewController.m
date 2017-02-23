@@ -12,6 +12,7 @@
 #import "ClientOrderTableViewCell.h"
 #import "ClientRentCarCell.h"
 #import "ComplaintViewController.h"
+#import "ListImgModel.h"
 @interface ClientOrderSecondViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSUserDefaults * userDefault;
@@ -51,12 +52,22 @@
         cell.endLabel.text = [NSString stringWithFormat:@"时间数据异常"];
     }
     
+
     NSURL * urlStr;
     if (Model.listImg.count != 0) {
-        NSString * imgUrl =[NSString stringWithFormat:@"http://192.168.123.73:8090%@",Model.listImg[0]];
+        NSMutableArray * modelArr = [NSMutableArray array];
+        for (NSDictionary * dict in Model.listImg)
+        {
+            ListImgModel * Model = [[ListImgModel alloc]initWithInfoDic:dict];
+            [modelArr addObject:Model];
+        }
+        ListImgModel * imgModel = [ListImgModel mj_objectWithKeyValues:modelArr[0]];
+        
+        NSString * imgUrl =[NSString stringWithFormat:@"%@%@",URLHTTP,imgModel.imgurl];
         urlStr = [NSURL URLWithString:imgUrl];
     }
     [cell.imgView sd_setImageWithURL:urlStr placeholderImage:[UIImage imageNamed:@"jztp"]];
+    
     
     cell.greenLabel.text = [NSString stringWithFormat:@"该车押金%@元，非节假日%@元/天，节假日%@元/天",Model.CarRentalOrders.deposited_price,Model.CarRentalOrders.on_holiday_prie,Model.CarRentalOrders.holiday_prie];
     //天数
@@ -68,6 +79,7 @@
     switch ([Model.CarRentalOrders.Status intValue]) {
         case 0:
         {// 取消订单
+            
         }
             break;
         case 1:
@@ -90,12 +102,13 @@
         ComplaintViewController * CVC = [[ComplaintViewController alloc]init];
         [self.navigationController pushViewController:CVC animated:YES];
     };
-    cell.firstBtnBlock = ^(){//取消
+    cell.firstBtnBlock = ^(){//取消 API_POST_USER_CAR_ORDER_CANCEL_URL
         NSLog(@"取消%ld",(long)indexPath.row);
         
+        [self postCancelOrdersWithOrderid:[Model.CarRentalOrders.Id integerValue]];
     };
-    cell.thirdBtnBlock = ^(){//支付
-        NSLog(@"支付%ld",(long)indexPath.row);
+    cell.thirdBtnBlock = ^(){//还车
+        NSLog(@"还车%ld",(long)indexPath.row);
         
     };
     
@@ -112,7 +125,50 @@
     return 210;
     
 }
+#pragma mark - cancelOrders
+- (void)postCancelOrdersWithOrderid:(NSInteger)orderid
+{
+    NSMutableDictionary * params = [NSMutableDictionary dictionary];
+    userDefault = [NSUserDefaults standardUserDefaults];
+    [params setObject:[userDefault valueForKey:@"Token"] forKey:@"Token"];
+    [params setObject:[NSString stringWithFormat:@"%ld",(long)orderid] forKey:@"Orderid"];
+    
+    [MHNetworkManager postReqeustWithURL:API_POST_USER_CAR_ORDER_CANCEL_URL params:params successBlock:^(NSDictionary *returnData) {
+        
+        NSLog(@"取消订单返回数据%@",returnData);
+        [Calculate_frame showWithText:[returnData objectForKey:@"message"]];
+        NSString * str = [NSString stringWithFormat:@"%@",[returnData objectForKey:@"states"]];
+        /*
+         states = 1, message = "订单取消成功"
+         states = -3, message = "订单取消失败"
+         states = -4, message = "订单超过5分钟无法取消！"
+         states = -1, message = "请先登录！"
+         */
+        switch ([str intValue]) {
+            case -3:
+               
+                break;
+            case -4:
+                
+                break;
+            case -1:
+                [self goLogin];
+                break;
+            case 1:
+                
+                
+                break;
+                
+            default:
+                break;
+        }
 
+        
+       } failureBlock:^(NSError *error) {
+        
+    } showHUD:YES];
+    
+}
 #pragma mark - 获取数据
 - (void)postUserOrdersList
 {

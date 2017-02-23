@@ -12,6 +12,7 @@
 #import "ClientOrderTableViewCell.h"
 #import "ClientRentCarCell.h"
 #import "ComplaintViewController.h"
+#import "ListImgModel.h"
 @interface MasterSecondViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSUserDefaults * userDefault;
@@ -55,7 +56,15 @@
     
     NSURL * urlStr;
     if (Model.listImg.count != 0) {
-        NSString * imgUrl =[NSString stringWithFormat:@"http://192.168.123.73:8090%@",Model.listImg[0]];
+        NSMutableArray * modelArr = [NSMutableArray array];
+        for (NSDictionary * dict in Model.listImg)
+        {
+            ListImgModel * Model = [[ListImgModel alloc]initWithInfoDic:dict];
+            [modelArr addObject:Model];
+        }
+        ListImgModel * imgModel = [ListImgModel mj_objectWithKeyValues:modelArr[0]];
+        
+        NSString * imgUrl =[NSString stringWithFormat:@"%@%@",URLHTTP,imgModel.imgurl];
         urlStr = [NSURL URLWithString:imgUrl];
     }
     [cell.imgView sd_setImageWithURL:urlStr placeholderImage:[UIImage imageNamed:@"jztp"]];
