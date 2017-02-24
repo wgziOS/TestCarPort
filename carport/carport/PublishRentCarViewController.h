@@ -15,4 +15,5 @@
 @property (strong, nonatomic) WGZaddCatPortImgView * papersImgView;
 @property (strong, nonatomic) NSString * carImgString;//车照片str
 @property (strong, nonatomic) NSString * papersImgString;//
+@property(nonatomic,strong) NSString * id;
 @end

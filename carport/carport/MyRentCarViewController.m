@@ -10,6 +10,7 @@
 #import "RentCarModel.h"
 #import "MyRentCarCell.h"
 #import "ListImgModel.h"
+#import "PublishRentCarViewController.h"
 @interface MyRentCarViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSUserDefaults * userDefault;
@@ -49,6 +50,28 @@
         [self updateData];
     }];
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self beginAppearanceTransition: YES animated: animated];
+
+    //右按钮
+    UIView * rightButtonView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 30, 25)];
+    UIButton * rightButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 25)];
+    [rightButton setImage:[UIImage imageNamed:@"fb"] forState:UIControlStateNormal];
+    rightButton.titleLabel.font = [UIFont systemFontOfSize:15];
+    [rightButton addTarget:self action:@selector(rightBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [rightButtonView addSubview:rightButton];
+    UIBarButtonItem *rightCunstomButtonView = [[UIBarButtonItem alloc]initWithCustomView:rightButtonView];
+    self.navigationItem.rightBarButtonItem = rightCunstomButtonView;
+ 
+}
+#pragma mark - 右按钮
+-(void)rightBtnClick:(id)sender
+{
+    PublishRentCarViewController * PVC = [[PublishRentCarViewController alloc]init];
+    PVC.navigationItem.title = @"发布租车信息";
+    [self.navigationController pushViewController:PVC animated:YES];
+}
 
 #pragma mark - tableView
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -76,22 +99,37 @@
     cell.holidayPriceLabel.text = [NSString stringWithFormat:@"节假日%@元/天",Model.VehicleInformation.holiday_prie];
     
 //    NSString * str = [NSString stringWithFormat:@"%@",Model.VehicleInformation.status];
-
+    
     switch ([Model.VehicleInformation.status intValue]) {
         case 0://审核中
-            
+        {
+            cell.statesLabel.text = @"审核中";
+        }
             break;
         case 1://已审核
-            
+        {
+            cell.statesLabel.text = @"已审核";
+        }
             break;
         case 2://未通过
-            
+        {
+            cell.statesLabel.text = @"未通过";
+        }
             break;
         case 3://被占用
-            
+        {
+            cell.statesLabel.text = @"被占用";
+            [cell.secondButton setImage:[UIImage imageNamed:@"xg"] forState:UIControlStateNormal];
+            [cell.firstButton setImage:[UIImage imageNamed:@"td"] forState:UIControlStateNormal];
+            cell.firstButton.userInteractionEnabled = NO;
+            cell.secondButton.userInteractionEnabled = NO;
+        }
             break;
         case -1://被下架
-            
+        {
+            cell.statesLabel.text = @"已下架";
+            cell.firstButton.hidden = YES;
+        }
             break;
             
         default:
@@ -120,7 +158,9 @@
 
     };
     cell.secondBtnBlock = ^(){
-        
+        PublishRentCarViewController * PVC = [[PublishRentCarViewController alloc]init];
+        PVC.id = Model.VehicleInformation.Id;
+        [self.navigationController pushViewController:PVC animated:YES];
 
     };
     

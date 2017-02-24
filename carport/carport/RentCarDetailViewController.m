@@ -84,8 +84,56 @@
             cell.plateNumberLabel.text = _model.VehicleInformation.plate_number;
             cell.kilometersTraveledLabel.text = [NSString stringWithFormat:@"%@公里",_model.VehicleInformation.kilometers_traveled];
             cell.seatCountLabel.text = [NSString stringWithFormat:@"%@座",_model.VehicleInformation.seat_count];
-            cell.engineDisplacementLabel.text = _model.VehicleInformation.engine_displacement;
-            cell.variableBoxLabel.text = _model.VehicleInformation.variable_box;
+
+            switch ([_model.VehicleInformation.variable_box intValue]) {
+                case 1:
+                {
+                    cell.variableBoxLabel.text = @"自动挡";
+                }
+                    break;
+                case 2:
+                {
+                    cell.variableBoxLabel.text = @"手动挡";
+                }
+                    break;
+          
+                default:
+                    break;
+            }
+
+            
+            switch ([_model.VehicleInformation.variable_box intValue]) {
+                case 1:
+                {
+                    cell.engineDisplacementLabel.text = @"1.0L及以下";
+                }
+                    break;
+                case 2:
+                {
+                    cell.engineDisplacementLabel.text = @"1.1L~1.6L";
+                }
+                    break;
+                case 3:
+                {cell.engineDisplacementLabel.text = @"1.7L~2.0L";
+                }
+                    break;
+                case 4:
+                {cell.engineDisplacementLabel.text = @"2.1L~2.5L";
+                }
+                    break;
+                case 5:
+                {cell.engineDisplacementLabel.text = @"2.6L~3.0L";
+                }
+                    break;
+                case 6:
+                {cell.engineDisplacementLabel.text = @"3.1L及以下";
+                }
+                    break;
+                default:
+                    break;
+            }
+
+            
 //            cell.configurationLabel.text =
             //多媒体
             return cell;

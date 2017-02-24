@@ -70,16 +70,20 @@
             //        NSLog(@"time1=%ld",(long)time1);
             start = [NSString stringWithFormat:@"/Date(%ld000)/",(long)time];
             end = [NSString stringWithFormat:@"/Date(%ld000)/",(long)time1];
-            NSLog(@"发布时endtime=%@",end);//
+           
+            //判断是否为 我的爱车页修改按钮 进入
+            if ([IsBlankString isBlankString:_id]){
+                [self turnJson];
+            }else{
+                [self turnJsonWithID];
+            }
             
-            [self turnJson];
         }else
         {
             [Calculate_frame showWithText:@"信息填写不全"];
             return;
         }
 
-  
     }]];
     
     [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
@@ -90,6 +94,47 @@
     
     
 }
+#pragma mark - turnJsonWithID 修改按钮传入id赋值给属性
+-(void)turnJsonWithID
+{
+    NSDictionary * json = @{
+                            @"listImg" : @[
+                                    @{
+                                        @"imgurl" : carBase64
+                                 
+                                        },
+                                    @{
+                                        @"imgurl" : papersBase64
+                                 
+                                        }
+                                    ],
+                            @"VehicleInformation" : @{
+                                    @"Id": _id,
+                                    @"owner_name":_ownerNameTextfield.text,
+                                    @"owner_phone":_ownerPhoneTextfield.text,
+                                    @"plate_number":plateNumber,
+                                    @"car_size":carSize,
+                                    @"seat_count":seatCount,
+                                    @"buy_car_year":buyCarYear,
+                                    @"kilometers_traveled":kmString,
+                                    @"variable_box":boxValue,
+                                    @"engine_displacement":displacementValue,
+                                    @"starttime":start,
+                                    @"endtime":end,
+                                    @"non_holiday_prie":_normalPriceTextfield.text,
+                                    @"holiday_prie":_holidayPriceTextfield.text,
+                                    @"deposited_price":_pledgePriceTextfield.text,
+                                    @"car_address":_addressTextfield.text,
+                                    @"take_car":_needToKnowTextfield.text,
+                                    @"descinfo":@"5445",
+                                    @"remarks":configurationValue //配置
+                                    }
+                            };
+    NSString * jsonStr = [DicToJson dictionaryToJson:json];
+    
+    [self postWithJson:jsonStr];
+}
+
 #pragma mark - turnJson
 -(void)turnJson
 {
@@ -341,11 +386,11 @@
     [_holidayPriceTextfield setText:@""];
     [_addressTextfield setText:@""];
     [_needToKnowTextfield setText:@""];
-    
 }
 -(void)goLogin
 {
     LGViewController *LGVC = [[LGViewController alloc]init];
+//    LGVC.navigationItem.title = @"登录";
     [self.navigationController pushViewController:LGVC animated:YES];
 }
 

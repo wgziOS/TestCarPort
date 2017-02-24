@@ -45,7 +45,7 @@
     [super viewDidLoad];
 
 //    [self.navigationController setNavigationBarHidden:YES animated:YES];
-    self.scrollViewHeight.constant = SCREENHEIGHT*1;
+    self.scrollViewHeight.constant = SCREENHEIGHT*1-64;
     [self headViewSet];
     
     
@@ -57,11 +57,28 @@
     NSMutableDictionary * params = [NSMutableDictionary dictionary];
     userDefault = [NSUserDefaults standardUserDefaults];
     [params setObject:[userDefault valueForKey:@"Token"] forKey:@"Token"];
-
+    __weak __typeof(self)weakSelf = self;
     [MHNetworkManager postReqeustWithURL:API_GET_USER_BASE_INFO_URL params:params successBlock:^(NSDictionary *returnData) {
         
         NSLog(@"%@",returnData);
+        NSString * str = [NSString stringWithFormat:@"%@",[returnData objectForKey:@"states"]];
         
+        switch ([str intValue]) {
+            case 1:
+            {
+            }
+                break;
+            case -1:
+            {
+                //先登录
+                [weakSelf goLogin];
+            }
+                break;
+                
+            default:
+                break;
+        }
+
         Model = [UserInfoModel mj_objectWithKeyValues:returnData];
         _phoneNumLabel.text = Model.phone;
         _moneyLabel.text = Model.balance;

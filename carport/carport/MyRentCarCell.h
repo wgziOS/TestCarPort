@@ -20,6 +20,7 @@ static NSString * const kMyRentCarCell = @"MyRentCarCell";
 ;
 @property (weak, nonatomic) IBOutlet UIButton *firstButton;
 @property (weak, nonatomic) IBOutlet UIButton *secondButton;
+@property (weak, nonatomic) IBOutlet UILabel *statesLabel;
 
 
 @property(nonatomic,strong) void (^firstBtnBlock)();

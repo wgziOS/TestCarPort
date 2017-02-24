@@ -11,6 +11,7 @@
 #import "NearbyModel.h"
 #import "MJExtension.h"
 #import "FilterHTML.h"
+#import "PublishCarPortViewController.h"
 @interface MeIsOwnerViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSUserDefaults * userDefault;
@@ -47,6 +48,29 @@
         self.page++;
         [self updateData];
     }];
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self beginAppearanceTransition: YES animated: animated];
+    
+    //右按钮
+    UIView * rightButtonView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 30, 25)];
+    UIButton * rightButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 25)];
+    //    rightButton.tag = 0;
+    [rightButton setImage:[UIImage imageNamed:@"fb"] forState:UIControlStateNormal];
+    rightButton.titleLabel.font = [UIFont systemFontOfSize:15];
+    [rightButton addTarget:self action:@selector(rightBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [rightButtonView addSubview:rightButton];
+    UIBarButtonItem *rightCunstomButtonView = [[UIBarButtonItem alloc]initWithCustomView:rightButtonView];
+    self.navigationItem.rightBarButtonItem = rightCunstomButtonView;
+    
+}
+#pragma mark - 右按钮
+-(void)rightBtnClick:(id)sender
+{
+    PublishCarPortViewController * PVC = [[PublishCarPortViewController alloc]init];
+    PVC.navigationItem.title = @"发布车位信息";
+    [self.navigationController pushViewController:PVC animated:YES];
 }
 /**
  * 更新视图.

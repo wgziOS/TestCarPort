@@ -65,8 +65,8 @@
     [self.headerView addSubview:label1];
     
     self.moneyButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.moneyButton.frame = CGRectMake(48, 120, 60, 30);
-    [self.moneyButton setTitle:@"250.25" forState:UIControlStateNormal];//写死
+    self.moneyButton.frame = CGRectMake(45, 120, 60, 30);
+    [self.moneyButton setTitle:@"0.00" forState:UIControlStateNormal];//写死
     self.moneyButton.titleLabel.font = [UIFont systemFontOfSize:12.f];
     [self.moneyButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.moneyButton.backgroundColor = [UIColor clearColor];
@@ -74,7 +74,7 @@
     [self.headerView addSubview:self.moneyButton];
     
     self.nikeNameLabel = [[UILabel alloc]initWithFrame:CGRectMake(90, 50, 80, 40)];
-    self.nikeNameLabel.text = @"KissMe>>>";
+    self.nikeNameLabel.text = @"昵称>>>";
     self.nikeNameLabel.font = [UIFont systemFontOfSize:15.f];
     self.nikeNameLabel.textColor = [UIColor whiteColor];
     [self.headerView addSubview:self.nikeNameLabel];
@@ -135,15 +135,15 @@
             break;
         case 1:
         {//发布车位
-            PublishCarPortViewController * carVC = [[PublishCarPortViewController alloc]init];
-            [self.slideMenuController showViewController:carVC];
+//            PublishCarPortViewController * carVC = [[PublishCarPortViewController alloc]init];
+//            [self.slideMenuController showViewController:carVC];
  
         }
             break;
         case 2:
         {//附近
-            MainViewController * MVC = [[MainViewController alloc]init];
-            [self.slideMenuController showViewController:MVC];
+//            MainViewController * MVC = [[MainViewController alloc]init];
+//            [self.slideMenuController showViewController:MVC];
         }
             break;
         case 3:
