@@ -13,19 +13,17 @@
 @interface AppDelegate ()
 
 @end
-//mapKey GNqXqxkQuMXPegdSKCVnDLQi1TeBgr4Q
+
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    // 创建窗口
+
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
     
-//    // 设置窗口的根控制器
-//    self.window.rootViewController = [[XMGTabBarController alloc] init];
     
     XMGTabBarController *contentViewController = [[XMGTabBarController alloc] init];
     LeftMenuController  *leftMenuViewController = [[LeftMenuController alloc] init];
@@ -34,7 +32,7 @@
     sideMenuController.scaleContent = NO;
     
     self.window.rootViewController = sideMenuController;
-//地图
+    //地图
     _mapManager = [[BMKMapManager alloc]init];
     // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
     BOOL ret = [_mapManager start:@"GNqXqxkQuMXPegdSKCVnDLQi1TeBgr4Q"  generalDelegate:nil];

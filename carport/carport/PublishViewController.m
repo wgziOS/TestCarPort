@@ -94,9 +94,7 @@
         label.frame = CGRectMake(labelX, labelY, labelW, labelH);
         [label addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelClick:)]];
         label.tag = i;
-        //        if (label.tag == 0) {
-        //            firstLabel = label;
-        //        }
+  
         [self.titleScrollView addSubview:label];
         
         if (i == 0) {

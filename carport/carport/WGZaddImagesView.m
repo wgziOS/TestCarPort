@@ -173,7 +173,7 @@
 - (void)layoutSubviews
  {
          [super layoutSubviews];
-         int count = self.subviews.count;
+         NSInteger count = self.subviews.count;
          CGFloat btnW = imageW;
          CGFloat btnH = imageH;
          int maxColumn = kMaxColumn > self.frame.size.width / imageW ? self.frame.size.width / imageW : kMaxColumn;
@@ -206,7 +206,8 @@
              {
                      // 根据tag修改需要编辑的控件
                      UIButton *btn = (UIButton *)[self viewWithTag:editTag];
-                     int index = [self.images indexOfObject:[btn imageForState:UIControlStateNormal]];
+                     NSInteger index = [self.images indexOfObject:[btn imageForState:UIControlStateNormal]];
+                    
                      [self.images removeObjectAtIndex:index];
                      [btn setImage:image forState:UIControlStateNormal];
                      [self.images insertObject:image atIndex:index];

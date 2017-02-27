@@ -61,13 +61,13 @@
 /**
  *添加周边雷达delegate，用于结果回调
  *不需要时，需要使用removeRadarManagerDelegate:移除，否则影响内存释放
- *@param delegate,  添加的id<BMKRadarManagerDelegate>对象
+ *@param delegate 添加的id<BMKRadarManagerDelegate>对象
  */
 - (void)addRadarManagerDelegate:(id<BMKRadarManagerDelegate>) delegate;
 
 /**
  *移除周边雷达delegate，取消结果回调
- *@param delegate,  需要移除的id<BMKRadarManagerDelegate>对象
+ *@param delegate  需要移除的id<BMKRadarManagerDelegate>对象
  */
 - (void)removeRadarManagerDelegate:(id<BMKRadarManagerDelegate>) delegate;
 

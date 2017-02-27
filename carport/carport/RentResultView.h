@@ -15,9 +15,9 @@
 //    BOOL _leaveAlertView;
 }
 
-@property (nonatomic, strong) UILabel * title;               //标题
-@property (nonatomic, strong) UILabel * subTitle;            //子标题
-@property (nonatomic, strong) UIView  * backImageView;       //顶层模态视图，半透明视图
+@property (nonatomic, strong) UILabel * title;
+@property (nonatomic, strong) UILabel * subTitle;
+@property (nonatomic, strong) UIView  * backImageView;       
 
 
 @property(nonatomic,strong) void (^goonBlock)();

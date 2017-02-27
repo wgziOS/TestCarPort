@@ -95,7 +95,7 @@
    
 }
 
-#pragma mark - Table view data source
+#pragma mark - Tableview datasource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
@@ -124,7 +124,7 @@
     return cell;
     
 }
-#pragma mark - Table view delegate
+#pragma mark - 点击
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
    
     switch (indexPath.row) {
@@ -160,15 +160,7 @@
         default:
             break;
     }
-    //    if(indexPath.row == 0){
-    //        OneViewController *one = [[OneViewController alloc] initWithNibName:@"OneViewController" bundle:nil];
-    //        [self.slideMenuController showViewController:one];
-    //        one.title = self.dataArray[indexPath.row];
-    //    }else{
-    //        TwoViewController *two = [[TwoViewController alloc] initWithNibName:@"TwoViewController" bundle:nil];
-    //        [self.slideMenuController showViewController:two];
-    //        two.title = self.dataArray[indexPath.row];
-    //    }
+
 
 }
 

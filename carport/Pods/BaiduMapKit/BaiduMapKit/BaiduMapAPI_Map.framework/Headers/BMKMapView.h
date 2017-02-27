@@ -438,7 +438,7 @@ typedef enum {
 
 /**
  *移除一组标注
- *@param annotation 要移除的标注数组
+ *@param annotations 要移除的标注数组
  */
 - (void)removeAnnotations:(NSArray *)annotations;
 
@@ -555,7 +555,7 @@ typedef enum {
 
 /**
  *添加热力图
- *	@param	[BMKHeatMap*]	heatMap	热力图绘制和显示数据
+ *	@param	heatMap	热力图绘制和显示数据
  */
 - (void)addHeatMap:(BMKHeatMap*)heatMap;
 
@@ -615,14 +615,14 @@ typedef enum {
 /**
  *当选中一个annotation views时，调用此接口
  *@param mapView 地图View
- *@param views 选中的annotation views
+ *@param view 选中的annotation views
  */
 - (void)mapView:(BMKMapView *)mapView didSelectAnnotationView:(BMKAnnotationView *)view;
 
 /**
  *当取消选中一个annotation views时，调用此接口
  *@param mapView 地图View
- *@param views 取消选中的annotation views
+ *@param view 取消选中的annotation views
  */
 - (void)mapView:(BMKMapView *)mapView didDeselectAnnotationView:(BMKAnnotationView *)view;
 
@@ -660,42 +660,42 @@ typedef enum {
 
 /**
  *点中覆盖物后会回调此接口，目前只支持点中BMKPolylineView时回调
- *@param mapview 地图View
+ *@param mapView 地图View
  *@param overlayView 覆盖物view信息
  */
 - (void)mapView:(BMKMapView *)mapView onClickedBMKOverlayView:(BMKOverlayView *)overlayView;
 
 /**
  *点中底图标注后会回调此接口
- *@param mapview 地图View
+ *@param mapView 地图View
  *@param mapPoi 标注点信息
  */
 - (void)mapView:(BMKMapView *)mapView onClickedMapPoi:(BMKMapPoi*)mapPoi;
 
 /**
  *点中底图空白处会回调此接口
- *@param mapview 地图View
+ *@param mapView 地图View
  *@param coordinate 空白处坐标点的经纬度
  */
 - (void)mapView:(BMKMapView *)mapView onClickedMapBlank:(CLLocationCoordinate2D)coordinate;
 
 /**
  *双击地图时会回调此接口
- *@param mapview 地图View
+ *@param mapView 地图View
  *@param coordinate 返回双击处坐标点的经纬度
  */
 - (void)mapview:(BMKMapView *)mapView onDoubleClick:(CLLocationCoordinate2D)coordinate;
 
 /**
  *长按地图时会回调此接口
- *@param mapview 地图View
+ *@param mapView 地图View
  *@param coordinate 返回长按事件坐标点的经纬度
  */
 - (void)mapview:(BMKMapView *)mapView onLongClick:(CLLocationCoordinate2D)coordinate;
 
 /**
  *3DTouch 按地图时会回调此接口（仅在支持3D Touch，且fouchTouchEnabled属性为YES时，会回调此接口）
- *@param mapview 地图View
+ *@param mapView 地图View
  *@param coordinate 触摸点的经纬度
  *@param force 触摸该点的力度(参考UITouch的force属性)
  *@param maximumPossibleForce 当前输入机制下的最大可能力度(参考UITouch的maximumPossibleForce属性)
@@ -704,13 +704,13 @@ typedef enum {
 
 /**
  *地图状态改变完成后会调用此接口
- *@param mapview 地图View
+ *@param mapView 地图View
  */
 - (void)mapStatusDidChanged:(BMKMapView *)mapView;
 
 /**
  *地图进入/移出室内图会调用此接口
- *@param mapview 地图View
+ *@param mapView 地图View
  *@param flag  YES:进入室内图; NO:移出室内图
  *@param info 室内图信息
  */

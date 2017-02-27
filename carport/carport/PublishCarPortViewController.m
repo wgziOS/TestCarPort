@@ -14,8 +14,6 @@
     WGZToggleButton * manageButton;
     
     NSUserDefaults * userDefault;
-    
-    
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *shangchuangLabel;
@@ -25,7 +23,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *endTimeTextfield;
 @property (weak, nonatomic) IBOutlet UIButton *sureButton;
 @property (weak, nonatomic) IBOutlet UIView *imgLineView;//分割线
-
 @property (weak, nonatomic) IBOutlet UITextField *carPortTitle;//title
 @property (weak, nonatomic) IBOutlet UITextField *userName;//车主
 @property (weak, nonatomic) IBOutlet UITextField *PlateNumber;//原始编号
@@ -40,7 +37,6 @@
 @property (strong, nonatomic) NSString * manageStr;//车位管理方式
 @property (strong, nonatomic) UIDatePicker *datePicker;
 @property (strong, nonatomic) NSString * selectTime;
-//@property (strong, nonatomic) WGZaddImagesView * addImageView;
 @property (strong, nonatomic) WGZaddCatPortImgView * addcarPortImgView;
 @property (strong, nonatomic) NSString * carPortImgString;//车位照片str
 @property (strong, nonatomic) WGZaddCatPortImgView * addMapImgView;
@@ -83,7 +79,7 @@
     [self addEntryModeButton];
     self.parkingEntranceTextfield.delegate = self;
     self.describeTextView.delegate = self;
-//    NSLog(@"ididid=%@",_id);
+
 }
 #pragma mark - 确定按钮
 - (IBAction)buttonClick:(id)sender {
@@ -93,15 +89,12 @@
     NSInteger time1 = [self turnSringToTimeIntervalWithString:_endTimeTextfield.text];
     NSString * start = [NSString stringWithFormat:@"/Date(%ld000)/",(long)time];
     NSString * end = [NSString stringWithFormat:@"/Date(%ld000)/",(long)time1];
-    NSLog(@"endtime=%@",end);
-//    NSString *baseb4_1 = [self image2DataURL:_addMapImgView.image];
-//    NSString *baseb4_2 = [self image2DataURL:_addcarPortImgView.image];
+//    NSLog(@"endtime=%@",end);
+
     
     NSString *baseb4_1 = [NSString stringWithFormat:@"data: image/png;base64,%@",[self UIImageToBase64Str:_addMapImgView.image]];
     NSString *baseb4_2 = [NSString stringWithFormat:@"data: image/png;base64,%@",[self UIImageToBase64Str:_addcarPortImgView.image]];
     
-//    NSLog(@"baseb4_1-----==--=======%@",baseb4_1);
-//    NSLog(@"baseb4_2-----==--=======%@",baseb4_2);
  
     NSString * describe = [NSString stringWithFormat:@"<p>%@</p>",_describeTextView.text];
    

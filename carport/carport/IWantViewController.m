@@ -19,7 +19,7 @@
 
 @property (weak, nonatomic) IBOutlet UIScrollView *titleScrollView;
 @property (weak, nonatomic) IBOutlet UIScrollView *contentScrollView;
-/*标题按钮地下的指示器*/
+
 @property (weak ,nonatomic) UIView *indicatorView ;
 @end
 
@@ -40,7 +40,7 @@
     
     [self scrollViewDidEndScrollingAnimation:self.contentScrollView];
     
-    //    底部指示器
+    //
     UIView *indicatorView = [[UIView alloc]init];
     self.indicatorView = indicatorView;
     indicatorView.backgroundColor = [UIColor colorWithRed:42.0/255.0 green:173.0/255.0 blue:234.0/255.0 alpha:1.0f];
@@ -81,7 +81,7 @@
 
 - (void)setupTitle
 {
-    //    WGZTitleLabel * firstLabel= [WGZTitleLabel new];
+
     
     CGFloat labelW = SCREEN_WIDTH/5;
     CGFloat labelY = 0;
@@ -94,9 +94,7 @@
         label.frame = CGRectMake(labelX, labelY, labelW, labelH);
         [label addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelClick:)]];
         label.tag = i;
-        //        if (label.tag == 0) {
-        //            firstLabel = label;
-        //        }
+
         [self.titleScrollView addSubview:label];
         
         if (i == 0) {

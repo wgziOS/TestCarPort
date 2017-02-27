@@ -32,7 +32,7 @@
     _papersImgView = [[WGZaddCatPortImgView alloc]initWithFrame:CGRectMake(100, z+45, 60, 60) andImageStr:@"czfb-xsz"];
     [self addSubview:_papersImgView];
     
-    // kvo 为par添加观察者
+    // kvo
     [_papersImgView addObserver:self forKeyPath:@"base64String" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
     
     [_carImgView addObserver:self forKeyPath:@"base64String1" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
@@ -75,7 +75,7 @@
     
     [self.kilometersTraveledTextfield addTarget:self action:@selector(textfieldTextDidChange:) forControlEvents:UIControlEventEditingChanged];
 }
-/** 添加观察者必须要实现的方法 */
+
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
     /** 打印新老值 */
     NSLog(@"old : %@  new : %@",[change objectForKey:@"old"],[change objectForKey:@"new"]);

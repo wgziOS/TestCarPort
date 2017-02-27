@@ -34,6 +34,7 @@
         _scrollview.pageDotImage = [UIImage imageNamed:@"pageControlDot@2x"];
         _scrollview.localizationImageNamesGroup = imageArray;
         _scrollview.autoScrollTimeInterval = 2.0;
+        
         _scrollview.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         [self addSubview:_scrollview];
     }

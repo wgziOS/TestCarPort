@@ -66,7 +66,7 @@
         }
         return nil;
     }
-    /// 如果有一些公共处理，可以写在这里
+    // 如果有一些公共处理，可以写在这里
     NSUInteger hashValue = [delegate hash];
     self.netWorkItem = [[MHAsiNetworkItem alloc]initWithtype:networkType url:url params:params delegate:delegate target:target action:action hashValue:hashValue showHUD:showHUD successBlock:successBlock failureBlock:failureBlock];
     self.netWorkItem.delegate = self;

@@ -84,9 +84,7 @@ static CGFloat kTransitionDuration = 0.3;
     [topVC.view addSubview:self];
 }
 
-/*
- * 视图的最顶层添加一个视图
- */
+
 - (UIViewController *)appRootViewController
 {
     UIViewController *appRootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
@@ -97,9 +95,7 @@ static CGFloat kTransitionDuration = 0.3;
     return topVC;
 }
 
-/*
- * 在rootViewController顶层添加视图
- */
+
 - (void)willMoveToSuperview:(UIView *)newSuperview
 {
     if (newSuperview == nil) {

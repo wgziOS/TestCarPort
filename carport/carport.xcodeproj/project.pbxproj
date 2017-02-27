@@ -432,7 +432,6 @@
 		B2C60CBF1DF11E88006BED2C /* denglu_10.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C60C801DF11E88006BED2C /* denglu_10.png */; };
 		B2C60CC11DF11E88006BED2C /* dingwei_02.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C60C821DF11E88006BED2C /* dingwei_02.png */; };
 		B2C60CC21DF11E88006BED2C /* dingwei_03.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C60C831DF11E88006BED2C /* dingwei_03.png */; };
-		B2C60CC31DF11E88006BED2C /* dingwei_04.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C60C841DF11E88006BED2C /* dingwei_04.png */; };
 		B2C60CC41DF11E88006BED2C /* dingwei_05.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C60C851DF11E88006BED2C /* dingwei_05.png */; };
 		B2C60CC51DF11E88006BED2C /* dlu_01.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C60C861DF11E88006BED2C /* dlu_01.png */; };
 		B2C60CC61DF11E88006BED2C /* dlu_02.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C60C871DF11E88006BED2C /* dlu_02.png */; };
@@ -467,7 +466,6 @@
 		B2C60CEA1DF11E88006BED2C /* xiangji_01.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C60CAB1DF11E88006BED2C /* xiangji_01.png */; };
 		B2C60CEB1DF11E88006BED2C /* xxtz.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C60CAC1DF11E88006BED2C /* xxtz.png */; };
 		B2C60CEC1DF11E88006BED2C /* yanzhengma.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C60CAD1DF11E88006BED2C /* yanzhengma.png */; };
-		B2C60CED1DF11E88006BED2C /* yuebeij_01.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C60CAE1DF11E88006BED2C /* yuebeij_01.png */; };
 		B2C60CEE1DF11E88006BED2C /* zhifbtb_01.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C60CAF1DF11E88006BED2C /* zhifbtb_01.png */; };
 		B2C60CF21DF1226B006BED2C /* tabbar-light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C60CF11DF1226B006BED2C /* tabbar-light@2x.png */; };
 		B2C60CF41DF1281A006BED2C /* dbdh_01.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C60CF31DF1281A006BED2C /* dbdh_01.png */; };
@@ -1084,7 +1082,6 @@
 		B2C60C801DF11E88006BED2C /* denglu_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = denglu_10.png; sourceTree = "<group>"; };
 		B2C60C821DF11E88006BED2C /* dingwei_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dingwei_02.png; sourceTree = "<group>"; };
 		B2C60C831DF11E88006BED2C /* dingwei_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dingwei_03.png; sourceTree = "<group>"; };
-		B2C60C841DF11E88006BED2C /* dingwei_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dingwei_04.png; sourceTree = "<group>"; };
 		B2C60C851DF11E88006BED2C /* dingwei_05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dingwei_05.png; sourceTree = "<group>"; };
 		B2C60C861DF11E88006BED2C /* dlu_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dlu_01.png; sourceTree = "<group>"; };
 		B2C60C871DF11E88006BED2C /* dlu_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dlu_02.png; sourceTree = "<group>"; };
@@ -1119,7 +1116,6 @@
 		B2C60CAB1DF11E88006BED2C /* xiangji_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xiangji_01.png; sourceTree = "<group>"; };
 		B2C60CAC1DF11E88006BED2C /* xxtz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xxtz.png; sourceTree = "<group>"; };
 		B2C60CAD1DF11E88006BED2C /* yanzhengma.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yanzhengma.png; sourceTree = "<group>"; };
-		B2C60CAE1DF11E88006BED2C /* yuebeij_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yuebeij_01.png; sourceTree = "<group>"; };
 		B2C60CAF1DF11E88006BED2C /* zhifbtb_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhifbtb_01.png; sourceTree = "<group>"; };
 		B2C60CF11DF1226B006BED2C /* tabbar-light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-light@2x.png"; sourceTree = "<group>"; };
 		B2C60CF31DF1281A006BED2C /* dbdh_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dbdh_01.png; sourceTree = "<group>"; };
@@ -1612,7 +1608,6 @@
 				B21895E71E0B6ECA00B798FB /* MasterOrderViewController.h */,
 				B21895E81E0B6ECA00B798FB /* MasterOrderViewController.m */,
 				B21895E91E0B6ECA00B798FB /* MasterOrderViewController.xib */,
-				B21895F71E0B71AA00B798FB /* MasterOrderTableCell */,
 				B26B8E021E121E8D0066ED0A /* MasterSecondViewController.h */,
 				B26B8E031E121E8D0066ED0A /* MasterSecondViewController.m */,
 				B26B8E041E121E8D0066ED0A /* MasterSecondViewController.xib */,
@@ -1771,6 +1766,8 @@
 		B28F67241E47FBD3001855F5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B21895F71E0B71AA00B798FB /* MasterOrderTableCell */,
+				B2900AAE1E5E8F7E00A754C8 /* MyRentCarCell */,
 				B23D4B321E0A5ABA005AF3E5 /* MeIsOwenrTableViewCell */,
 				B29327BC1E01256F0053C557 /* MetableViewCell */,
 			);
@@ -1810,7 +1807,6 @@
 				B2900AA41E5E778700A754C8 /* MyRentCarViewController.h */,
 				B2900AA51E5E778700A754C8 /* MyRentCarViewController.m */,
 				B2900AA61E5E778700A754C8 /* MyRentCarViewController.xib */,
-				B2900AAE1E5E8F7E00A754C8 /* MyRentCarCell */,
 			);
 			name = MyRentCar;
 			sourceTree = "<group>";
@@ -2436,7 +2432,6 @@
 				B2C60C801DF11E88006BED2C /* denglu_10.png */,
 				B2C60C821DF11E88006BED2C /* dingwei_02.png */,
 				B2C60C831DF11E88006BED2C /* dingwei_03.png */,
-				B2C60C841DF11E88006BED2C /* dingwei_04.png */,
 				B2C60C851DF11E88006BED2C /* dingwei_05.png */,
 				B2C60C861DF11E88006BED2C /* dlu_01.png */,
 				B2C60C871DF11E88006BED2C /* dlu_02.png */,
@@ -2472,7 +2467,6 @@
 				B2C60CAB1DF11E88006BED2C /* xiangji_01.png */,
 				B2C60CAC1DF11E88006BED2C /* xxtz.png */,
 				B2C60CAD1DF11E88006BED2C /* yanzhengma.png */,
-				B2C60CAE1DF11E88006BED2C /* yuebeij_01.png */,
 				B2C60CAF1DF11E88006BED2C /* zhifbtb_01.png */,
 			);
 			path = images2;
@@ -2881,7 +2875,6 @@
 				B29327C11E012F560053C557 /* SettingViewController.xib in Resources */,
 				B29327461E00CDE60053C557 /* cdl-czcw-dj-icon@3x.png in Resources */,
 				B2ACE91B1E0249E900B7B415 /* ck@3x.jpg in Resources */,
-				B2C60CC31DF11E88006BED2C /* dingwei_04.png in Resources */,
 				B26B8DF31E120B2B0066ED0A /* 5@2x.jpg in Resources */,
 				B29E02641E53E81900615FE2 /* czfb-actp@2x.png in Resources */,
 				B29327871E00CDE60053C557 /* fbcw-kdd-dj@2x.png in Resources */,
@@ -2965,7 +2958,6 @@
 				B2C60CD51DF11E88006BED2C /* gerzx_03.png in Resources */,
 				B2C60D071DF15009006BED2C /* MeViewController.xib in Resources */,
 				B24AD0C11DFE97850049FE24 /* PublishCarPortViewController.xib in Resources */,
-				B2C60CED1DF11E88006BED2C /* yuebeij_01.png in Resources */,
 				B29E024B1E53E81900615FE2 /* clxq-sxy-lb@3x.png in Resources */,
 				B2ACE9381E026C9900B7B415 /* fbcw-bmz@3x.jpg in Resources */,
 				B29E024C1E53E81900615FE2 /* czfb-1jyx-wxz@2x.png in Resources */,
@@ -3616,7 +3608,7 @@
 				DEVELOPMENT_TEAM = RG8JYDVCLT;
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/wgz/Desktop/TestCarPort/carport/carport/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/wgz/Desktop/CarPort/carport/carport/PrefixHeader.pch;
 				INFOPLIST_FILE = carport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-6gg.cn.carport";
@@ -3632,7 +3624,7 @@
 				DEVELOPMENT_TEAM = RG8JYDVCLT;
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/wgz/Desktop/TestCarPort/carport/carport/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/wgz/Desktop/CarPort/carport/carport/PrefixHeader.pch;
 				INFOPLIST_FILE = carport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-6gg.cn.carport";
