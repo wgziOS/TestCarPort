@@ -266,7 +266,7 @@
                 <outlet property="seatCountLabel" destination="CLO-jv-O9b" id="uxH-QE-DLl"/>
                 <outlet property="variableBoxLabel" destination="vbK-pf-VcX" id="cLq-qv-jmZ"/>
             </connections>
-            <point key="canvasLocation" x="80.5" y="130"/>
+            <point key="canvasLocation" x="39" y="17"/>
         </tableViewCell>
     </objects>
     <resources>

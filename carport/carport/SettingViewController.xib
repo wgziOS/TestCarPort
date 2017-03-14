@@ -124,14 +124,14 @@
                             <rect key="frame" x="20" y="49" width="335" height="2"/>
                             <color key="backgroundColor" red="0.93061944799999996" green="0.93061944799999996" blue="0.93061944799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dqbb.png" translatesAutoresizingMaskIntoConstraints="NO" id="tA7-ER-TbR">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sybz.png" translatesAutoresizingMaskIntoConstraints="NO" id="tA7-ER-TbR">
                             <rect key="frame" x="20" y="19" width="20" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="20" id="etf-98-eyw"/>
                                 <constraint firstAttribute="height" constant="20" id="ufK-4h-GiB"/>
                             </constraints>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gywm.png" translatesAutoresizingMaskIntoConstraints="NO" id="c78-6a-oHZ">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gywm.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="c78-6a-oHZ">
                             <rect key="frame" x="20" y="61" width="20" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="20" id="7HU-SV-IUp"/>
@@ -352,10 +352,9 @@
     </objects>
     <resources>
         <image name="dlu_02.png" width="30" height="42"/>
-        <image name="dqbb.png" width="200" height="200"/>
         <image name="dxtz.png" width="200" height="200"/>
         <image name="grzl_01.png" width="19" height="35"/>
-        <image name="gywm.png" width="200" height="200"/>
+        <image name="gywm.jpg" width="200" height="200"/>
         <image name="sybz.png" width="200" height="200"/>
         <image name="tsjy.png" width="200" height="200"/>
         <image name="xxtz.png" width="200" height="200"/>

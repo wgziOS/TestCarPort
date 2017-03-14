@@ -63,7 +63,27 @@
 #define API_POST_USER_CAR_ORDER_CANCEL_URL    [NSString stringWithFormat:@"%@/API/UserCarOrderCancel",URLHTTP]// 用户租车退单 (string Token, int Orderid)
 
 /*
-
+UserVerification(string Token) 判断用户是否有填验证信息
+ states = 0, message = "token不存在或到期！"
+ states = -1, message = "请先登录！"
+ states = 1, message = "验证通过! "
+ states = 2, message = "用户验证信息不通过，可联系管理人员！"
+ states = -3, message = "用户还未提交验证信息，请去完善验证信息"
+ 
+ UserVerificationSubmit(string Token, string Json) 保存个人信息
+ {
+ "userid": 14,
+ "IDcard_obverse": null,
+ "IDcard_opposite":null,
+ "driver_license": null,
+ "consent_agreement": 1
+ }
+ "IDcard_obverse": null,
+ "IDcard_opposite":null,
+ "driver_license": null,
+ 这三个是 Base64  如果 没有就null
+ consent_agreement 1 同意协议
+ 0不同意
  */
 
 //主题蓝色

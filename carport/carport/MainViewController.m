@@ -11,15 +11,21 @@
 #import "MyLocationViewController.h"
 #import "NearbyCarportViewController.h"
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
-@interface MainViewController ()<BMKMapViewDelegate,BMKLocationServiceDelegate>
+#import "MainCell.h"
+#import <SDCycleScrollView.h>
+@interface MainViewController ()<BMKMapViewDelegate,BMKLocationServiceDelegate,UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>
 {
     BMKLocationService* _locService;
     NSUserDefaults * userDefault;
     int count;
+    UILabel * cityLabel;
 }
 @property (nonatomic ,strong) BMKMapView* mapView;
 @property (nonatomic ,strong) NSString * userLongitude;//用户经度
 @property (nonatomic ,strong) NSString * userLatitude;//纬度
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIView *headView;
+@property (strong, nonatomic) SDCycleScrollView * scrollView;
 @end
 
 @implementation MainViewController
@@ -33,25 +39,21 @@
 {
     [self beginAppearanceTransition: YES animated: animated];
     //左按钮
-    UIView * leftButtonView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
-    UIButton * leftButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
-    [leftButton setImage:[UIImage imageNamed:@"cwlb_01"] forState:UIControlStateNormal];
+    UIView * leftButtonView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 25)];
+    UIButton * leftButton = [[UIButton alloc]initWithFrame:CGRectMake(27, 0, 25, 25)];
+    [leftButton setImage:[UIImage imageNamed:@"dw"] forState:UIControlStateNormal];
     leftButton.titleLabel.font = [UIFont systemFontOfSize:15];
     [leftButton addTarget:self action:@selector(leftButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    cityLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 50, 25)];
+    cityLabel.text = @"厦门";
+    cityLabel.textColor = [UIColor whiteColor];
+    cityLabel.font = [UIFont systemFontOfSize:13.0f];
+    [leftButtonView addSubview:cityLabel];
     [leftButtonView addSubview:leftButton];
     UIBarButtonItem *leftCunstomButtonView = [[UIBarButtonItem alloc]initWithCustomView:leftButtonView];
     self.navigationItem.leftBarButtonItem = leftCunstomButtonView;
-    //右按钮
-    UIView * rightButtonView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 30, 25)];
-    UIButton * rightButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 25)];
-//    rightButton.tag = 0;
-    [rightButton setImage:[UIImage imageNamed:@"cwlb_02"] forState:UIControlStateNormal];
-    rightButton.titleLabel.font = [UIFont systemFontOfSize:15];
-    [rightButton addTarget:self action:@selector(rightButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-    [rightButtonView addSubview:rightButton];
-    UIBarButtonItem *rightCunstomButtonView = [[UIBarButtonItem alloc]initWithCustomView:rightButtonView];
-    self.navigationItem.rightBarButtonItem = rightCunstomButtonView;
-    
+   
 
     [_mapView viewWillAppear];
     _mapView.delegate = self; // 此处记得不用的时候需要置nil
@@ -61,6 +63,55 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    [_tableView registerNib:[UINib nibWithNibName:kMainCell bundle:nil] forCellReuseIdentifier:kMainCell];
+    
+    [self addTableHeadView];
+}
+//轮播
+-(void) addTableHeadView{
+//    _scrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 220) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    _scrollView  = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 220) imageNamesGroup:@[]];
+    
+//    _scrollView.imageURLStringsGroup = _slideImgArray;
+    _scrollView.pageControlDotSize = CGSizeMake(8.0, 8.0);
+    _scrollView.autoScrollTimeInterval = 2.0;
+    _scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    [_headView addSubview:_scrollView];
+}
+#pragma mark - tableView
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MainCell * cell = [tableView dequeueReusableCellWithIdentifier:kMainCell];
+
+    return cell;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 10;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 120;
+}
+#pragma mark -租车按钮方法
+- (IBAction)ZCBtnClick:(id)sender {
+}
+#pragma mark -租车位按钮方法
+- (IBAction)ZCWBtnClick:(id)sender {
+}
+#pragma mark 左按钮方法
+-(void)leftButtonClick:(id)sender
+{
+//    LGViewController * LGVC = [[LGViewController alloc]init];
+//    [self.navigationController pushViewController:LGVC animated:YES];
+}
+
+
+
+#pragma mark -———————————————— 加载mapView 老版本首页
+-(void)MapView{
     self.mapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     self.view = self.mapView;
     
@@ -70,8 +121,8 @@
     [self startLocation];
     [self setMapZoomLevel:0.08f];
     count = 1;
-}
 
+}
 #pragma mark - 定位
 -(void)startLocation
 {
@@ -117,18 +168,6 @@
 {
     double zoomLevel = level;
     [_mapView setRegion:BMKCoordinateRegionMake(_mapView.centerCoordinate, BMKCoordinateSpanMake(zoomLevel,zoomLevel))];
-}
-#pragma mark you按钮方法
--(void)rightButtonClick:(id)sender
-{
-
-}
-#pragma mark 左按钮方法
--(void)leftButtonClick:(id)sender
-{
-    
-    LGViewController * LGVC = [[LGViewController alloc]init];
-    [self.navigationController pushViewController:LGVC animated:YES];
 }
 
 
