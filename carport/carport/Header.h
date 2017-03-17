@@ -62,7 +62,13 @@
 
 #define API_POST_USER_CAR_ORDER_CANCEL_URL    [NSString stringWithFormat:@"%@/API/UserCarOrderCancel",URLHTTP]// 用户租车退单 (string Token, int Orderid)
 
+#define API_RECOMMENDED_CAR_URL    [NSString stringWithFormat:@"%@/API/Recommended_Car",URLHTTP]// 首页的 车辆推荐 (string Token,)
+
+#define API_USER_VERIFICATION_URL    [NSString stringWithFormat:@"%@/API/UserVerification",URLHTTP]// 判断用户是否有填验证信息 (string Token,)
+
+#define API_USER_VERIFICATION_SUBMIT_URL    [NSString stringWithFormat:@"%@/API/UserVerificationSubmit",URLHTTP]// (string Token, string Json) 保存个人信息
 /*
+API_USER_VERIFICATION_URL
 UserVerification(string Token) 判断用户是否有填验证信息
  states = 0, message = "token不存在或到期！"
  states = -1, message = "请先登录！"

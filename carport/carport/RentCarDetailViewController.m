@@ -12,6 +12,7 @@
 #import "RentCarTimeCell.h"
 #import "RentCarNeedToKnowCell.h"
 #import "RentResultView.h"
+#import "VerificationViewController.h"
 @interface RentCarDetailViewController ()<UITableViewDataSource,UITableViewDelegate,SDCycleScrollViewDelegate>
 {
     NSUserDefaults * userDefault;
@@ -191,8 +192,8 @@
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"下单超过5分钟无法取消订单\n是否立即租用" preferredStyle:  UIAlertControllerStyleAlert];
     
     [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        
-        [self postRental];
+        [self postUserVerification];
+//        [self postRental];
     }]];
     
     [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
@@ -203,7 +204,47 @@
     [self presentViewController:alert animated:true completion:nil];
     
 }
-
+#pragma mark - 判断用户是否有填验证信息
+- (void)postUserVerification
+{
+    NSMutableDictionary * params = [NSMutableDictionary dictionary];
+    userDefault = [NSUserDefaults standardUserDefaults];
+    [params setObject:[userDefault valueForKey:@"Token"] forKey:@"Token"];
+    __weak __typeof(self)weakSelf = self;
+    
+    [MHNetworkManager postReqeustWithURL:API_USER_VERIFICATION_URL params:params successBlock:^(NSDictionary *returnData) {
+        
+        [Calculate_frame showWithText:[returnData objectForKey:@"message"]];
+        
+        NSString * str = [NSString stringWithFormat:@"%@",[returnData objectForKey:@"states"]];
+        switch (str.intValue) {
+            case 1://通过
+                [weakSelf postRental];
+                break;
+            case -1:
+                [weakSelf goLogin];
+                break;
+            case 0:
+                [weakSelf goLogin];
+                break;
+            case 2://"用户验证信息不通过，可联系管理人员！"
+                 [Calculate_frame showWithText:@"用户验证信息不通过，可联系管理人员！"];
+                break;
+            case -3://"用户还未提交验证信息，请去完善验证信息"
+                [Calculate_frame showWithText:@"用户还未提交验证信息，请去完善验证信息"];
+                //跳转
+                [weakSelf goVerification];
+                break;
+            
+            default:
+                break;
+        }
+        
+    } failureBlock:^(NSError *error) {
+        [Calculate_frame showWithText:@"网络请求失败"];
+    } showHUD:YES];
+    
+}
 #pragma mark - 获取数据
 - (void)postRental
 {
@@ -244,6 +285,10 @@
         [Calculate_frame showWithText:@"网络请求失败"];
     } showHUD:YES];
     
+}
+-(void)goVerification{
+    VerificationViewController * VVC = [[VerificationViewController alloc]init];
+    [self.navigationController pushViewController:VVC animated:YES];
 }
 -(void)goFailure
 {

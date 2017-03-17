@@ -395,6 +395,30 @@
 		B2ACE93F1E026C9A00B7B415 /* fbcw-kdd@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2ACE9331E026C9900B7B415 /* fbcw-kdd@2x.jpg */; };
 		B2ACE9401E026C9A00B7B415 /* fbcw-kdd@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2ACE9341E026C9900B7B415 /* fbcw-kdd@3x.jpg */; };
 		B2ACE9431E02976E00B7B415 /* WGZaddCatPortImgView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ACE9421E02976E00B7B415 /* WGZaddCatPortImgView.m */; };
+		B2BF5F891E7B7445000F02EA /* banner1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2BF5F851E7B7445000F02EA /* banner1.jpg */; };
+		B2BF5F8A1E7B7445000F02EA /* banner2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2BF5F861E7B7445000F02EA /* banner2.jpg */; };
+		B2BF5F8B1E7B7445000F02EA /* banner3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2BF5F871E7B7445000F02EA /* banner3.jpg */; };
+		B2BF5F8C1E7B7445000F02EA /* banner4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2BF5F881E7B7445000F02EA /* banner4.jpg */; };
+		B2BF5F901E7B74FE000F02EA /* TuijianCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BF5F8E1E7B74FE000F02EA /* TuijianCell.m */; };
+		B2BF5F911E7B74FE000F02EA /* TuijianCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2BF5F8F1E7B74FE000F02EA /* TuijianCell.xib */; };
+		B2BF5F941E7B7576000F02EA /* 汽车@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BF5F921E7B7576000F02EA /* 汽车@2x.png */; };
+		B2BF5F951E7B7576000F02EA /* 汽车@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BF5F931E7B7576000F02EA /* 汽车@3x.png */; };
+		B2BF5F981E7B7809000F02EA /* ckxq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BF5F961E7B7809000F02EA /* ckxq@2x.png */; };
+		B2BF5F991E7B7809000F02EA /* ckxq@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BF5F971E7B7809000F02EA /* ckxq@3x.png */; };
+		B2BF5F9D1E7B9407000F02EA /* VerificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BF5F9B1E7B9407000F02EA /* VerificationViewController.m */; };
+		B2BF5F9E1E7B9407000F02EA /* VerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2BF5F9C1E7B9407000F02EA /* VerificationViewController.xib */; };
+		B2BF5FAB1E7B9734000F02EA /* bc_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BF5F9F1E7B9734000F02EA /* bc_btn@2x.png */; };
+		B2BF5FAC1E7B9734000F02EA /* bc_btn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BF5FA01E7B9734000F02EA /* bc_btn@3x.png */; };
+		B2BF5FAD1E7B9734000F02EA /* 传照片@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BF5FA11E7B9734000F02EA /* 传照片@2x.png */; };
+		B2BF5FAE1E7B9734000F02EA /* 传照片@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BF5FA21E7B9734000F02EA /* 传照片@3x.png */; };
+		B2BF5FAF1E7B9734000F02EA /* 驾驶证照片@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BF5FA31E7B9734000F02EA /* 驾驶证照片@2x.png */; };
+		B2BF5FB01E7B9734000F02EA /* 驾驶证照片@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BF5FA41E7B9734000F02EA /* 驾驶证照片@3x.png */; };
+		B2BF5FB11E7B9734000F02EA /* 同意@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BF5FA51E7B9734000F02EA /* 同意@2x.png */; };
+		B2BF5FB21E7B9734000F02EA /* 同意@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BF5FA61E7B9734000F02EA /* 同意@3x.png */; };
+		B2BF5FB31E7B9734000F02EA /* 头像@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BF5FA71E7B9734000F02EA /* 头像@2x.png */; };
+		B2BF5FB41E7B9734000F02EA /* 头像@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BF5FA81E7B9734000F02EA /* 头像@3x.png */; };
+		B2BF5FB51E7B9734000F02EA /* 未选中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BF5FA91E7B9734000F02EA /* 未选中@2x.png */; };
+		B2BF5FB61E7B9734000F02EA /* 未选中@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BF5FAA1E7B9734000F02EA /* 未选中@3x.png */; };
 		B2C60BE71DF10C07006BED2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C60BE61DF10C07006BED2C /* main.m */; };
 		B2C60BEA1DF10C07006BED2C /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2C60BE91DF10C07006BED2C /* AppDelegate.mm */; };
 		B2C60BED1DF10C07006BED2C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C60BEC1DF10C07006BED2C /* ViewController.m */; };
@@ -1048,6 +1072,32 @@
 		B2ACE9341E026C9900B7B415 /* fbcw-kdd@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fbcw-kdd@3x.jpg"; sourceTree = "<group>"; };
 		B2ACE9411E02976E00B7B415 /* WGZaddCatPortImgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGZaddCatPortImgView.h; sourceTree = "<group>"; };
 		B2ACE9421E02976E00B7B415 /* WGZaddCatPortImgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGZaddCatPortImgView.m; sourceTree = "<group>"; };
+		B2BF5F851E7B7445000F02EA /* banner1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner1.jpg; sourceTree = "<group>"; };
+		B2BF5F861E7B7445000F02EA /* banner2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner2.jpg; sourceTree = "<group>"; };
+		B2BF5F871E7B7445000F02EA /* banner3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner3.jpg; sourceTree = "<group>"; };
+		B2BF5F881E7B7445000F02EA /* banner4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner4.jpg; sourceTree = "<group>"; };
+		B2BF5F8D1E7B74FE000F02EA /* TuijianCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TuijianCell.h; sourceTree = "<group>"; };
+		B2BF5F8E1E7B74FE000F02EA /* TuijianCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TuijianCell.m; sourceTree = "<group>"; };
+		B2BF5F8F1E7B74FE000F02EA /* TuijianCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TuijianCell.xib; sourceTree = "<group>"; };
+		B2BF5F921E7B7576000F02EA /* 汽车@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "汽车@2x.png"; sourceTree = "<group>"; };
+		B2BF5F931E7B7576000F02EA /* 汽车@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "汽车@3x.png"; sourceTree = "<group>"; };
+		B2BF5F961E7B7809000F02EA /* ckxq@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ckxq@2x.png"; sourceTree = "<group>"; };
+		B2BF5F971E7B7809000F02EA /* ckxq@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ckxq@3x.png"; sourceTree = "<group>"; };
+		B2BF5F9A1E7B9407000F02EA /* VerificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerificationViewController.h; sourceTree = "<group>"; };
+		B2BF5F9B1E7B9407000F02EA /* VerificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerificationViewController.m; sourceTree = "<group>"; };
+		B2BF5F9C1E7B9407000F02EA /* VerificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerificationViewController.xib; sourceTree = "<group>"; };
+		B2BF5F9F1E7B9734000F02EA /* bc_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bc_btn@2x.png"; sourceTree = "<group>"; };
+		B2BF5FA01E7B9734000F02EA /* bc_btn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bc_btn@3x.png"; sourceTree = "<group>"; };
+		B2BF5FA11E7B9734000F02EA /* 传照片@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "传照片@2x.png"; sourceTree = "<group>"; };
+		B2BF5FA21E7B9734000F02EA /* 传照片@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "传照片@3x.png"; sourceTree = "<group>"; };
+		B2BF5FA31E7B9734000F02EA /* 驾驶证照片@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "驾驶证照片@2x.png"; sourceTree = "<group>"; };
+		B2BF5FA41E7B9734000F02EA /* 驾驶证照片@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "驾驶证照片@3x.png"; sourceTree = "<group>"; };
+		B2BF5FA51E7B9734000F02EA /* 同意@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "同意@2x.png"; sourceTree = "<group>"; };
+		B2BF5FA61E7B9734000F02EA /* 同意@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "同意@3x.png"; sourceTree = "<group>"; };
+		B2BF5FA71E7B9734000F02EA /* 头像@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "头像@2x.png"; sourceTree = "<group>"; };
+		B2BF5FA81E7B9734000F02EA /* 头像@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "头像@3x.png"; sourceTree = "<group>"; };
+		B2BF5FA91E7B9734000F02EA /* 未选中@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "未选中@2x.png"; sourceTree = "<group>"; };
+		B2BF5FAA1E7B9734000F02EA /* 未选中@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "未选中@3x.png"; sourceTree = "<group>"; };
 		B2C60BE21DF10C07006BED2C /* carport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C60BE61DF10C07006BED2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B2C60BE81DF10C07006BED2C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1690,6 +1740,9 @@
 				B216D0B61E77CE81009E518D /* MainCell.h */,
 				B216D0B71E77CE81009E518D /* MainCell.m */,
 				B216D0B81E77CE81009E518D /* MainCell.xib */,
+				B2BF5F8D1E7B74FE000F02EA /* TuijianCell.h */,
+				B2BF5F8E1E7B74FE000F02EA /* TuijianCell.m */,
+				B2BF5F8F1E7B74FE000F02EA /* TuijianCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -2006,6 +2059,9 @@
 				B2CEFC8D1E519BA5001CDD91 /* RentCarDetailViewController.h */,
 				B2CEFC8E1E519BA5001CDD91 /* RentCarDetailViewController.m */,
 				B2CEFC8F1E519BA5001CDD91 /* RentCarDetailViewController.xib */,
+				B2BF5F9A1E7B9407000F02EA /* VerificationViewController.h */,
+				B2BF5F9B1E7B9407000F02EA /* VerificationViewController.m */,
+				B2BF5F9C1E7B9407000F02EA /* VerificationViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -2205,6 +2261,33 @@
 			path = "entry-JPG";
 			sourceTree = "<group>";
 		};
+		B2BF5F841E7B7445000F02EA /* banner */ = {
+			isa = PBXGroup;
+			children = (
+				B2BF5F9F1E7B9734000F02EA /* bc_btn@2x.png */,
+				B2BF5FA01E7B9734000F02EA /* bc_btn@3x.png */,
+				B2BF5FA11E7B9734000F02EA /* 传照片@2x.png */,
+				B2BF5FA21E7B9734000F02EA /* 传照片@3x.png */,
+				B2BF5FA31E7B9734000F02EA /* 驾驶证照片@2x.png */,
+				B2BF5FA41E7B9734000F02EA /* 驾驶证照片@3x.png */,
+				B2BF5FA51E7B9734000F02EA /* 同意@2x.png */,
+				B2BF5FA61E7B9734000F02EA /* 同意@3x.png */,
+				B2BF5FA71E7B9734000F02EA /* 头像@2x.png */,
+				B2BF5FA81E7B9734000F02EA /* 头像@3x.png */,
+				B2BF5FA91E7B9734000F02EA /* 未选中@2x.png */,
+				B2BF5FAA1E7B9734000F02EA /* 未选中@3x.png */,
+				B2BF5F961E7B7809000F02EA /* ckxq@2x.png */,
+				B2BF5F971E7B7809000F02EA /* ckxq@3x.png */,
+				B2BF5F921E7B7576000F02EA /* 汽车@2x.png */,
+				B2BF5F931E7B7576000F02EA /* 汽车@3x.png */,
+				B2BF5F851E7B7445000F02EA /* banner1.jpg */,
+				B2BF5F861E7B7445000F02EA /* banner2.jpg */,
+				B2BF5F871E7B7445000F02EA /* banner3.jpg */,
+				B2BF5F881E7B7445000F02EA /* banner4.jpg */,
+			);
+			path = banner;
+			sourceTree = "<group>";
+		};
 		B2C60BD91DF10C07006BED2C = {
 			isa = PBXGroup;
 			children = (
@@ -2299,6 +2382,7 @@
 			isa = PBXGroup;
 			children = (
 				B2C60BF11DF10C07006BED2C /* Assets.xcassets */,
+				B2BF5F841E7B7445000F02EA /* banner */,
 				B29E01EF1E53E81800615FE2 /* rentimg */,
 				B26B8DC71E11FDD30066ED0A /* Center */,
 				B2534FB11E499E0C00CB6B34 /* Other */,
@@ -2516,6 +2600,7 @@
 				B2CEFC0F1E518938001CDD91 /* IWantViewController.h */,
 				B2CEFC101E518938001CDD91 /* IWantViewController.m */,
 				B2CEFC111E518938001CDD91 /* IWantViewController.xib */,
+				B2DB909E1E7BC78C005ADC4B /* Pay */,
 				B2C60C5A1DF115F4006BED2C /* FindCarPort */,
 				B2CEFC7B1E519155001CDD91 /* WantRentCar */,
 			);
@@ -2595,6 +2680,13 @@
 				B2D5AB7C1DFF9A2C006EEAFD /* UUDatePicker_DateModel.m */,
 			);
 			path = UUDatePicker_Block;
+			sourceTree = "<group>";
+		};
+		B2DB909E1E7BC78C005ADC4B /* Pay */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Pay;
 			sourceTree = "<group>";
 		};
 		B2DBE5AE1E03BFBA00A72EFE /* ThreeLevelPage */ = {
@@ -2926,6 +3018,7 @@
 				B2FD858C1DF6B29800447AA2 /* wellcom_02.png in Resources */,
 				B2C60D001DF128F0006BED2C /* dbdh_06.png in Resources */,
 				B2C60C2A1DF10EAF006BED2C /* dingwei_01.png in Resources */,
+				B2BF5FAC1E7B9734000F02EA /* bc_btn@3x.png in Resources */,
 				B216D0AE1E77C9CD009E518D /* zc@2x.png in Resources */,
 				B24188E91E10F03000C6BFD7 /* wddd-wscz-qd@3x.jpg in Resources */,
 				B24188F31E11109100C6BFD7 /* czdd-wfk@3x.png in Resources */,
@@ -2948,12 +3041,15 @@
 				B2C60CB61DF11E88006BED2C /* cwxq_09.png in Resources */,
 				B2E66C2F1DF517FA00889EA1 /* RegisterViewController.xib in Resources */,
 				B23C82AB1E0CFD1D00CD1486 /* SuggestViewController.xib in Resources */,
+				B2BF5FAE1E7B9734000F02EA /* 传照片@3x.png in Resources */,
 				B2CEFC8C1E519622001CDD91 /* WantRentCarCell.xib in Resources */,
 				B264B6F51E5FBF6F001A1869 /* xg@3x.png in Resources */,
+				B2BF5F8B1E7B7445000F02EA /* banner3.jpg in Resources */,
 				B2CEFC851E5191BF001CDD91 /* PublishRentCarViewController.xib in Resources */,
 				B2C60CFE1DF128F0006BED2C /* dbdh_04.png in Resources */,
 				B2C60CB11DF11E88006BED2C /* 967.png in Resources */,
 				B2C60C3D1DF10EAF006BED2C /* gerzx_05.png in Resources */,
+				B2BF5FAF1E7B9734000F02EA /* 驾驶证照片@2x.png in Resources */,
 				B26B8DF61E120B2B0066ED0A /* 6@3x.jpg in Resources */,
 				B29E02551E53E81900615FE2 /* czfb-1z6-wxz@3x.png in Resources */,
 				B23D4B431E0A6C15005AF3E5 /* picture-wait@3x.png in Resources */,
@@ -2973,6 +3069,7 @@
 				B26B8DD41E11FE280066ED0A /* cdl-xxfb-dj@2x.png in Resources */,
 				B26B8DEB1E120B2B0066ED0A /* 1@2x.jpg in Resources */,
 				B29E026C1E53E81900615FE2 /* czfb-icon@2x.png in Resources */,
+				B2BF5F951E7B7576000F02EA /* 汽车@3x.png in Resources */,
 				B293277A1E00CDE60053C557 /* dhl-top-@3x.png in Resources */,
 				B216D0B41E77C9CD009E518D /* zhdl@2x.png in Resources */,
 				B2C60C2C1DF10EAF006BED2C /* dingwei_03.png in Resources */,
@@ -3028,7 +3125,9 @@
 				B2C60D0C1DF152E3006BED2C /* MeTableViewCell.xib in Resources */,
 				B2CEFC181E51894B001CDD91 /* PublishViewController.xib in Resources */,
 				B29327521E00CDE60053C557 /* ck-dj@3x.png in Resources */,
+				B2BF5FB21E7B9734000F02EA /* 同意@3x.png in Resources */,
 				B29327801E00CDE60053C557 /* fbcw-ddh-dj@3x.png in Resources */,
+				B2BF5F911E7B74FE000F02EA /* TuijianCell.xib in Resources */,
 				B26B8E061E121E8D0066ED0A /* MasterSecondViewController.xib in Resources */,
 				B2C60CEE1DF11E88006BED2C /* zhifbtb_01.png in Resources */,
 				B2C60CB21DF11E88006BED2C /* cwlb_01.png in Resources */,
@@ -3038,6 +3137,7 @@
 				B2C60CC11DF11E88006BED2C /* dingwei_02.png in Resources */,
 				B29327761E00CDE60053C557 /* czcw-ss-icon@3x.png in Resources */,
 				B2C60CC91DF11E88006BED2C /* dlu_05.png in Resources */,
+				B2BF5FB41E7B9734000F02EA /* 头像@3x.png in Resources */,
 				B29E025A1E53E81900615FE2 /* czfb-3ys@2x.png in Resources */,
 				B29E02611E53E81900615FE2 /* czfb-7z2-wxz@3x.png in Resources */,
 				B29E02801E53E81900615FE2 /* wyzc-fbxx-wxz@2x.png in Resources */,
@@ -3071,9 +3171,11 @@
 				B2EB3FBE1DF7E11800ABC83F /* EditorInfoViewController.xib in Resources */,
 				B29E02541E53E81900615FE2 /* czfb-1z6-wxz@2x.png in Resources */,
 				B26B8DF41E120B2B0066ED0A /* 5@3x.jpg in Resources */,
+				B2BF5FAD1E7B9734000F02EA /* 传照片@2x.png in Resources */,
 				B293275B1E00CDE60053C557 /* cwxq-ckcwxq-dj-icon@2x.png in Resources */,
 				B26B8E231E1252AB0066ED0A /* czdd-fk@3x.png in Resources */,
 				B293274E1E00CDE60053C557 /* cdl-wdzx-cion@3x.png in Resources */,
+				B2BF5F8C1E7B7445000F02EA /* banner4.jpg in Resources */,
 				B2D5AB831DFFEEC5006EEAFD /* sc-icon@2x.png in Resources */,
 				B2C60CD11DF11E88006BED2C /* full_01.png in Resources */,
 				B2C60C291DF10EAF006BED2C /* cwlb_04.png in Resources */,
@@ -3115,6 +3217,7 @@
 				B2C60CDD1DF11E88006BED2C /* kg_01.png in Resources */,
 				B29E02531E53E81900615FE2 /* czfb-1z5@3x.png in Resources */,
 				B2EB3FC41DF7E46000ABC83F /* EditorInfoTableViewCell.xib in Resources */,
+				B2BF5F991E7B7809000F02EA /* ckxq@3x.png in Resources */,
 				B26B8E1E1E12522E0066ED0A /* yhdd-td@2x.png in Resources */,
 				B2900AAD1E5E7F1400A754C8 /* MyRentCarCell.xib in Resources */,
 				B24272831E528714006BDBCD /* RentCarInfoCell.xib in Resources */,
@@ -3125,6 +3228,7 @@
 				B29327431E00CDE60053C557 /* cdl-cwdj-dj-icon@2x.png in Resources */,
 				B29327591E00CDE60053C557 /* cwxq-bj@2x.png in Resources */,
 				B29E02731E53E81900615FE2 /* czfb-usbck-wxz@3x.png in Resources */,
+				B2BF5F891E7B7445000F02EA /* banner1.jpg in Resources */,
 				B215C5CA1E4C50EF00D9588C /* dlu_04.jpg in Resources */,
 				B2C60BF01DF10C07006BED2C /* Main.storyboard in Resources */,
 				B215C5CC1E4C549B00D9588C /* dingwei_04.jpg in Resources */,
@@ -3189,8 +3293,10 @@
 				B26B8E101E123D950066ED0A /* MasterFourViewController.xib in Resources */,
 				B29E02521E53E81900615FE2 /* czfb-1z5@2x.png in Resources */,
 				B26B8DF51E120B2B0066ED0A /* 6@2x.jpg in Resources */,
+				B2BF5F981E7B7809000F02EA /* ckxq@2x.png in Resources */,
 				B29327AF1E00ECC20053C557 /* czcw-youhui-icon@2x.jpg in Resources */,
 				B26B8DF21E120B2B0066ED0A /* 4@3x.jpg in Resources */,
+				B2BF5FB31E7B9734000F02EA /* 头像@2x.png in Resources */,
 				B24AD0AD1DFE2AF10049FE24 /* CarPortDetailViewController.xib in Resources */,
 				B26AB68B1E5BDEDE00031C8E /* ClientRentCarCell.xib in Resources */,
 				B29E02441E53E81900615FE2 /* clxq-icon@2x.png in Resources */,
@@ -3204,9 +3310,11 @@
 				B2C60CC71DF11E88006BED2C /* dlu_03.png in Resources */,
 				B29E02831E53E81900615FE2 /* wyzc-fbxx-xz@3x.png in Resources */,
 				B2DBE5B31E03C86800A72EFE /* FailureViewController.xib in Resources */,
+				B2BF5F941E7B7576000F02EA /* 汽车@2x.png in Resources */,
 				B29E02751E53E81900615FE2 /* czfb-usbck@3x.png in Resources */,
 				B29E02781E53E81900615FE2 /* czfb-zdd-wxz@2x.png in Resources */,
 				B29327551E00CDE60053C557 /* cwcz-dht@2x.png in Resources */,
+				B2BF5FB51E7B9734000F02EA /* 未选中@2x.png in Resources */,
 				B2ACE9361E026C9900B7B415 /* fbcw-bmz-dj@3x.jpg in Resources */,
 				B29327411E00CDE60053C557 /* cdl-cwdj-cion@2x.png in Resources */,
 				B2C60CD71DF11E88006BED2C /* gerzx_05.png in Resources */,
@@ -3224,6 +3332,7 @@
 				B2C60CD41DF11E88006BED2C /* gerzx_02.png in Resources */,
 				B29E024E1E53E81900615FE2 /* czfb-1jyx@2x.png in Resources */,
 				B2EB3FA81DF7909B00ABC83F /* MyLocationViewController.xib in Resources */,
+				B2BF5F8A1E7B7445000F02EA /* banner2.jpg in Resources */,
 				B2C60CD81DF11E88006BED2C /* gerzx_06.png in Resources */,
 				B29327821E00CDE60053C557 /* fbcw-ddh@3x.png in Resources */,
 				B29E028A1E53E81900615FE2 /* wyzc-wdzx-xz@2x.png in Resources */,
@@ -3294,11 +3403,13 @@
 				B29E02601E53E81900615FE2 /* czfb-7z2-wxz@2x.png in Resources */,
 				B2ACE9391E026C9A00B7B415 /* fbcw-ddh-dj@2x.jpg in Resources */,
 				B2ACE93B1E026C9A00B7B415 /* fbcw-ddh@2x.jpg in Resources */,
+				B2BF5FB61E7B9734000F02EA /* 未选中@3x.png in Resources */,
 				B24188EC1E10F03000C6BFD7 /* wddd-wscz-ts@2x.jpg in Resources */,
 				B2C60CE81DF11E88006BED2C /* where_01.png in Resources */,
 				B2C60CC51DF11E88006BED2C /* dlu_01.png in Resources */,
 				B29E02651E53E81900615FE2 /* czfb-actp@3x.png in Resources */,
 				B24272931E52AB37006BDBCD /* PublishRentCarInfoCell.xib in Resources */,
+				B2BF5FAB1E7B9734000F02EA /* bc_btn@2x.png in Resources */,
 				B2ACE9081E02406400B7B415 /* fbcw-b-icon@3x.jpg in Resources */,
 				B2ACE9231E0249E900B7B415 /* fbcw-wy@3x.jpg in Resources */,
 				B2C60C421DF10EAF006BED2C /* tousu_01.png in Resources */,
@@ -3306,6 +3417,7 @@
 				B29327C61E01365A0053C557 /* SubmitPassWordViewController.xib in Resources */,
 				B293278C1E00CDE60053C557 /* fbcw-qd-dj--icon@3x.png in Resources */,
 				B29327681E00CDE60053C557 /* cwxq-yysb-icon@3x.png in Resources */,
+				B2BF5FB01E7B9734000F02EA /* 驾驶证照片@3x.png in Resources */,
 				B2ACE93C1E026C9A00B7B415 /* fbcw-ddh@3x.jpg in Resources */,
 				B2C60CFC1DF128F0006BED2C /* dbdh_02.png in Resources */,
 				B2E66C251DF4FF4200889EA1 /* MainViewController.xib in Resources */,
@@ -3314,11 +3426,13 @@
 				B293277E1E00CDE60053C557 /* fbcw-bmz@3x.png in Resources */,
 				B29327451E00CDE60053C557 /* cdl-czcw-dj-icon@2x.png in Resources */,
 				B29327971E00CDE60053C557 /* fbcw-wy@2x.png in Resources */,
+				B2BF5FB11E7B9734000F02EA /* 同意@2x.png in Resources */,
 				B29E026A1E53E81900615FE2 /* czfb-gpsdhx@3x.png in Resources */,
 				B29327AE1E00ECC20053C557 /* czcw-dizhi-icon@3x.jpg in Resources */,
 				B2C60C451DF10EAF006BED2C /* where_01.png in Resources */,
 				B29327481E00CDE60053C557 /* cdl-czcw-icon@3x.png in Resources */,
 				B2FD85841DF6A2CE00447AA2 /* BalanceViewController.xib in Resources */,
+				B2BF5F9E1E7B9407000F02EA /* VerificationViewController.xib in Resources */,
 				B29327B31E00F3E80053C557 /* fbcw-map-icon@2x.png in Resources */,
 				B29327831E00CDE60053C557 /* fbcw-djsc-dj-icon@2x.png in Resources */,
 				B26B8E331E125F120066ED0A /* ClientOrderThirdViewController.xib in Resources */,
@@ -3391,6 +3505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2BF5F901E7B74FE000F02EA /* TuijianCell.m in Sources */,
 				B21A35051DFA5EE8000E4637 /* ListImgModel.m in Sources */,
 				B2C60C681DF11738006BED2C /* XMGTabBar.m in Sources */,
 				B26AB68A1E5BDEDE00031C8E /* ClientRentCarCell.m in Sources */,
@@ -3535,6 +3650,7 @@
 				B24AD0BA1DFE916A0049FE24 /* MyCarPortTableViewCell.m in Sources */,
 				B23D4B301E0A59CD005AF3E5 /* MeIsOwnerViewController.m in Sources */,
 				B2D5AB811DFFC953006EEAFD /* WGZaddImagesView.m in Sources */,
+				B2BF5F9D1E7B9407000F02EA /* VerificationViewController.m in Sources */,
 				B2DBE5A81E036C2A00A72EFE /* WGZToggleButton.m in Sources */,
 				B23D4B361E0A5AF4005AF3E5 /* MeIsOwnerTableViewCell.m in Sources */,
 			);
