@@ -113,6 +113,7 @@
 }
 #pragma mark - 保存
 - (IBAction)saveBtnClick:(id)sender {
+    [self turnJson];
 }
 #pragma mark - turnJson
 -(void)turnJson
