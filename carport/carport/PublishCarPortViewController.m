@@ -94,7 +94,7 @@
     
     NSString *baseb4_1 = [NSString stringWithFormat:@"data: image/png;base64,%@",[self UIImageToBase64Str:_addMapImgView.image]];
     NSString *baseb4_2 = [NSString stringWithFormat:@"data: image/png;base64,%@",[self UIImageToBase64Str:_addcarPortImgView.image]];
-    
+    NSLog(@"8888==%@",baseb4_1);
  
     NSString * describe = [NSString stringWithFormat:@"<p>%@</p>",_describeTextView.text];
    

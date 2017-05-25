@@ -13,9 +13,13 @@
 #import "RentCarNeedToKnowCell.h"
 #import "RentResultView.h"
 #import "VerificationViewController.h"
+#import "PayViewController.h"
+
 @interface RentCarDetailViewController ()<UITableViewDataSource,UITableViewDelegate,SDCycleScrollViewDelegate>
 {
     NSUserDefaults * userDefault;
+    NSString * userStartTime;
+    NSString * userEndTime;
 }
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *headView;
@@ -153,6 +157,18 @@
             cell1.timeLabel.text = str;
             cell1.nonHolidayPrie.text = [NSString stringWithFormat:@"%@元/天",_model.VehicleInformation.non_holiday_prie];
             cell1.holidayPrie.text = [NSString stringWithFormat:@"%@元/天",_model.VehicleInformation.holiday_prie];
+            
+            cell1.startTimeBlock = ^(NSString *text){
+//                carSize = text;
+                NSLog(@"cg===%@",text);
+                userStartTime = text;
+            };
+            
+            cell1.endTimeBlock = ^(NSString *text){
+//                plateNumber = text;
+                userEndTime = text;
+            };
+            
             return cell1;
         }
             break;
@@ -178,7 +194,7 @@
 {
     
     if (indexPath.row == 1 || indexPath.row == 2) {
-        return 145;
+        return 210;
     }else return 200;
 
 }
@@ -188,12 +204,15 @@
 }
 #pragma mark - 立即租用按钮
 - (IBAction)rentBtnClick:(id)sender {
-    
+ 
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"下单超过5分钟无法取消订单\n是否立即租用" preferredStyle:  UIAlertControllerStyleAlert];
     
     [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self postUserVerification];
-//        [self postRental];
+//        [self postUserVerification];
+        PayViewController * PVC = [[PayViewController alloc]init];
+        [self.navigationController pushViewController:PVC animated:YES];
+        
+        
     }]];
     
     [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
@@ -204,6 +223,9 @@
     [self presentViewController:alert animated:true completion:nil];
     
 }
+
+
+
 #pragma mark - 判断用户是否有填验证信息
 - (void)postUserVerification
 {
@@ -245,7 +267,7 @@
     } showHUD:YES];
     
 }
-#pragma mark - 获取数据
+#pragma mark - 获取数据 (string Starttime, string Endtime)
 - (void)postRental
 {
     NSMutableDictionary * params = [NSMutableDictionary dictionary];
@@ -253,7 +275,13 @@
     [params setObject:[NSString stringWithFormat:@"%@",_model.VehicleInformation.Id] forKey:@"VehicleId"];
     userDefault = [NSUserDefaults standardUserDefaults];
     [params setObject:[userDefault valueForKey:@"Token"] forKey:@"Token"];
+    
+    [params setObject:userStartTime forKey:@"Starttime"];
+    [params setObject:userEndTime forKey:@"Endtime"];
+    
     __weak __typeof(self)weakSelf = self;
+    
+    
     
     [MHNetworkManager postReqeustWithURL:API_GET_USER_CAR_RENTAL_URL params:params successBlock:^(NSDictionary *returnData) {
         
@@ -282,7 +310,7 @@
         }
         
     } failureBlock:^(NSError *error) {
-        [Calculate_frame showWithText:@"网络请求失败"];
+        [Calculate_frame showWithText:[NSString stringWithFormat:@"%@",error]];
     } showHUD:YES];
     
 }

@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *contentScrollView;
 /*标题按钮地下的指示器*/
 @property (weak ,nonatomic) UIView *indicatorView ;
+
 @end
 
 @implementation PublishViewController

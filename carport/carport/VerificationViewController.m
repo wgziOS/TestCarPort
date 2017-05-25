@@ -118,9 +118,10 @@
 #pragma mark - turnJson
 -(void)turnJson
 {
-    NSString * str = [self UIImageToBase64Str:_firstImgView.image];
-    NSString * str1 = [self UIImageToBase64Str:_secondImgView.image];
-    NSString * str2 = [self UIImageToBase64Str:_thirdImgView.image];
+    
+    NSString * str = [NSString stringWithFormat:@"data: image/png;base64,%@",[self UIImageToBase64Str:_firstImgView.image]];
+    NSString * str1 = [NSString stringWithFormat:@"data: image/png;base64,%@",[self UIImageToBase64Str:_secondImgView.image]];
+    NSString * str2 = [NSString stringWithFormat:@"data: image/png;base64,%@",[self UIImageToBase64Str:_thirdImgView.image]];
     NSDictionary * json = @{
                             @"userid": userID,
                             @"IDcard_obverse": str,
@@ -129,6 +130,8 @@
                             @"consent_agreement": @"1"
                             };
     NSString * jsonStr = [DicToJson dictionaryToJson:json];
+    
+//    NSLog(@"json=========%@",jsonStr);
     
     
     [self postBCWithJson:jsonStr];
@@ -182,7 +185,7 @@
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"保存成功" preferredStyle:  UIAlertControllerStyleAlert];
     
     [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-
+        [self.navigationController popViewControllerAnimated:YES];
     }]];
     
     [self presentViewController:alert animated:true completion:nil];

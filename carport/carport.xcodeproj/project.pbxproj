@@ -38,6 +38,20 @@
 		B21A34FF1DFA5D1D000E4637 /* PageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A34FE1DFA5D1D000E4637 /* PageModel.m */; };
 		B21A35021DFA5DC8000E4637 /* ParkingSpaceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A35011DFA5DC8000E4637 /* ParkingSpaceModel.m */; };
 		B21A35051DFA5EE8000E4637 /* ListImgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A35041DFA5EE8000E4637 /* ListImgModel.m */; };
+		B21E33F11E8640F600DEC537 /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B21E33EF1E8640F600DEC537 /* PayViewController.m */; };
+		B21E33F21E8640F600DEC537 /* PayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21E33F01E8640F600DEC537 /* PayViewController.xib */; };
+		B21E33F51E86445900DEC537 /* 天空@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B21E33F31E86445900DEC537 /* 天空@2x.png */; };
+		B21E33F61E86445900DEC537 /* 天空@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B21E33F41E86445900DEC537 /* 天空@3x.png */; };
+		B21E33FF1E86490600DEC537 /* 微信支付@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B21E33F71E86490600DEC537 /* 微信支付@2x.png */; };
+		B21E34001E86490600DEC537 /* 微信支付@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B21E33F81E86490600DEC537 /* 微信支付@3x.png */; };
+		B21E34011E86490600DEC537 /* 选中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B21E33F91E86490600DEC537 /* 选中@2x.png */; };
+		B21E34021E86490600DEC537 /* 选中@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B21E33FA1E86490600DEC537 /* 选中@3x.png */; };
+		B21E34031E86490600DEC537 /* 支付宝支付@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B21E33FB1E86490600DEC537 /* 支付宝支付@2x.png */; };
+		B21E34041E86490600DEC537 /* 支付宝支付@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B21E33FC1E86490600DEC537 /* 支付宝支付@3x.png */; };
+		B21E34051E86490600DEC537 /* weidianji@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B21E33FD1E86490600DEC537 /* weidianji@2x.png */; };
+		B21E34061E86490600DEC537 /* weidianji@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B21E33FE1E86490600DEC537 /* weidianji@3x.png */; };
+		B21E340A1E864C5400DEC537 /* PayVCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B21E34081E864C5400DEC537 /* PayVCCell.m */; };
+		B21E340B1E864C5400DEC537 /* PayVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21E34091E864C5400DEC537 /* PayVCCell.xib */; };
 		B221C9641DF8DD37005BAD69 /* NearbyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B221C9621DF8DD37005BAD69 /* NearbyTableViewCell.m */; };
 		B221C9651DF8DD37005BAD69 /* NearbyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B221C9631DF8DD37005BAD69 /* NearbyTableViewCell.xib */; };
 		B221C9AE1DF905F5005BAD69 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = B221C9821DF905F5005BAD69 /* MJRefreshAutoFooter.m */; };
@@ -652,6 +666,22 @@
 		B21A35011DFA5DC8000E4637 /* ParkingSpaceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParkingSpaceModel.m; sourceTree = "<group>"; };
 		B21A35031DFA5EE8000E4637 /* ListImgModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListImgModel.h; sourceTree = "<group>"; };
 		B21A35041DFA5EE8000E4637 /* ListImgModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListImgModel.m; sourceTree = "<group>"; };
+		B21E33EE1E8640F600DEC537 /* PayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayViewController.h; sourceTree = "<group>"; };
+		B21E33EF1E8640F600DEC537 /* PayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayViewController.m; sourceTree = "<group>"; };
+		B21E33F01E8640F600DEC537 /* PayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PayViewController.xib; sourceTree = "<group>"; };
+		B21E33F31E86445900DEC537 /* 天空@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "天空@2x.png"; sourceTree = "<group>"; };
+		B21E33F41E86445900DEC537 /* 天空@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "天空@3x.png"; sourceTree = "<group>"; };
+		B21E33F71E86490600DEC537 /* 微信支付@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "微信支付@2x.png"; sourceTree = "<group>"; };
+		B21E33F81E86490600DEC537 /* 微信支付@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "微信支付@3x.png"; sourceTree = "<group>"; };
+		B21E33F91E86490600DEC537 /* 选中@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "选中@2x.png"; sourceTree = "<group>"; };
+		B21E33FA1E86490600DEC537 /* 选中@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "选中@3x.png"; sourceTree = "<group>"; };
+		B21E33FB1E86490600DEC537 /* 支付宝支付@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "支付宝支付@2x.png"; sourceTree = "<group>"; };
+		B21E33FC1E86490600DEC537 /* 支付宝支付@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "支付宝支付@3x.png"; sourceTree = "<group>"; };
+		B21E33FD1E86490600DEC537 /* weidianji@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weidianji@2x.png"; sourceTree = "<group>"; };
+		B21E33FE1E86490600DEC537 /* weidianji@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weidianji@3x.png"; sourceTree = "<group>"; };
+		B21E34071E864C5400DEC537 /* PayVCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayVCCell.h; sourceTree = "<group>"; };
+		B21E34081E864C5400DEC537 /* PayVCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayVCCell.m; sourceTree = "<group>"; };
+		B21E34091E864C5400DEC537 /* PayVCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PayVCCell.xib; sourceTree = "<group>"; };
 		B221C9611DF8DD37005BAD69 /* NearbyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyTableViewCell.h; sourceTree = "<group>"; };
 		B221C9621DF8DD37005BAD69 /* NearbyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyTableViewCell.m; sourceTree = "<group>"; };
 		B221C9631DF8DD37005BAD69 /* NearbyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearbyTableViewCell.xib; sourceTree = "<group>"; };
@@ -2086,6 +2116,16 @@
 		B29E01EF1E53E81800615FE2 /* rentimg */ = {
 			isa = PBXGroup;
 			children = (
+				B21E33F71E86490600DEC537 /* 微信支付@2x.png */,
+				B21E33F81E86490600DEC537 /* 微信支付@3x.png */,
+				B21E33F91E86490600DEC537 /* 选中@2x.png */,
+				B21E33FA1E86490600DEC537 /* 选中@3x.png */,
+				B21E33FB1E86490600DEC537 /* 支付宝支付@2x.png */,
+				B21E33FC1E86490600DEC537 /* 支付宝支付@3x.png */,
+				B21E33FD1E86490600DEC537 /* weidianji@2x.png */,
+				B21E33FE1E86490600DEC537 /* weidianji@3x.png */,
+				B21E33F31E86445900DEC537 /* 天空@2x.png */,
+				B21E33F41E86445900DEC537 /* 天空@3x.png */,
 				B216D09E1E77C9CD009E518D /* ckxq@2x.png */,
 				B216D09F1E77C9CD009E518D /* ckxq@3x.png */,
 				B216D0A01E77C9CD009E518D /* dw@2x.png */,
@@ -2357,6 +2397,7 @@
 				B2E66C511DF54BFA00889EA1 /* LeftMenu */,
 				B2C60C591DF115E4006BED2C /* Main */,
 				B2CEFC0D1E5186E6001CDD91 /* IWant */,
+				B2DB909E1E7BC78C005ADC4B /* Pay */,
 				B2CEFC0E1E5187A5001CDD91 /* Publish */,
 				B2C60C5C1DF1162A006BED2C /* Me */,
 			);
@@ -2600,7 +2641,6 @@
 				B2CEFC0F1E518938001CDD91 /* IWantViewController.h */,
 				B2CEFC101E518938001CDD91 /* IWantViewController.m */,
 				B2CEFC111E518938001CDD91 /* IWantViewController.xib */,
-				B2DB909E1E7BC78C005ADC4B /* Pay */,
 				B2C60C5A1DF115F4006BED2C /* FindCarPort */,
 				B2CEFC7B1E519155001CDD91 /* WantRentCar */,
 			);
@@ -2685,6 +2725,12 @@
 		B2DB909E1E7BC78C005ADC4B /* Pay */ = {
 			isa = PBXGroup;
 			children = (
+				B21E33EE1E8640F600DEC537 /* PayViewController.h */,
+				B21E33EF1E8640F600DEC537 /* PayViewController.m */,
+				B21E33F01E8640F600DEC537 /* PayViewController.xib */,
+				B21E34071E864C5400DEC537 /* PayVCCell.h */,
+				B21E34081E864C5400DEC537 /* PayVCCell.m */,
+				B21E34091E864C5400DEC537 /* PayVCCell.xib */,
 			);
 			name = Pay;
 			sourceTree = "<group>";
@@ -3073,6 +3119,7 @@
 				B293277A1E00CDE60053C557 /* dhl-top-@3x.png in Resources */,
 				B216D0B41E77C9CD009E518D /* zhdl@2x.png in Resources */,
 				B2C60C2C1DF10EAF006BED2C /* dingwei_03.png in Resources */,
+				B21E34021E86490600DEC537 /* 选中@3x.png in Resources */,
 				B2ACE91E1E0249E900B7B415 /* fbcw-qt@2x.jpg in Resources */,
 				B2ACE93E1E026C9A00B7B415 /* fbcw-kdd-dj@3x.jpg in Resources */,
 				B29327731E00CDE60053C557 /* czcw-ss-dj-icon@2x.png in Resources */,
@@ -3119,6 +3166,7 @@
 				B29327741E00CDE60053C557 /* czcw-ss-dj-icon@3x.png in Resources */,
 				B208ACF01E0930CD00224F12 /* denglu_92.png in Resources */,
 				B26B8E2E1E125EF00066ED0A /* ClientOrderSecondViewController.xib in Resources */,
+				B21E34011E86490600DEC537 /* 选中@2x.png in Resources */,
 				B29327931E00CDE60053C557 /* fbcw-sc-icon@2x.png in Resources */,
 				B2C60CEB1DF11E88006BED2C /* xxtz.png in Resources */,
 				B2E66C501DF549C100889EA1 /* LeftMenuController.xib in Resources */,
@@ -3186,6 +3234,7 @@
 				B29327B91E00F6010053C557 /* ForgetPassWordViewController.xib in Resources */,
 				B293277D1E00CDE60053C557 /* fbcw-bmz@2x.png in Resources */,
 				B293275D1E00CDE60053C557 /* cwxq-ckcwxq-icon@2x.png in Resources */,
+				B21E340B1E864C5400DEC537 /* PayVCCell.xib in Resources */,
 				B26AB6971E5BEAB000031C8E /* jztp@3x.png in Resources */,
 				B2C60CD91DF11E88006BED2C /* grzl_01.png in Resources */,
 				B29E025E1E53E81900615FE2 /* czfb-6z3@2x.png in Resources */,
@@ -3209,6 +3258,7 @@
 				B2E66D4A1DF5565200889EA1 /* SVProgressHUD.bundle in Resources */,
 				B29E025C1E53E81900615FE2 /* czfb-6z3-wxz@2x.png in Resources */,
 				B293277B1E00CDE60053C557 /* fbcw-bmz-dj@2x.png in Resources */,
+				B21E33FF1E86490600DEC537 /* 微信支付@2x.png in Resources */,
 				B2ACE9191E0249E900B7B415 /* ck-dj@3x.jpg in Resources */,
 				B2ACE9351E026C9900B7B415 /* fbcw-bmz-dj@2x.jpg in Resources */,
 				B2E66D4D1DF5589000889EA1 /* dlu_03.jpg in Resources */,
@@ -3239,6 +3289,7 @@
 				B29E02511E53E81900615FE2 /* czfb-1z5-wxz@3x.png in Resources */,
 				B2C60C491DF10EAF006BED2C /* zhifbtb_01.png in Resources */,
 				B293278E1E00CDE60053C557 /* fbcw-qd-icon@3x.png in Resources */,
+				B21E34001E86490600DEC537 /* 微信支付@3x.png in Resources */,
 				B29E028E1E53E81900615FE2 /* wyzc-wy-xz@2x.png in Resources */,
 				B24188F41E11109100C6BFD7 /* czdd-yfk@2x.png in Resources */,
 				B2C60CEA1DF11E88006BED2C /* xiangji_01.png in Resources */,
@@ -3314,13 +3365,16 @@
 				B29E02751E53E81900615FE2 /* czfb-usbck@3x.png in Resources */,
 				B29E02781E53E81900615FE2 /* czfb-zdd-wxz@2x.png in Resources */,
 				B29327551E00CDE60053C557 /* cwcz-dht@2x.png in Resources */,
+				B21E33F51E86445900DEC537 /* 天空@2x.png in Resources */,
 				B2BF5FB51E7B9734000F02EA /* 未选中@2x.png in Resources */,
 				B2ACE9361E026C9900B7B415 /* fbcw-bmz-dj@3x.jpg in Resources */,
 				B29327411E00CDE60053C557 /* cdl-cwdj-cion@2x.png in Resources */,
 				B2C60CD71DF11E88006BED2C /* gerzx_05.png in Resources */,
 				B29327781E00CDE60053C557 /* czcw-ssk@3x.png in Resources */,
+				B21E33F21E8640F600DEC537 /* PayViewController.xib in Resources */,
 				B2C60CDE1DF11E88006BED2C /* kg_02.png in Resources */,
 				B221C9651DF8DD37005BAD69 /* NearbyTableViewCell.xib in Resources */,
+				B21E34031E86490600DEC537 /* 支付宝支付@2x.png in Resources */,
 				B2C60C301DF10EAF006BED2C /* dlu_02.png in Resources */,
 				B2C60CC21DF11E88006BED2C /* dingwei_03.png in Resources */,
 				B2DBE5AD1E039D5700A72EFE /* SucessViewController.xib in Resources */,
@@ -3350,10 +3404,13 @@
 				B2C60D021DF128F0006BED2C /* dbdh_08.png in Resources */,
 				B24188EB1E10F03000C6BFD7 /* wddd-wscz-td@3x.jpg in Resources */,
 				B29327541E00CDE60053C557 /* ck@3x.png in Resources */,
+				B21E33F61E86445900DEC537 /* 天空@3x.png in Resources */,
+				B21E34061E86490600DEC537 /* weidianji@3x.png in Resources */,
 				B2C60CF21DF1226B006BED2C /* tabbar-light@2x.png in Resources */,
 				B2C60CC41DF11E88006BED2C /* dingwei_05.png in Resources */,
 				B29327471E00CDE60053C557 /* cdl-czcw-icon@2x.png in Resources */,
 				B29327721E00CDE60053C557 /* czcw-search-icon@2x.png in Resources */,
+				B21E34051E86490600DEC537 /* weidianji@2x.png in Resources */,
 				B24F790E1E7685EC00563CD5 /* gywm.jpg in Resources */,
 				B2ACE9221E0249E900B7B415 /* fbcw-wy@2x.jpg in Resources */,
 				B216D0B01E77C9CD009E518D /* zcw@2x.png in Resources */,
@@ -3426,6 +3483,7 @@
 				B293277E1E00CDE60053C557 /* fbcw-bmz@3x.png in Resources */,
 				B29327451E00CDE60053C557 /* cdl-czcw-dj-icon@2x.png in Resources */,
 				B29327971E00CDE60053C557 /* fbcw-wy@2x.png in Resources */,
+				B21E34041E86490600DEC537 /* 支付宝支付@3x.png in Resources */,
 				B2BF5FB11E7B9734000F02EA /* 同意@2x.png in Resources */,
 				B29E026A1E53E81900615FE2 /* czfb-gpsdhx@3x.png in Resources */,
 				B29327AE1E00ECC20053C557 /* czcw-dizhi-icon@3x.jpg in Resources */,
@@ -3600,6 +3658,7 @@
 				B2C60D061DF15009006BED2C /* MeViewController.m in Sources */,
 				B2EB3FBD1DF7E11800ABC83F /* EditorInfoViewController.m in Sources */,
 				B221C9C11DF905F5005BAD69 /* UIView+MJExtension.m in Sources */,
+				B21E340A1E864C5400DEC537 /* PayVCCell.m in Sources */,
 				B2E66C8D1DF5553F00889EA1 /* UIButton+AFNetworking.m in Sources */,
 				B2CEFC121E518938001CDD91 /* IWantViewController.m in Sources */,
 				B2E66D361DF555CC00889EA1 /* NSObject+MJProperty.m in Sources */,
@@ -3632,6 +3691,7 @@
 				B2E66C911DF5553F00889EA1 /* UIWebView+AFNetworking.m in Sources */,
 				B24AD0A81DFE243A0049FE24 /* FilterHTML.m in Sources */,
 				B2E66C241DF4FF4200889EA1 /* MainViewController.m in Sources */,
+				B21E33F11E8640F600DEC537 /* PayViewController.m in Sources */,
 				B2E66D301DF555CC00889EA1 /* MJProperty.m in Sources */,
 				B26B8E0A1E123B620066ED0A /* MasterThirdViewController.m in Sources */,
 				B26B8E371E125F320066ED0A /* ClientOrderFourViewController.m in Sources */,
